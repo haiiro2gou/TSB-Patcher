@@ -15,7 +15,8 @@
 * [NaturalMergeSort](NaturalMergeSort)ディレクトリ ([MIT License](NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 * [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
 * [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache-2.0 License](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
-* [TheSkyBlessing/data/rom](TheSkyBlessing/data/rom/functions)ディレクトリ ([MIT License](OhMyDat/LICENSE))
+* [TSB-Patcher/data/asset](TSB-Patcher/data/api/functions)ディレクトリ ([MIT License](Asset/LICENSE) / Copyright by ProjectTSB)
+* [TSB-Patcher/data/rom](TSB-Patcher/data/rom/functions)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
 
 ## 謝辞
 このリポジトリでは、以下のライブラリを利用させていただいてます。
