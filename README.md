@@ -11,8 +11,8 @@
 
 ## ライセンスについて
 このリポジトリでは、以下のディレクトリを除き、ProjectTSBにより[CC0-1.0 Universal](LICENSE)ライセンスが適用されています。
-* [data/asset](TSB-Patcher/data/api/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/Asset/LICENSE) / Copyright by ProjectTSB)
-* [data/rom](TSB-Patcher/data/rom/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/OhMyDat/LICENSE) / Copyright by 赤石愛)
+* [data/asset](data/asset/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/Asset/LICENSE) / Copyright by ProjectTSB)
+* [data/rom](data/rom/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/OhMyDat/LICENSE) / Copyright by 赤石愛)
 
 ## 謝辞
 このリポジトリでは、以下のライブラリを利用させていただいてます。
