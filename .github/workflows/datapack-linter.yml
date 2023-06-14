@@ -14,15 +14,13 @@ jobs:
         with:
           fetch-depth: 0
           path: TSB-Patcher
-          sparse-checkout: |
-            data
-            pack.mcmeta
-            
+
       - name: Checkout Dependency
         uses: actions/checkout@v3
         with:
           repository: ProjectTSB/TheSkyBlessing
           fetch-depth: 0
+      - run: git checkout refs/tags/v0.1.6
 
       - name: Test
         uses: ChenCMD/datapack-linter@v1
