@@ -8,7 +8,7 @@
     execute if entity @s[scores={55.Tick=0}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
 
 # 隙だらけなので耐性
-    effect give @s resistance 1 2 true
+    effect give @s resistance 1 5 true
 
 # 魔方陣展開
     execute if entity @s[scores={55.Tick=30..31}] positioned ~ ~0.2 ~ rotated ~ 0 run function asset:mob/0185.tutankhamen/tick/magic_square/02.1st_square

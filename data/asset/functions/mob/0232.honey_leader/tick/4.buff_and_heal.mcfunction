@@ -19,7 +19,7 @@
     tag @e[type=skeleton,scores={MobID=233},distance=..15] add 6G.HoneyMob
 
 # バフ
-    #effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] resistance 2 1 true
+    #effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] resistance 2 3 true
     #effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] speed 2 1 true
 
 # 回復
