@@ -26,4 +26,4 @@
     function lib:damage/reset
 
 # プレイヤーの方向へ前進
-    tp @s ~ ~ ~ facing entity @p[gamemode=!spectator]
+ tp @s ~ ~ ~ facing entity @p[gamemode=!spectator]

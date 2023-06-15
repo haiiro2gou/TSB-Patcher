@@ -25,3 +25,5 @@
 
 # 近くにプレイヤーがいない場合は消滅
     execute unless entity @a[gamemode=!spectator,distance=..30] run kill @s
+
+
