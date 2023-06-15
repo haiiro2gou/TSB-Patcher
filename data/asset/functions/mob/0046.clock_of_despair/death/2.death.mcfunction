@@ -11,4 +11,4 @@ kill @e[type=glow_item_frame,tag=1A.ClockItemFrame]
 # ボスドロ
     data modify storage api: Argument.ID set value 837
     data modify storage api: Argument.Important set value true
-    function api:sacred_treasure/spawn/from_id
+    function api:artifact/spawn/from_id
