@@ -13,4 +13,4 @@
     playsound entity.ender_eye.death player @p ~ ~ ~ 1.0 1.0
 
 # 耐性付与
-    effect give @s resistance 3 1
+    effect give @s resistance 3 3

@@ -36,6 +36,6 @@
     execute if score $Random Temporary matches 1 run effect give @s haste 90 1
     execute if score $Random Temporary matches 2 run effect give @s jump_boost 90 1
     execute if score $Random Temporary matches 3 run effect give @s night_vision 90 1
-    execute if score $Random Temporary matches 4 run effect give @s resistance 45 0
+    execute if score $Random Temporary matches 4 run effect give @s resistance 45 1
 # リセット
     scoreboard players reset $Random Temporary

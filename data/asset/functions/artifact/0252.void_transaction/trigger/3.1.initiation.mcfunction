@@ -13,7 +13,7 @@
     effect give @s jump_boost 120 3 true
     effect give @s regeneration 120 3 true
     effect give @s fire_resistance 120 3 true
-    effect give @s resistance 120 3 true
+    effect give @s resistance 120 7 true
     effect give @s invisibility 120 3 true
     effect give @s night_vision 120 3 true
     effect give @s water_breathing 120 3 true
