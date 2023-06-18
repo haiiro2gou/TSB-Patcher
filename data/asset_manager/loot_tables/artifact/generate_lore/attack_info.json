@@ -83,7 +83,7 @@
                                         "interpret": true
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line2[5]",
                                         "interpret": true
                                     }
