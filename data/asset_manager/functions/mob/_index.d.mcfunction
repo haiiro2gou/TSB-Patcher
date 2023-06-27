@@ -3,6 +3,11 @@
 
 #> storage
 # @within *
+#   api:mob/core/**
+#   asset:mob/*/register
+#   asset:mob/*/*/
+#   asset:mob/extends
+#   asset:mob/super.*
 #   asset_manager:mob/**
 #   asset:mob/*/summon/2.summon
 #   asset:mob/common/**
@@ -10,6 +15,8 @@
 
 #> 初期化タグ
 # @within function
+#   api:mob/core/summon
+#   asset:mob/*/summon/
 #   asset:mob/*/summon/2.summon
 #   asset:mob/common/summon
     #declare tag MobInit
@@ -18,7 +25,6 @@
 # @within function
 #   core:tick/
 #   mob_manager:init/
-#   asset:artifact/0001.book_of_all-seeing/trigger/get_defense_info
 #   asset:mob/**
 #   asset_manager:mob/**
     #declare tag AssetMob
