@@ -1,5 +1,5 @@
 #> core:patcher/load
-# @within tag/function minecraft:load
+# @within function core:load
 
 # ⚠️ リリース時のみtrueにすること。 これをtrueにした場合、ワールドに不可逆的な登録処理が発生します。 ⚠️
     data modify storage global Patcher.IsProduction set value false
