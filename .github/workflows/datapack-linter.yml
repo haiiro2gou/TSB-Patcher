@@ -1,29 +1,35 @@
 name: lint-datapack
 on:
-    push:
-    pull_request:
-    workflow_dispatch:
+  push:
+  pull_request:
+  workflow_dispatch:
 jobs:
-    lint:
-        name: lint
-        runs-on: ubuntu-latest
-        if: "!contains(github.event.head_commit.message, '[skip ci]')"
-        steps:
-          - name: Checkout Dependency
-            uses: actions/checkout@v3
-            with:
-                repository: ProjectTSB/TheSkyBlessing
-                fetch-depth: 0
-          - run: git checkout refs/tags/v0.1.6
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-          - name: Checkout
-            uses: actions/checkout@v3
-            with:
-                fetch-depth: 0
-                path: TSB-Patcher
+      - name: Checkout Dependency
+        uses: actions/checkout@v3
+        with:
+          repository: ProjectTSB/TheSkyBlessing
+          path: TSB-master
+          fetch-depth: 0
+          sparse-checkout: |
+            NaturalMergeSort
+            OhMyDat
+            ScoreToHealth
 
-          - name: Test
-            uses: ChenCMD/datapack-linter@v1
-            with:
-                outputDefine: public
-                notOutputSuccess: true
+      - run: |
+          mv -f TSB-master/** ../TSB-Patcher
+
+      - name: Test
+        uses: ChenCMD/datapack-linter@v1
+        with:
+          outputDefine: public
+          notOutputSuccess: true
