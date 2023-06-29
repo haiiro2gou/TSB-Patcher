@@ -1,0 +1,27 @@
+name: file-list
+on: workflow_dispatch
+jobs:
+  list:
+    name: list
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Checkout Dependency
+        uses: actions/checkout@v3
+        with: 
+          repository: ProjectTSB/TheSkyBlessing
+          path: TSB-master
+          ref: refs/tags/v0.1.6
+          fetch-depth: 0
+          sparse-checkout: |
+            NaturalMergeSort
+            OhMyDat
+            ScoreToHealth
+
+      - run: |
+          mv -f TSB-master/** ../TSB-Patcher
+          ls -1URH ../**
