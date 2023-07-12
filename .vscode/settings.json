@@ -2016,7 +2016,7 @@
     "git.branchProtection": [
         "master"
     ],
-    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+    "git.branchProtectionPrompt": "alwaysPrompt",
     "gitmoji.addCustomEmoji": [
         {
             "code": ":balance_scale:",
