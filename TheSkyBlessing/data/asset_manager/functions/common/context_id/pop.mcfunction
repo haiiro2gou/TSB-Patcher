@@ -9,6 +9,7 @@
 #   api:spawner/subtract_hp
 #   asset:*/extends
 #   asset:*/super.*
+#   asset_manager:artifact/give
 #   asset_manager:effect/events/*/call_super_method
 #   asset_manager:mob/triggers/*/call_super_method
 
