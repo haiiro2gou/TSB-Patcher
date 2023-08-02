@@ -3,7 +3,7 @@
     "datapack.env.dataVersion": "1.20.1",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
-    "datapack.env.detectionDepth": 1,
+    "datapack.env.detectionDepth": 2,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
     "datapack.env.permissionLevel": 2,
