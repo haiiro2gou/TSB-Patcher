@@ -1,8 +1,8 @@
-#> api:modifier/core/receive_heal/remove
+#> api:modifier/core/max_health/remove
 #
 #
 #
-# @within function api:modifier/receive_heal/remove
+# @within function api:modifier/max_health/remove
 
 # UserStorage呼び出し
     function oh_my_dat:please
@@ -17,7 +17,7 @@
     data modify storage api: Modifiers set from storage api: NewModifiers
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.ReceiveHeal set from storage api: Modifiers
 # データの更新
-    data modify storage api: Base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base.ReceiveHeal
+    data modify storage api: Base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base.MaxHealth
     function api:modifier/core/common/update_modifier/
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.ReceiveHeal set from storage api: Modifier
 # リセット
