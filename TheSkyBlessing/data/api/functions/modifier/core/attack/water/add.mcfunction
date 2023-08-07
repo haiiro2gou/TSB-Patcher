@@ -11,12 +11,14 @@
 # 追加する
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Water append value {}
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Water[-1].UUID set from storage api: Argument.UUID
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Water[-1].Amount set from storage api: Argument.Amount
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Water[-1].Amount double -0.001 run data get storage api: Argument.Amount 1000
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Water[-1].Operation set from storage api: Argument.Operation
 # データの更新
+    data modify storage api: Base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base.Attack.Water
     data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Water
     function api:modifier/core/common/update_modifier/
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Attack.Water set from storage api: Modifier
 # リセット
+    data remove storage api: Base
     data remove storage api: Modifiers
     data remove storage api: Modifier

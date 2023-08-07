@@ -14,7 +14,7 @@
 # 50島極振り時: HP +50, MP+100, Atk+40%, Def+40%
 
 # 固定加算
-    scoreboard players add $MaxHealth Global 20000
+    scoreboard players add $MaxHealth Global 2
     execute as @a run function player_manager:bonus/update_health_bonus
     scoreboard players add $MaxMP Global 4
     execute as @a run function player_manager:bonus/update_mp_bonus
