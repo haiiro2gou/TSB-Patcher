@@ -311,8 +311,8 @@ team modify NoCollision collisionRule never
         #declare score_holder $MaxMP
         #declare score_holder $AttackBonus
         #declare score_holder $DefenseBonus
-    scoreboard players set $MaxHealth Global 200000
-    scoreboard players set $MaxMP Global 100
+    scoreboard players set $MaxHealth Global 0
+    scoreboard players set $MaxMP Global 0
     scoreboard players set $AttackBonus Global 0
     scoreboard players set $DefenseBonus Global 0
 
