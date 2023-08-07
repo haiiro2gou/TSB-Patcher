@@ -25,7 +25,6 @@ jobs:
           sparse-checkout: |
             NaturalMergeSort
             OhMyDat
-            ScoreToHealth
 
       - run: |
           mv -f TSB-master/** ../TSB-Patcher
