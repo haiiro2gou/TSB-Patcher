@@ -1,5 +1,12 @@
 {
     "values": [
+        "asset:artifact/0166.blessing_armor/trigger/equip/",
+        "asset:artifact/0207.life_is_transitory/trigger/equip/",
+        "asset:artifact/0561.solitariness/trigger/equip/",
+        "asset:artifact/0562.heartland/trigger/equip/",
+        "asset:artifact/0563.heartland/trigger/equip/",
+        "asset:artifact/0564.heartland/trigger/equip/",
+        "asset:artifact/0565.heartland/trigger/equip/",
         "asset:artifact/0736.sailor_hat/trigger/1.trigger",
         "asset:artifact/0986.order_of_healing/trigger/1.trigger",
         "asset:artifact/0980.thunder_charm/trigger/1.trigger",
