@@ -17,17 +17,16 @@
     function api:modifier/max_health/remove
 
 # 差分にする
-    execute unless score $BonusHealthOld Global matches -2147483648..2147483647 run scoreboard players set $BonusHealthOld Global 0
+    execute store result score $BonusHealthOld Temporary run data get storage api: Removed.Amount
     scoreboard players operation $Diff Temporary = $BonusHealth Global
-    scoreboard players operation $Diff Temporary -= $BonusHealthOld Global
+    scoreboard players operation $Diff Temporary -= $BonusHealthOld Temporary
 # 出力
     execute store result score $isNegative Temporary if score $Diff Temporary matches ..-1
     execute if score $isNegative Temporary matches 1 run scoreboard players operation $Diff Temporary *= $-1 Const
     execute if score $isNegative Temporary matches 0 if score $Diff Temporary matches 1.. run tellraw @s [{"text":"最大体力が","color":"white"},{"score":{"name":"$Diff","objective":"Temporary"},"color":"aqua"},{"text":"増加した","color":"white"}]
     execute if score $isNegative Temporary matches 1 if score $Diff Temporary matches 1.. run tellraw @s [{"text":"最大体力が","color":"white"},{"score":{"name":"$Diff","objective":"Temporary"},"color":"aqua"},{"text":"減少した","color":"white"}]
-# ログ残し
-    scoreboard players operation $BonusHealthOld Global = $BonusHealth Global
 # リセット
+    scoreboard players reset $BonusHealthOld Temporary
     scoreboard players reset $Diff Temporary
     scoreboard players reset $isNegative Temporary
 
