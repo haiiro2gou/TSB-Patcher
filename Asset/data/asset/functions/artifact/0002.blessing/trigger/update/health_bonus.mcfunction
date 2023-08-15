@@ -1,4 +1,4 @@
-#> player_manager:bonus/update_health_bonus
+#> asset:artifact/0002.blessing/trigger/update/health_bonus
 #
 #
 #
@@ -13,7 +13,7 @@
     #declare score_holder $isNegative
 
 # 古いのをremove
-    data modify storage api: Argument.UUID set value [I;2,2,1,1]
+    data modify storage api: Argument.UUID set value [I;1,1,2,0]
     function api:modifier/max_health/remove
 
 # 差分にする
@@ -32,6 +32,6 @@
     scoreboard players reset $isNegative Temporary
 
 # 適用
-    data modify storage api: Argument set value {Amount:-1,UUID:[I;2,2,1,1],Operation:"add"}
+    data modify storage api: Argument set value {Amount:-1,UUID:[I;1,1,2,0],Operation:"add"}
     execute store result storage api: Argument.Amount double 1 run scoreboard players get $BonusHealth Global
     function api:modifier/max_health/add

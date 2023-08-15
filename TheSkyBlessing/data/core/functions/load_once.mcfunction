@@ -311,7 +311,6 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:load_once
     #   core:handler/first_join
-    #   player_manager:bonus/**
     #   asset:artifact/0002.blessing/trigger/**
         #declare score_holder $BonusHealth
         #declare score_holder $BonusMP
