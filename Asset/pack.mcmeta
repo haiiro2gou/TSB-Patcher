@@ -1,6 +1,10 @@
 {
     "pack": {
-        "pack_format": 10,
+        "pack_format": 18,
+        "supported_formats": {
+            "min_inclusive": 18,
+            "max_inclusive": 18
+        },
         "description": "Mobや神器のAssetを入れるDatapack"
     }
 }
