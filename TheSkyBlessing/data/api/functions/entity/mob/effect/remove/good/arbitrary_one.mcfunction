@@ -1,4 +1,4 @@
-#> api:entity/mob/effect/remove/multiple
+#> api:entity/mob/effect/remove/good/arbitrary_one
 #
 # entityに付与されている良い効果のエフェクトのうち、ClearLv を満たすものを1つ削除します
 #

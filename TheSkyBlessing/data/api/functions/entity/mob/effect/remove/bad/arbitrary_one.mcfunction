@@ -1,6 +1,6 @@
-#> api:entity/mob/effect/remove/good/multiple
+#> api:entity/mob/effect/remove/bad/arbitrary_one
 #
-# entityに付与されている良い効果のエフェクトのうち、ClearLv を満たすものを全て削除します
+# entityに付与されている悪い効果のエフェクトのうち、ClearLv を満たすものを1つ削除します
 #
 # @input storage api:
 #   Argument.ClearLv : int
