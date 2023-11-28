@@ -14,7 +14,7 @@
 # セッション開く
     function lib:array/session/open
 # エフェクトをすでに持っているかを取得する
-    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[].ID
+    data modify storage lib: Array[] set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[].ID
     data modify storage lib: CompareTarget set from storage asset:effect ID
     function lib:array/compare_single
 # 該当IDのデータの取得を試みる

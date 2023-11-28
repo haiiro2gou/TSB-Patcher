@@ -7,9 +7,9 @@
 # storage呼び出し
     function oh_my_dat:please
 # effect id抽出
-    data modify storage asset:effect IDList set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[].ID
+    data modify storage asset:effect IDList[] set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[].ID
 # 条件を代入
-    data modify storage asset:effect Type set from storage api: Argument.ClearType
+    data modify storage asset:effect ClearType set from storage api: Argument.ClearType
     data modify storage asset:effect IsSingle set from storage api: Argument.IsSingle
 # ループに入れる
     function api:entity/mob/effect/core/remove/from_level/loop
