@@ -6,6 +6,7 @@
 # @output storage asset:effect TargetEffectData : EffectData | null
 # @within function
 #   api:entity/mob/effect/core/remove/from_id
+#   api:entity/mob/effect/core/remove/multiple/loop
 #   asset_manager:effect/give/give
 
 # storage呼び出し
