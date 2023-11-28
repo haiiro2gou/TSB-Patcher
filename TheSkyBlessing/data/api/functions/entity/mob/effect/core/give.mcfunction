@@ -49,12 +49,5 @@
 
     data remove storage asset:effect NonExistsInRom
 
-    data remove storage asset:effect ExtendsSafe
-    data remove storage asset:effect Name
-    data remove storage asset:effect Description
-    data remove storage asset:effect ExtendsSafe
-    data remove storage asset:effect DurationMax
-    data remove storage asset:effect StackMax
-
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop
