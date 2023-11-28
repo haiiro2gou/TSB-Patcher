@@ -4,6 +4,7 @@
 #
 # @within function
 #   api:entity/mob/effect/core/remove/multiple/
+#   api:entity/mob/effect/core/remove/multiple/loop
 
 # 先頭を取り出す
     data modify storage api: Argument.ID set from storage asset:effect IDList[0]
