@@ -32,7 +32,7 @@
     data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
     execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect NextTickEffects[-1]
     execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect NextTickEffects[-1]
-    execute if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{AllowClearWithMilk:true} run data remove storage asset:effect NextTickEffects[-1]
+    execute if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{RequireClearLv:1} run data remove storage asset:effect NextTickEffects[-1]
     execute if entity @s[tag=Death] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect NextTickEffects[-1]
 # リセット
     data remove storage asset:context this
