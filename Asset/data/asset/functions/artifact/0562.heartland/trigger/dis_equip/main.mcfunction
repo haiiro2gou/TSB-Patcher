@@ -10,6 +10,7 @@
 
 # 補正削除
     data modify storage api: Argument.UUID set value [I;1,1,562,6]
+    function api:modifier/max_health/remove
 
 # HP回復
     data modify storage lib: Argument.Heal set value 20f
