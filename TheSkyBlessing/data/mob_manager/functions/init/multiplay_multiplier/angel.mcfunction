@@ -12,11 +12,11 @@
     #declare score_holder $MultiplayMultiplierBase
     #declare score_holder $MultiplayMultiplier
 
-# ベース倍率 0.4(e1)
-    scoreboard players set $MultiplayMultiplierBase Temporary 4
-# マルチ補正倍率 0.6(e1)
-    scoreboard players set $MultiplayMultiplier Temporary 6
-# マルチ補正倍率の計算 0.6(e1) * N(e0) + 0.4(e1)
+# ベース倍率 0.8(e1)
+    scoreboard players set $MultiplayMultiplierBase Temporary 8
+# マルチ補正倍率 0.2(e1)
+    scoreboard players set $MultiplayMultiplier Temporary 2
+# マルチ補正倍率の計算 0.2(e1) * N(e0) + 0.8(e1)
     scoreboard players operation $MultiplayMultiplier Temporary *= $PlayerCount Global
     scoreboard players operation $MultiplayMultiplier Temporary += $MultiplayMultiplierBase Temporary
 # マルチ補正倍率の保存
