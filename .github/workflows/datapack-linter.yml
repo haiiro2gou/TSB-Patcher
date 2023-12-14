@@ -28,7 +28,6 @@ jobs:
           sparse-checkout: |
             NaturalMergeSort
             OhMyDat
-            ScoreToHealth
 
       - name: Deploy Dependencies
         run: |

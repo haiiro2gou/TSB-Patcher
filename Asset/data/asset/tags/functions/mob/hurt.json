@@ -67,7 +67,6 @@
         "asset:mob/0189.water_mage/hurt/1.trigger",
         "asset:mob/0190.thunder_mage/hurt/1.trigger",
         "asset:mob/0156.infringement/hurt/1.trigger",
-        "asset:mob/0186.ferocious_bee/hurt/1.trigger",
-        "asset:mob/ex.1/_/hurt"
+        "asset:mob/0186.ferocious_bee/hurt/1.trigger"
     ]
 }

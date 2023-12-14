@@ -99,8 +99,6 @@
         "asset:mob/0075.watermelon/tick/1.trigger",
         "asset:mob/0076.golden_watermelon_bomber/tick/1.trigger",
         "asset:mob/0077.golden_watermelon/tick/1.trigger",
-        "asset:mob/0139.blast_eye/tick/1.trigger",
-        "asset:mob/ex.1/_/tick",
-        "asset:mob/ex.2/_/tick"
+        "asset:mob/0139.blast_eye/tick/1.trigger"
     ]
 }
