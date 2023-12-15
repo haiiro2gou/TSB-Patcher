@@ -8,6 +8,7 @@
 # @private
     #declare storage asset:artifact
     #declare tag CanUsed
+    #declare function asset:artifact/common/check_condition/legs
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
     data modify storage asset:artifact IgnoreCondition set value ["localcd"]
