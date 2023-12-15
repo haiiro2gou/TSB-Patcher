@@ -8,7 +8,8 @@
     #declare score_holder $Random
 # ダメージ
     # 最大体力の8割
-        execute store result storage lib: Argument.Damage float 0.4 run attribute @s minecraft:generic.max_health get 1
+        function api:modifier/max_health/get
+        execute store result storage lib: Argument.Damage float 0.4 run data get storage api: Return.MaxHealth
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 補正をしない

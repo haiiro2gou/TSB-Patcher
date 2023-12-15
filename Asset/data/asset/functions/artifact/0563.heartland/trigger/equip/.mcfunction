@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:artifact/equip
 
-execute if data storage asset:context id{chest:563} run function asset:artifact/0563.heartland/trigger/equip/main
+execute if data storage asset:context id{chest:563} run function asset:artifact/0563.heartland/trigger/equip/check_condition

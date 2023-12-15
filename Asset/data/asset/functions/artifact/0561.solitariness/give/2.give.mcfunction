@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '[{"text":"۞","color":"dark_gray"},{"text":"ソリタリネス","color":"gray"},{"text":"۞","color":"dark_gray"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"孤独が唯一の友人だった。"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"孤独が唯一の友人だった。"}]','[{"text":"最大体力+4","color":"red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)

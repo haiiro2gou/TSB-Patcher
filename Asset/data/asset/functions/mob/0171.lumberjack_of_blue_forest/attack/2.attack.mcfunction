@@ -11,7 +11,10 @@
     execute at @p[tag=Victim,distance=..6] run playsound entity.ghast.hurt hostile @a ~ ~ ~ 0.5 0.8 0
 
 # 最大体力-30%
-    attribute @p[tag=Victim,distance=..6] generic.max_health modifier add 00000001-0000-0002-0000-00ab00000000 "4R.max_health_down" -0.3 multiply
+    data modify storage api: Argument.UUID set value [I;1,2,171,0]
+    data modify storage api: Argument.Amount set value -0.3
+    data modify storage api: Argument.Operation set value "multiply"
+    execute as @p[tag=Victim,distance=..6] run function api:modifier/max_health/add
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 14f

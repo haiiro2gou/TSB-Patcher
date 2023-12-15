@@ -16,8 +16,8 @@
 
 # 体力
     # 最大体力を取得
-        execute store result score $6H.MaxHP Temporary run attribute @s minecraft:generic.max_health get
-
+        function api:modifier/max_health/get
+        execute store result score $6H.MaxHP Temporary run data get storage api: Return.MaxHealth
     # 現在体力を取得
         function api:data_get/health
         execute store result score $6H.CurrentHP Temporary run data get storage api: Health 1000

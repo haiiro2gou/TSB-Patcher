@@ -21,7 +21,8 @@
 # 個数を取得
     execute store result score $Count Temporary if data storage asset:context Items.hotbar[{tag:{TSB:{ID:928}}}]
 # ダメージ
-    execute store result score $Health Temporary run attribute @s generic.max_health get 100
+    function api:modifier/max_health/get
+    execute store result score $Health Temporary run data get storage api: Return.MaxHealth 100
     scoreboard players operation $Count Temporary *= $7 Const
     scoreboard players operation $Count Temporary += $10 Const
     scoreboard players operation $Health Temporary *= $Count Temporary
