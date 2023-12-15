@@ -8,10 +8,8 @@
     playsound minecraft:item.armor.equip_generic player @a ~ ~ ~ 1 0.8
 
 # 補正を削除
-    attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-040800000007
-
-# 最大体力を反映するための即時回復
-    effect give @s instant_health 1 0
+    data modify storage api: Argument.UUID set value [I;1,1,1032,7]
+    function api:modifier/max_health/remove
 
 # 補正を追加
     execute unless entity @s[tag=!DevPrivilege,predicate=player_manager:is_believe/null] run function asset:artifact/1032.life_charm/trigger/add_modifier

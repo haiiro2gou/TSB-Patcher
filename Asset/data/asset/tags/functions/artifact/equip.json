@@ -61,6 +61,7 @@
         "asset:artifact/0707.mage_hat/trigger/1.trigger",
         "asset:artifact/0708.mage_robe_upper/trigger/1.trigger",
         "asset:artifact/0709.mage_robe_lower/trigger/1.trigger",
-        "asset:artifact/0710.mage_boots/trigger/1.trigger"
+        "asset:artifact/0710.mage_boots/trigger/1.trigger",
+        "asset:artifact/1032.life_charm/trigger/1.trigger"
     ]
 }
