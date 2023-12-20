@@ -8,8 +8,8 @@
     function oh_my_dat:please
 # 必要なデータ取得
     data modify storage asset:effect Effects set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
-# アイテム使用チェック
-    execute if score @s UsedMilk matches 1.. run tag @s add ClearEffect
+# 死亡判定
+    execute if entity @s[tag=Death] run tag @s add ClearEffect
     execute if score @s UsedTotem matches 1.. run tag @s add ClearEffect
 # 各エフェクトを処理する
     execute if data storage asset:effect Effects[0] run function asset_manager:effect/foreach
