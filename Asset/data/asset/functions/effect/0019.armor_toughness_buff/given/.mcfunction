@@ -4,7 +4,7 @@
 #
 # @within function asset:effect/0019.armor_toughness_buff/_/given
 
-# N*1の防具値上昇
+# N*1の防具強度上昇
     execute if data storage asset:context {Stack:1} run attribute @s generic.armor_toughness modifier add 00000001-0000-0003-0000-001300000000 "J.ArmorToughnessBuff" 1 add
     execute if data storage asset:context {Stack:2} run attribute @s generic.armor_toughness modifier add 00000001-0000-0003-0000-001300000000 "J.ArmorToughnessBuff" 2 add
     execute if data storage asset:context {Stack:3} run attribute @s generic.armor_toughness modifier add 00000001-0000-0003-0000-001300000000 "J.ArmorToughnessBuff" 3 add

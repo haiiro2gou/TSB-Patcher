@@ -4,7 +4,7 @@
 #
 # @within function asset:effect/0020.attack_speed_buff/_/given
 
-# N*1の防具値上昇
+# N*1の攻撃速度上昇
     execute if data storage asset:context {Stack:1} run attribute @s generic.attack_speed modifier add 00000001-0000-0003-0000-001400000000 "K.AttackSpeedBuff" 1 add
     execute if data storage asset:context {Stack:2} run attribute @s generic.attack_speed modifier add 00000001-0000-0003-0000-001400000000 "K.AttackSpeedBuff" 2 add
     execute if data storage asset:context {Stack:3} run attribute @s generic.attack_speed modifier add 00000001-0000-0003-0000-001400000000 "K.AttackSpeedBuff" 3 add
