@@ -7,7 +7,7 @@
 # リセットする
     attribute @s generic.movement_speed modifier remove 00000001-0000-0003-0000-001100000000
 
-# N*0.05のノックバック耐性上昇
+# N*0.05の移動速度上昇
     execute if data storage asset:context {Stack:1} run attribute @s generic.movement_speed modifier add 00000001-0000-0003-0000-001100000000 "H.SpeedBuff" 0.05 add
     execute if data storage asset:context {Stack:2} run attribute @s generic.movement_speed modifier add 00000001-0000-0003-0000-001100000000 "H.SpeedBuff" 0.10 add
     execute if data storage asset:context {Stack:3} run attribute @s generic.movement_speed modifier add 00000001-0000-0003-0000-001100000000 "H.SpeedBuff" 0.15 add
