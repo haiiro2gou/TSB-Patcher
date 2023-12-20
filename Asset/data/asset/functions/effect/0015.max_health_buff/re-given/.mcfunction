@@ -8,7 +8,7 @@
     data modify storage api: Argument.UUID set value [I;1,3,15,0]
     function api:modifier/max_health/remove
 
-# N*5%の基礎攻撃力上昇
+# N*1の最大体力上昇
     data modify storage api: Argument.UUID set value [I;1,3,15,0]
     execute store result storage api: Argument.Amount double 0.05 run data get storage asset:context Stack 1
     data modify storage api: Argument.Operation set value "add"
