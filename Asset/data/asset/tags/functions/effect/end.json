@@ -11,6 +11,9 @@
         "asset:effect/0009.defense_magic_buff/_/end",
         "asset:effect/0010.defense_fire_buff/_/end",
         "asset:effect/0011.defense_water_buff/_/end",
-        "asset:effect/0012.defense_thunder_buff/_/end"
+        "asset:effect/0012.defense_thunder_buff/_/end",
+        "asset:effect/0013.heal_buff/_/end",
+        "asset:effect/0014.receive_heal_buff/_/end",
+        "asset:effect/0015.max_health_buff/_/end"
     ]
 }
