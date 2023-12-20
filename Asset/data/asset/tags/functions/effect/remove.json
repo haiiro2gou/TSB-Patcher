@@ -15,6 +15,7 @@
         "asset:effect/0013.heal_buff/_/remove",
         "asset:effect/0014.receive_heal_buff/_/remove",
         "asset:effect/0015.max_health_buff/_/remove",
-        "asset:effect/0016.knockback_resistance_buff/_/remove"
+        "asset:effect/0016.knockback_resistance_buff/_/remove",
+        "asset:effect/0017.movement_speed_buff/_/remove"
     ]
 }
