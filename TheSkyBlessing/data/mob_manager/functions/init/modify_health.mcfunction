@@ -8,7 +8,9 @@
     execute store result score @s MobHealthMax run attribute @s generic.max_health get 1
 # 付近雑魚のHPマルチ補正をかける
     execute if entity @s[tag=Enemy] run function mob_manager:init/multiplay_multiplier/normal
-# 体力を緩衝体力に移す
-    execute store result entity @s AbsorptionAmount float 1 run scoreboard players get @s MobHealthMax
-    attribute @s generic.max_health base set 0.01
-    data modify entity @s Health set value 0.01f
+# 現在体力を設定する
+    scoreboard players operation @s MobHealth = @s MobHealthMax
+# 体力を引き上げて無敵にする
+    attribute @s generic.max_health base set 1024
+    effect give @s[type=!#lib:undead] instant_health infinite 100 true
+    effect give @s[type=#lib:undead] instant_damage infinite 100 true

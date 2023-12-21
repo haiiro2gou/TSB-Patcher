@@ -56,13 +56,12 @@
         data modify storage asset:mob Attributes[{Name:"generic.knockback_resistance"}].Base set from storage asset:mob KnockBackResist
     # 適用
         data modify entity @s Attributes set from storage asset:mob Attributes
-    # 体力
+    # 体力 (100倍で補正する)
         data modify entity @s Health set value 1024f
-        execute store result score @s MobHealthMax run data get storage asset:mob Health 10
+        execute store result score @s MobHealthMax run data get storage asset:mob Health 1
         execute if data storage asset:mob {Type:"Enemy"} run function mob_manager:init/multiplay_multiplier/normal
         execute if data storage asset:mob {Type:"Enemy.Boss"} run function mob_manager:init/multiplay_multiplier/angel
-        execute store result score @s MobHealth run scoreboard players get @s MobHealthMax
-        # execute store result entity @s AbsorptionAmount float 1 run scoreboard players get @s MobHealthMax
+        scoreboard players operation @s MobHealth = @s MobHealthMax
     # そのまま適用するやつ
         execute store result score @s MobID run data get storage asset:mob ID
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
