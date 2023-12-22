@@ -12,7 +12,6 @@ jobs:
   lint:
     name: lint
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -27,7 +26,6 @@ jobs:
           fetch-depth: 0
           sparse-checkout: |
             NaturalMergeSort
-            OhMyDat
             ScoreToHealth
 
       - name: Deploy Dependencies
