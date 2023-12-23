@@ -49,6 +49,7 @@
     data modify storage asset:artifact Item.tag.TSB.Triggers set from storage asset:artifact Triggers
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
+    data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCount
 
 # 名前
     # 残り回数が存在する場合

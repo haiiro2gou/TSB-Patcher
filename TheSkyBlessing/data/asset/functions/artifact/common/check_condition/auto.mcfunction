@@ -8,4 +8,5 @@
 # @within function asset:artifact/*/*/2.check_condition
 
 data modify storage asset:artifact TargetSlot set value 'auto'
-function asset_manager:artifact/check/
+execute unless data storage asset:artifact Index run data modify storage asset:artifact Index set value 0
+function asset_manager:artifact/check/ with storage asset:artifact
