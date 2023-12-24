@@ -6,8 +6,7 @@
 #   asset_manager:artifact/**
 #   asset:artifact/*/register
 #   asset:artifact/*/give/2.give
-#   asset:artifact/*/trigger/**check_condition
-#   asset:artifact/*/trigger/**main
+#   asset:artifact/*/trigger/**
 #   asset:artifact/common/**
     #declare storage asset:artifact
 
