@@ -6,6 +6,8 @@
 
 # 神器データの取得
     function asset_manager:artifact/data/current/get
+# 古いデータの回収
+    execute unless data storage asset:artifact TargetItems[0].tag.TSB.Triggers[0] run function asset_manager:artifact/data/migrate
 # MP減少処理
     function asset_manager:artifact/use/remove_mp with storage asset:artifact
 # 特殊クールダウン保存
