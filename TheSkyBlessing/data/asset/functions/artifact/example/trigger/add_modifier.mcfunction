@@ -16,7 +16,7 @@
     function api:modifier/max_mp/remove
 
 # 個数
-    execute store result score $Count Temporary run data get storage asset:context New.Items.hotbar[{tag:{TSB:{ID:65535}}}]
+    execute store result score $Count Temporary if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:65535}}}]
 # 補正を追加
     # 基礎攻撃力 N*5%
         data modify storage api: Argument.UUID set value [I;1,1,65535,7]

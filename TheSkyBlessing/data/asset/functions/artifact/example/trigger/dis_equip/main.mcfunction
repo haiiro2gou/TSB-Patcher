@@ -6,6 +6,12 @@
 
 # 補正を削除
     data modify storage api: Argument.UUID set value [I;1,1,65535,7]
+    function api:modifier/attack/base/remove
+    data modify storage api: Argument.UUID set value [I;1,1,65535,7]
+    function api:modifier/defense/base/remove
+    data modify storage api: Argument.UUID set value [I;1,1,65535,7]
+    function api:modifier/max_health/remove
+    data modify storage api: Argument.UUID set value [I;1,1,65535,7]
     function api:modifier/max_mp/remove
 
 # 補正を追加
