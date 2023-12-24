@@ -5,7 +5,7 @@
 # @within function asset:artifact/example/trigger/attack/1.trigger
 
 # 神器IDの設定
-    data modify storage asset:artifact TargetID set value 2147483647
+    data modify storage asset:artifact TargetID set value 65535
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
     function asset:artifact/common/check_condition/mainhand
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
