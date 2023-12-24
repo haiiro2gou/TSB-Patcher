@@ -5,7 +5,7 @@
 # 発動可能な場合実行者に`CanUsed`のtagが付与されます。
 #
 # @output tag @s CanUsed
-# @within function asset:artifact/**check_condition
+# @within function asset:artifact/*/**check_condition
 
 data modify storage asset:artifact TargetSlot set value 'feet'
 execute unless data storage asset:artifact Index run data modify storage asset:artifact Index set value 0

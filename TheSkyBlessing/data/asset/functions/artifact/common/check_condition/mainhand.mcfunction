@@ -6,7 +6,7 @@
 #
 # @input as player
 # @output tag @s CanUsed
-# @within function asset:artifact/**check_condition
+# @within function asset:artifact/*/**check_condition
 
 data modify storage asset:artifact TargetSlot set value 'mainhand'
 execute unless data storage asset:artifact Index run data modify storage asset:artifact Index set value 0
