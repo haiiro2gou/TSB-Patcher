@@ -4,8 +4,6 @@
 #
 # @input storage api:
 #   Argument.ID : int
-# @output storage api:
-#   Return.Effect : Component
 # @api
 
 # validate

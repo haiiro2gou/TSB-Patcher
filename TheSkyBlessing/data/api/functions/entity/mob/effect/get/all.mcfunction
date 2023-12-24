@@ -3,8 +3,6 @@
 # Effect一覧を取得する
 #
 # @input as player
-# @output storage api:
-#   Return.Effects : Component[]
 # @api
 
 # storage呼び出し
