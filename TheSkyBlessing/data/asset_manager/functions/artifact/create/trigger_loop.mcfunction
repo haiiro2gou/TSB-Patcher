@@ -25,6 +25,11 @@
 # 7? スペシャル☆クールタイム
     execute if data storage asset:temp Trigger.SpecialCooldown run function asset_manager:artifact/create/set_special_cooltime
 
+# Lore一括追加
+    data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
+# リセット
+    data modify block 10000 0 10000 Items set value []
+
 # loop
     data remove storage asset:temp Trigger
     data remove storage asset:temp Triggers[0]
