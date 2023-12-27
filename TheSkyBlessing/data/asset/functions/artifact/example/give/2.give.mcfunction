@@ -12,7 +12,7 @@ data modify storage asset:artifact Item set value "minecraft:stick"
 data modify storage asset:artifact Name set value '{"text":"","extra":[{"text":"テスト君"},{"text":"二式","color":"yellow"}]}'
 data modify storage asset:artifact Lore set value ['{"text":"Trigger並列化の先行版。"}','{"text":"これで神器のバリエーションが増えるといいな。"}']
 # data modify storage asset:artifact CostText set value '{"text":""}'
-data modify storage asset:artifact RemainingCount set value 50
+# data modify storage asset:artifact RemainingCount set value
 data modify storage asset:artifact Triggers set value []
 # Trigger 0
     data modify storage asset:artifact Triggers append value {}
