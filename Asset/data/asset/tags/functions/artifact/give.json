@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:artifact/0769.shaking_splash/give/1.trigger",
+        "asset:artifact/0770.shaking_splash_empty/give/1.trigger",
         "asset:artifact/0787.aurora_helm/give/1.trigger",
         "asset:artifact/0788.aurora_armor/give/1.trigger",
         "asset:artifact/0789.aurora_leggings/give/1.trigger",
