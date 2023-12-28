@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:artifact/0775.jade_armor/register",
+        "asset:artifact/0778.jade_armor/register",
         "asset:artifact/0719.sword_of_divine_sound/register",
         "asset:artifact/0690.steam_core/register",
         "asset:artifact/0724.oblivious_snow/register",
