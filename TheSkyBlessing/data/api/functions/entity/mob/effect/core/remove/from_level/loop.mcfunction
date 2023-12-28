@@ -15,7 +15,7 @@
     data modify storage asset:effect ID set from storage asset:effect IDList[0]
     function asset_manager:effect/common/try_pop_effect_data
 
-# 存在する場合]
+# 存在する場合
         data modify storage asset:effect CanRemove set value true
     # レベルチェック
         execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect CanRemove set value false
@@ -31,9 +31,9 @@
         execute if data storage asset:effect TargetEffectData run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects append from storage asset:effect TargetEffectData
 
 # リセット
-    scoreboard players reset $ClearLv Temporary
-    scoreboard players reset $RequiredLv Temporary
+    data remove storage asset:effect ID
+    data remove storage asset:effect TargetEffectData
 
 # 残っていたら再帰
     data remove storage asset:effect IDList[0]
-    execute unless data storage asset:effect {Succeeded:1,IsSingle:true} if data storage asset:effect IDList[0] run function api:entity/mob/effect/core/remove/from_level/loop
+    execute unless data storage asset:effect {CanRemove:true,IsSingle:true} if data storage asset:effect IDList[0] run function api:entity/mob/effect/core/remove/from_level/loop
