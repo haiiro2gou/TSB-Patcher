@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:artifact/1038.flame_devil_head/give/1.trigger",
+        "asset:artifact/1039.flame_devil_chest/give/1.trigger",
+        "asset:artifact/1040.flame_devil_legs/give/1.trigger",
+        "asset:artifact/1041.flame_devil_feet/give/1.trigger",
         "asset:artifact/0758.sina_tk/give/1.trigger",
         "asset:artifact/0759.sina_tk_empty/give/1.trigger",
         "asset:artifact/0638.spirit_garment/give/1.trigger",
