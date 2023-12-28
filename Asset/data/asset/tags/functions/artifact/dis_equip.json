@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:artifact/0715.world_tree_crown/trigger/dis_equip/",
+        "asset:artifact/0716.world_tree_branch/trigger/dis_equip/",
+        "asset:artifact/0717.world_tree_stem/trigger/dis_equip/",
+        "asset:artifact/0718.world_tree_root/trigger/dis_equip/",
         "asset:artifact/0711.deep_sea_coral_crown/trigger/dis_equip/",
         "asset:artifact/0712.deep_sea_coral_raiment/trigger/dis_equip/",
         "asset:artifact/0713.deep_sea_coral_leggings/trigger/dis_equip/",
