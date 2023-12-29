@@ -30,7 +30,7 @@
     execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..10,limit=1] run scoreboard players set $CountMul Temporary 5
 
 # ダメージ/計算
-    execute store result score $Health Temporary run data get entity @e[type=#lib:living,type=!player,tag=Victim,distance=..10,limit=1] AbsorptionAmount 100
+    scoreboard players operation $Health Temporary = @e[type=#lib:living,type=!player,tag=Victim,distance=..10,limit=1] MobHealth
     scoreboard players operation $Count Temporary *= $CountMul Temporary
     scoreboard players operation $Count Temporary += $Base Temporary
     scoreboard players operation $Health Temporary *= $Count Temporary
