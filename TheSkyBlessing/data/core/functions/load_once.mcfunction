@@ -156,6 +156,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
+        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
 
     #> AssetManager: Mob -Private
     # @within function
