@@ -33,6 +33,14 @@
     # @within function
     #   asset_manager:teleporter/**
         scoreboard objectives add TeleporterLogCD dummy {"text":"他のテレポーターが発見できなかった際のログのクールダウン"}
+
+    #> イベントハンドラ用スコアボード
+    # @within function
+    #   asset_manager:artifact/triggers/**
+    #   player_manager:vanilla_attack/**
+    #   core:load_once
+    #   core:handler/*
+    #   core:tick/**
         scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
 
     #> PlayerManager - Motionチェック用スコアボード
