@@ -85,7 +85,6 @@ kill 0-0-0-0-0
     #alias entity commonMarker 0-0-0-0-0
     #alias entity commonArmorStand 0-0-0-0-1
 summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
-summon armor_stand 0.0 0.0 0.0 {UUID:[I;0,0,0,1],Marker:1b,Invisible:1b}
 
 
 #> 当たり判定を消す汎用Teamの作成
@@ -110,7 +109,6 @@ team modify NoCollision collisionRule never
         execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
         execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
-    scoreboard players set $Difficulty Global 2
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
@@ -217,8 +215,10 @@ team modify NoCollision collisionRule never
     #       player_manager:pos_fix_and_calc_diff
     #       api:player_vector/get
     #   predicate lib:is_player_moving
+        scoreboard objectives add PlayerPosDiff.X dummy
+        scoreboard objectives add PlayerPosDiff.Y dummy
+        scoreboard objectives add PlayerPosDiff.Z dummy
         scoreboard objectives add PlayerStopTime dummy
-        scoreboard objectives add PosPacketLossDetectAfterTick dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
