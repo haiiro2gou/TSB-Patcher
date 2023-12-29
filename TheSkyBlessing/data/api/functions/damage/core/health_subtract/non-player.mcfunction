@@ -27,7 +27,8 @@
 # ノックバック無効を削除
     attribute @s minecraft:generic.knockback_resistance modifier remove 3-0-1-0-100000001
 # 代入 / kill
-    execute if score $Health Temporary matches 1.. store result entity @s AbsorptionAmount float 0.001 run scoreboard players get $Health Temporary
+    execute if score $Health Temporary matches 1.. run scoreboard players operation $Health Temporary /= $10 Const
+    execute if score $Health Temporary matches 1.. run scoreboard players operation @s MobHealth = $Health Temporary
     execute if score $Health Temporary matches ..0 as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add Killer
     execute if score $Health Temporary matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
     execute if score $Health Temporary matches ..0 run damage @s 9999 minecraft:player_attack by @p[tag=Killer]
