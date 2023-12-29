@@ -13,9 +13,9 @@
     #declare score_holder $MultiplayMultiplier
 
 # ベース倍率 0.8(e1)
-    scoreboard players set $MultiplayMultiplierBase Temporary 8
+    scoreboard players set $MultiplayMultiplierBase Temporary 80
 # マルチ補正倍率 0.2(e1)
-    scoreboard players set $MultiplayMultiplier Temporary 2
+    scoreboard players set $MultiplayMultiplier Temporary 20
 # マルチ補正倍率の計算 0.2(e1) * N(e0) + 0.8(e1)
     scoreboard players operation $MultiplayMultiplier Temporary *= $PlayerCount Global
     scoreboard players operation $MultiplayMultiplier Temporary += $MultiplayMultiplierBase Temporary
@@ -23,7 +23,6 @@
     scoreboard players operation @s MobMaxHealthMultiplier = $MultiplayMultiplier Temporary
 # マルチ補正の適用 (e1 -> e0)
     scoreboard players operation @s MobHealthMax *= $MultiplayMultiplier Temporary
-    scoreboard players operation @s MobHealthMax /= $10 Const
 # リセット
     scoreboard players reset $NearbyPlayerCount Temporary
     scoreboard players reset $MultiplayMultiplier Temporary

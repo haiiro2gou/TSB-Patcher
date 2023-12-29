@@ -19,12 +19,11 @@
 # 個数を取得
     execute store result score $Count Temporary if data storage asset:context Items.hotbar[{tag:{TSB:{ID:2147483647}}}]
 # ダメージ
-    execute store result score $Health Temporary run data get entity @e[type=#lib:living,type=!player,tag=Victim,distance=..70,limit=1] AbsorptionAmount 100
+    scoreboard players operation $Health Temporary = @e[type=#lib:living,type=!player,tag=Victim,distance=..70,limit=1] MobHealth
     scoreboard players operation $Count Temporary *= $5 Const
     scoreboard players operation $Count Temporary += $10 Const
     scoreboard players operation $Health Temporary *= $Count Temporary
-    scoreboard players operation $Health Temporary /= $100 Const
-    execute store result storage lib: Argument.Damage float 0.01 run scoreboard players get $Health Temporary
+    execute store result storage lib: Argument.Damage float 0.0001 run scoreboard players get $Health Temporary
 # ダメージ/その他の設定
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
