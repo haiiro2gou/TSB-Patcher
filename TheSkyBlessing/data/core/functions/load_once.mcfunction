@@ -85,7 +85,6 @@ kill 0-0-0-0-0
     #alias entity commonMarker 0-0-0-0-0
     #alias entity commonArmorStand 0-0-0-0-1
 summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
-summon armor_stand 0.0 0.0 0.0 {UUID:[I;0,0,0,1],Marker:1b,Invisible:1b}
 
 
 #> 当たり判定を消す汎用Teamの作成
@@ -110,7 +109,6 @@ team modify NoCollision collisionRule never
         execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
         execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
-    scoreboard players set $Difficulty Global 2
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
@@ -156,7 +154,6 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
-        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
 
     #> AssetManager: Mob -Private
     # @within function
@@ -174,22 +171,11 @@ team modify NoCollision collisionRule never
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
 
-    #> AssetManager: Teleporter
-    # @within function
-    #   asset_manager:teleporter/**
-        scoreboard objectives add TeleporterLogCD dummy {"text":"他のテレポーターが発見できなかった際のログのクールダウン"}
-
     #> AssetManager: Island
     # @within function
     #   asset_manager:island/**
         scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
         scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
-
-    #> AssetManager: Effect
-    # @within function
-    #   asset_manager:effect/**
-        scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
-        scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
 
     #> イベントハンドラ用スコアボード
     # @within function
@@ -200,7 +186,7 @@ team modify NoCollision collisionRule never
     #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
-        scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
+        scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
@@ -223,8 +209,10 @@ team modify NoCollision collisionRule never
     #       player_manager:pos_fix_and_calc_diff
     #       api:player_vector/get
     #   predicate lib:is_player_moving
+        scoreboard objectives add PlayerPosDiff.X dummy
+        scoreboard objectives add PlayerPosDiff.Y dummy
+        scoreboard objectives add PlayerPosDiff.Z dummy
         scoreboard objectives add PlayerStopTime dummy
-        scoreboard objectives add PosPacketLossDetectAfterTick dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
@@ -317,13 +305,14 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:load_once
     #   core:handler/first_join
-    #   asset:artifact/0002.blessing/trigger/**
-        #declare score_holder $BonusHealth
-        #declare score_holder $BonusMP
+    #   player_manager:bonus/**
+    #   asset:sacred_treasure/0002.blessing/trigger/**
+        #declare score_holder $MaxHealth
+        #declare score_holder $MaxMP
         #declare score_holder $AttackBonus
         #declare score_holder $DefenseBonus
-    scoreboard players set $BonusHealth Global 0
-    scoreboard players set $BonusMP Global 0
+    scoreboard players set $MaxHealth Global 200000
+    scoreboard players set $MaxMP Global 100
     scoreboard players set $AttackBonus Global 0
     scoreboard players set $DefenseBonus Global 0
 
@@ -386,9 +375,5 @@ team modify NoCollision collisionRule never
     function #asset:mob/load
     function #asset:effect/load
 
-
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
-
-#> ROMを初期化する
-    function rom:init
