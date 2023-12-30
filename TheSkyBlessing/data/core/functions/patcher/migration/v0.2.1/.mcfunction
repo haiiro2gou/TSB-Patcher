@@ -1,11 +1,11 @@
-#> core:patcher/migration/v0.0.3/
+#> core:patcher/migration/v0.2.1/
 #
-#
+# v0.2.0 -> v0.2.1
 #
 # @within function core:patcher/migration/
 
 # マイグレーション先バージョン設定
-    data modify storage global Patcher.Version set value "v0.0.3"
+    data modify storage global Patcher.Version set value "v0.2.1"
 
 #> from: e5c883e76c6e66dac6ddbc23c81fcc57a7120c99
 # @private
