@@ -60,7 +60,7 @@
 
 # 演出用の針を召喚する
     summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["1A.ClockHand","Object","Uninterferable"]}
-    execute as @e[type=armor_stand,tag=1A.ClockHand,distance=..1,sort=nearest,limit=1] run tp @e[type=zombie,tag=MobInit,distance=..0.01]
+    execute as @e[type=armor_stand,tag=1A.ClockHand,distance=..1,sort=nearest,limit=1] run tp @e[type=zombie,tag=MobInit,distance=..0.01,limit=1]
 
 #地面におくやつ
     summon glow_item_frame ~ ~ ~-8 {Tags:["1A.ClockItemFrame"],Facing:1b,ItemRotation:0b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20217}}}
