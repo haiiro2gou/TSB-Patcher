@@ -1,38 +1,38 @@
 name: lint-datapack
 on:
-  push:
-  pull_request:
-  workflow_dispatch:
+    push:
+    pull_request:
+    workflow_dispatch:
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
-  cancel-in-progress: true
+    group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
+    cancel-in-progress: true
 jobs:
-  lint:
-    name: lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+    lint:
+        name: lint
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v4
+            with:
+                fetch-depth: 0
 
-      - name: Checkout Dependency
-        uses: actions/checkout@v3
-        with:
-          repository: ProjectTSB/TheSkyBlessing
-          path: TSB-master
-          fetch-depth: 0
-          sparse-checkout: |
-            NaturalMergeSort
+          - name: Checkout Dependency
+            uses: actions/checkout@v4
+            with:
+                repository: ProjectTSB/TheSkyBlessing
+                path: TSB-master
+                fetch-depth: 0
+                sparse-checkout: |
+                    NaturalMergeSort
 
-      - name: Deploy Dependencies
-        run: |
-          mv -f TSB-master/** ../TSB-Patcher
-          rm -r TSB-master
+          - name: Deploy Dependencies
+            run: |
+                mv -f TSB-master/** ../TSB-Patcher
+                rm -r TSB-master
 
-      - name: Datapack Linter
-        uses: ChenCMD/datapack-linter@v2
-        with:
-          muteSuccessResult: true
-          ignoreLintPathPattern: |
-            animated_java:**
+          - name: Datapack Linter
+            uses: ChenCMD/datapack-linter@v2
+            with:
+                muteSuccessResult: true
+                ignoreLintPathPattern: |
+                    animated_java:**
