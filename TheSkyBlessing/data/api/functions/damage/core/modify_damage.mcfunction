@@ -11,7 +11,7 @@
     #declare score_holder $Damage
     #declare score_holder $Modifier
     #declare score_holder $Temp
-    #declare score_holder $Average
+    #declare score_holder $Multiplier
 
 # 必要なデータの取得と加算
     # 元ダメージ
@@ -24,20 +24,18 @@
         execute if data storage api: Argument{AttackType:"Physical"} unless data storage api: Modifiers.Physical run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{AttackType:"Magic"} store result score $Temp Temporary run data get storage api: Modifiers.Magic 100
         execute if data storage api: Argument{AttackType:"Magic"} unless data storage api: Modifiers.Magic run scoreboard players set $Temp Temporary 100
-        scoreboard players operation $Average Temporary += $Temp Temporary
+        scoreboard players operation $Multiplier Temporary += $Temp Temporary
     # 第二属性
-        execute if data storage api: Argument{ElementType:"None"} run scoreboard players operation $Temp Temporary = $Average Temporary
+        execute if data storage api: Argument{ElementType:"None"} run scoreboard players set $Temp Temporary 0
         execute if data storage api: Argument{ElementType:"Fire"} store result score $Temp Temporary run data get storage api: Modifiers.Fire 100
         execute if data storage api: Argument{ElementType:"Fire"} unless data storage api: Modifiers.Fire run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{ElementType:"Water"} store result score $Temp Temporary run data get storage api: Modifiers.Water 100
         execute if data storage api: Argument{ElementType:"Water"} unless data storage api: Modifiers.Water run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{ElementType:"Thunder"} store result score $Temp Temporary run data get storage api: Modifiers.Thunder 100
         execute if data storage api: Argument{ElementType:"Thunder"} unless data storage api: Modifiers.Thunder run scoreboard players set $Temp Temporary 100
-        scoreboard players operation $Average Temporary += $Temp Temporary
-    # 平均値
-        scoreboard players operation $Average Temporary /= $2 Const
+        scoreboard players operation $Multiplier Temporary += $Temp Temporary
     # 補正値の計算
-        scoreboard players operation $Modifier Temporary *= $Average Temporary
+        scoreboard players operation $Modifier Temporary *= $Multiplier Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
 # 最低値設定
     scoreboard players operation $Modifier Temporary > $25 Const
@@ -47,7 +45,7 @@
     execute store result storage api: ModifiedDamage double 0.0001 run scoreboard players get $Damage Temporary
 # リセット
     data remove storage api: Modifiers
-    scoreboard players reset $Average Temporary
+    scoreboard players reset $Multiplier Temporary
     scoreboard players reset $Damage Temporary
     scoreboard players reset $Modifier Temporary
     scoreboard players reset $Temp Temporary
