@@ -27,7 +27,7 @@ The fork of TSB with latest updates applied
 
 > 1. Download and unzip datapacks.zip.
 > 2. Put (replace) the contents zip file directly into the `datapacks` directory of your TSB world you are playing in.
-> 3. Launch your TSB world with Java Edition v1.20.2.
+> 3. Launch your TSB world with Java Edition v1.20.4.
 
 ## その他 (Others)
 
