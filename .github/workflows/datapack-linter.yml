@@ -11,6 +11,13 @@ jobs:
         name: lint
         runs-on: ubuntu-latest
         steps:
+          - name: Generate Token
+            id: generate_token
+            uses: tibdex/github-app-token@v1
+            with:
+                app_id: ${{ secrets.UPDATER_ID }}
+                private_key: ${{ secrets.UPDATER_KEY }}
+
           - name: Checkout Repository
             uses: actions/checkout@v4
             with:
@@ -36,3 +43,60 @@ jobs:
                 muteSuccessResult: true
                 ignoreLintPathPattern: |
                     animated_java:**
+
+          - name: Checkout Asset
+            if: ${{ github.ref == 'refs/heads/v1' }}
+            uses: actions/checkout@v4
+            with:
+                repository: haiiro2gou/TSB-Asset
+                ref: patcher/v1
+                path: ./Asset2
+                fetch-depth: 0
+                persist-credentials: false
+
+          - name: Setup minimum typescript code runner
+            if: ${{ github.ref == 'refs/heads/v1'}}
+            run: |
+                npm i -g ts-node
+                npm i -D @types/node
+
+          - name: Generate declares.d.mcfunction
+            if: ${{ github.ref == 'refs/heads/v1' }}
+            run: |
+                ts-node ./.github/workflows/make-declares-mcf.ts
+            env:
+                CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
+                REPOSITORY: haiiro2gou/TSB-Patcher
+                BRANCH: v1
+                VISIBILITY_FILTER: |
+                    function@asset:artifact/artifact_name/trigger/2.check_condition
+                    function@asset:artifact/artifact_name/trigger/3.main
+                    function@asset:artifact/artifact_name/give/2.give
+                    function@asset:island/island_id/register/register
+                    function@asset:mob/mob_name/summon/2.summon
+                    function@asset:mob/mob_name/register
+                    function@asset:mob/mob_name/attack/
+                    function@asset:mob/mob_name/death/
+                    function@asset:mob/mob_name/hurt/
+                    function@asset:mob/mob_name/tick/
+                    function@asset:mob/mob_name/attack/SOMETHING_FUNCTION
+                    function@asset:mob/mob_name/death/SOMETHING_FUNCTION
+                    function@asset:mob/mob_name/hurt/SOMETHING_FUNCTION
+                    function@asset:spawner/spawner_id/register
+                    function@asset:teleporter/tp_id/register
+                    function@asset:trader/trader_name/register/register
+                OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
+                OUTPUT_RESOURCE_PATH: minecraft:declares.d
+
+          - name: Deploy declares to Asset Repository
+            if: ${{ github.ref == 'refs/heads/v1' }}
+            uses: actions-js/push@v1.4
+            with:
+                github_token: ${{ steps.generate_token.outputs.token }}
+                repository: haiiro2gou/TSB-Asset
+                branch: patcher/v1
+                directory: ./Asset2
+                message: |
+                    Update Declares from TSB-Patcher@${{ github.SHA }}
+
+                    [regenerate cache]
