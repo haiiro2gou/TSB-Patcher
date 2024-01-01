@@ -2,8 +2,7 @@
 #
 # 神器の作成部 ここでID等を定義する
 #
-# @user
-# @private
+# @within function asset:artifact/example/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:artifact/common/giveを実行することで入手可能。
