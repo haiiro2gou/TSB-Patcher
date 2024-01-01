@@ -97,6 +97,6 @@ jobs:
                 branch: patcher/v1
                 directory: ./Asset2
                 message: |
-                    Update Declares from TSB-Patcher@${{ github.SHA }}
+                    Update Declares from haiiro2gou/TSB-Patcher@${{ github.SHA }}
 
                     [regenerate cache]
