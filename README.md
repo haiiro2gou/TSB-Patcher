@@ -1,6 +1,6 @@
 # TSB-Patcher
 
-最新要素が適用されたTSB二次創作データパック
+最新要素が適用されたTSB二次創作データパック  
 The fork of TSB with latest updates applied
 
 [![stars](https://img.shields.io/github/stars/haiiro2gou/TSB-patcher?logo=github)](https://github.com/haiiro2gou/TSB-patcher/stargazers)
@@ -16,14 +16,14 @@ The fork of TSB with latest updates applied
 
 ## 対応バージョン (Versions)
 
-- Java版 1.20.2
+- Java版 1.20.4
 - TSB v0.1.6
 
 ## 導入方法 (How to use)
 
 1. `datapacks.zip`をダウンロードして、解凍する
 2. 遊んでいるTSBのワールドの`datapacks`ディレクトリに中身のzipファイルを**そのまま**入れる（置き換える）
-3. Java Edition v1.20.2でワールドを起動する
+3. Java Edition v1.20.4でワールドを起動する
 
 > 1. Download and unzip datapacks.zip.
 > 2. Put (replace) the contents zip file directly into the `datapacks` directory of your TSB world you are playing in.
