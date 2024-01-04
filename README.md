@@ -35,8 +35,8 @@ The fork of TSB with latest updates applied
 
 このリポジトリでは、以下のディレクトリを除き、ProjectTSBにより[CC0-1.0 Universal](LICENSE)ライセンスが適用されています。
 
-- [data/asset](data/asset/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/Asset/LICENSE) / Copyright by ProjectTSB)
-- [data/rom](data/rom/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/OhMyDat/LICENSE) / Copyright by 赤石愛)
+- [Asset](Asset/data/asset/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/Asset/LICENSE) / Copyright by ProjectTSB)
+- [TheSkyBlessing/data/rom](TheSkyBlessing/data/rom/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/OhMyDat/LICENSE) / Copyright by 赤石愛)
 
 ### 謝辞 (Special Thanks)
 
