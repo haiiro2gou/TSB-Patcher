@@ -1,6 +1,6 @@
 #> core:patcher/migration/v1.0.0/
 #
-# v0.3.0 -> v1.0.0
+# v0.4.1 -> v1.0.0
 #
 # @within function core:patcher/migration/
 
