@@ -55,6 +55,6 @@ The fork of TSB with latest updates applied
 
 ### 各種リンク (Contact)
 
-**Discord: haiiro#3187**  
+**Discord: haiiro2gou**  
 **X (Twitter): [@blanoir3298](https://x.com/blanoir3298)**  
 **Youtube: [はいいろ。](https://www.youtube.com/channel/UC4HoswwsCjgVmZlmhZ0Dpbg)**
