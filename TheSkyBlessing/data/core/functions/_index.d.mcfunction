@@ -9,7 +9,7 @@
 # TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
 #> Global Vars - Private
 # @within *
-#   core:load_once
+#   core:patcher/load_once
 #   api:global_vars/difficulty/**
     #declare score_holder $Difficulty
 
@@ -19,4 +19,4 @@
 
 #> DistributedIntervalGroup
 # @within function **6_distributed_interval
-#declare score_holder $DistributeGroup
+    #declare score_holder $DistributeGroup
