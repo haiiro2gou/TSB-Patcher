@@ -20,7 +20,7 @@
     scoreboard players set $MultiplayMultiplierBase Temporary 90
 # マルチ補正倍率 0.10(e1)
     scoreboard players set $MultiplayMultiplier Temporary 10
-# マルチ補正倍率の計算 0.1(e1) * N(e0) + 0.9(e1)
+# マルチ補正倍率の計算 0.10(e1) * N(e0) + 0.90(e1)
     scoreboard players operation $MultiplayMultiplier Temporary *= $NearbyPlayerCount Temporary
     scoreboard players operation $MultiplayMultiplier Temporary += $MultiplayMultiplierBase Temporary
 # マルチ補正倍率の保存
