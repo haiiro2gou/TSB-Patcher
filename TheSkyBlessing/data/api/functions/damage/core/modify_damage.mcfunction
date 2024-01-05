@@ -39,7 +39,7 @@
         scoreboard players operation $Modifier Temporary *= $Multiplier Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
 # 最低値設定
-    scoreboard players operation $Modifier Temporary > $25 Const
+    scoreboard players operation $Modifier Temporary > $10 Const
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
