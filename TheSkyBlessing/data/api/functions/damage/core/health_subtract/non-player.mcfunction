@@ -4,10 +4,10 @@
 #
 # @within function api:damage/core/health_subtract/
 
-#>
+#> Val
 # @private
-#declare score_holder $Fluctuation
-#declare tag UUIDAttacker
+    #declare score_holder $Fluctuation
+    #declare tag UUIDAttacker
 
 # ダメージ表示
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
