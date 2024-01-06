@@ -8,6 +8,7 @@
 #   Name : TextComponent
 #   Lore : TextComponent[]
 #   RemainingCount? : int
+#   RemainingCountMax? : int
 #   Slot : Slot
 #   Trigger : Trigger
 #   Condition? : TextComponent
@@ -37,6 +38,7 @@
     execute unless data storage asset:artifact Name run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Name","color":"red"}]
     execute unless data storage asset:artifact Lore run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Lore","color":"red"}]
     # execute unless data storage asset:artifact RemainingCount run
+    execute unless data storage asset:artifact RemainingCountMax if data storage asset:artifact RemainingCount run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
     execute unless data storage asset:artifact Triggers[0] run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Triggers","color":"red"}]
     execute if data storage asset:artifact Triggers[0] run data modify storage asset:temp Triggers set from storage asset:artifact Triggers
     execute if data storage asset:artifact Triggers[0] run function asset:artifact/common/trigger/check
