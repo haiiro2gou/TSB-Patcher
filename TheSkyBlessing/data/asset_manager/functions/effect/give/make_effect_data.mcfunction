@@ -1,6 +1,7 @@
 #> asset_manager:effect/give/make_effect_data
 #
 #
+#
 # @output storage asset:effect EffectData
 # @within function asset_manager:effect/give/give
 
