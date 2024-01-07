@@ -4,7 +4,12 @@
             "trigger": "player_killed_entity",
             "conditions": {
                 "killing_blow": {
-                    "is_projectile": true
+                    "tags": [
+                        {
+                            "id": "is_projectile",
+                            "expected": true
+                        }
+                    ]
                 }
             }
         }
