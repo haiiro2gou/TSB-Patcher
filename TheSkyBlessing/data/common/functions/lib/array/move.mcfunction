@@ -2,11 +2,11 @@
 #
 # 配列をキャッシュへ移動します。
 #
-# @input
+# @input storage lib:
 #   T extends any
-#   storage lib: Array: [T] @ N
+#   Array: [T] @ N
 #   操作する配列データ
-#   score #Argument.Index Lib
+#   Argument.Index: int
 #   目的の要素のindex
 # @output storage lib:
 #   Array: [T] @ (N - Index)
@@ -21,9 +21,12 @@
 # 動かす回数を算出する
     execute store result score #Index Temporary if data storage lib: Array[]
     scoreboard players remove #Index Temporary 1
-    scoreboard players operation #Index Temporary -= #Argument.Index Lib
+    execute store result score #Argument.Index Temporary run data get storage lib: Argument.Index
+    scoreboard players operation #Index Temporary -= #Argument.Index Temporary
 # 再帰的に動かす
     execute if score #Index Temporary matches 1.. run function common:lib/array/core/move
 
 # リセット
+    data remove storage lib: Argument.Index
+    scoreboard players reset #Argument.Index Temporary
     scoreboard players reset #Index Temporary

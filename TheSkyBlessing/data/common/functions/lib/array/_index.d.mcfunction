@@ -1,7 +1,7 @@
 #> common:lib/array/_index.d
 # @private
 
-#>
+#> 共通scoreholder
 # @within function common:lib/array/**
     #declare score_holder #Index
     #declare score_holder #ListSize
@@ -15,12 +15,23 @@
     #declare score_holder #Cur
 
 #> Compare処理用
-# @within function common:lib/array/**compare*
-#declare score_holder #Temp
+# @within function
+#   common:lib/array/compare*
+#   common:lib/array/core/compare*
+    #declare score_holder #Temp
+
+#> Sort処理用
+# @within function
+#   common:lib/array/sort_*
+#   common:lib/array/core/sort_**
+    #declare score_holder #Value1
+    #declare score_holder #Value2
 
 #> sum処理用
-# @within function common:lib/array/**sum
-#declare score_holder #isNumeric
+# @within function
+#   common:lib/array/sum
+#   common:lib/array/core/sum
+    #declare score_holder #isNumeric
 
 #> 算術処理用
 # @within function
