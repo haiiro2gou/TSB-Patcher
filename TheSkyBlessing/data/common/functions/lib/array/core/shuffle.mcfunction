@@ -1,7 +1,7 @@
 #> common:lib/array/core/shuffle
 # @within function common:lib/array/**
 
-execute store result score #Index Temporary run function ashen_lib:random/
+execute store result score #Index Temporary run function common:lib/random/
 scoreboard players operation #Index Temporary %= #ListSize Temporary
 execute if score #Index Temporary matches 1.. run function common:lib/array/core/move
 data modify storage lib: ArrayO append from storage lib: Array[-1]
