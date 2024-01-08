@@ -60,6 +60,7 @@
     data remove storage asset:artifact Name
     data remove storage asset:artifact Lore
     data remove storage asset:artifact RemainingCount
+    data remove storage asset:artifact RemainingCountMax
     data remove storage asset:artifact Slot
     data remove storage asset:artifact Trigger
     data remove storage asset:artifact Condition
