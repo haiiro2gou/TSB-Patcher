@@ -8,7 +8,6 @@
 # @private
     #declare score_holder $Fluctuation
     #declare tag UUIDAttacker
-    #declare tag Attacked
 
 # ダメージ表示
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
