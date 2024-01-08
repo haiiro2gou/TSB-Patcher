@@ -12,6 +12,12 @@
     #declare score_holder $LatestModifiedUser
     #declare score_holder $LatestModifiedEntity
 
+#> タグ定義
+# @within
+#   function api:damage/core/health_subtract/non-player
+#   advancement asset_manager:artifact/attack/melee
+    #declare tag Attacked
+
 #> Declare
 # @within function api:damage/core/trigger_on_damage/**
     #declare tag TargetAttacker
