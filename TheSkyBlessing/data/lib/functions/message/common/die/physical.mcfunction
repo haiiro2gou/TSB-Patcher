@@ -6,7 +6,7 @@
 
 #> Random
 # @private
-#declare score_holder $Random
+    #declare score_holder $Random
 
 execute store result score $Random Temporary run function lib:random/
 scoreboard players operation $Random Temporary %= $100 Const

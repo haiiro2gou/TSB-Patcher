@@ -6,7 +6,7 @@
 
 #> private
 # @private
-#declare score_holder $Calc
+    #declare score_holder $Calc
 
 # 100からノックバック耐性を引いた値を出す
     scoreboard players set $Calc Temporary 100

@@ -8,7 +8,6 @@
     data modify storage global Patcher.Version set value "v0.4.0"
 
 #> from: b6f378b2a1cbf4c37dda26fc04fbde8695fc2589
-# @private
     gamerule blockExplosionDropDecay true
     gamerule blockExplosionDropDecay true
     gamerule doVinesSpread true
@@ -25,5 +24,4 @@
     gamerule waterSourceConversion true
 
 #> from: c22fa96a8c7926684d8cd43ce92fc54fd02a9a51
-# @private
     gamerule doWardenSpawning true

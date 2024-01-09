@@ -91,4 +91,4 @@
 # @within function
 #   asset_manager:mob/tick/*
 #   asset_manager:mob/bossbar/*
-#declare tag BossbarTarget
+    #declare tag BossbarTarget

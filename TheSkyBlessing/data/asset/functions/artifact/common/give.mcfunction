@@ -26,7 +26,7 @@
 
 #> Inv
 # @private
-#declare score_holder $InvSize
+    #declare score_holder $InvSize
 
 # storage検証
     execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]

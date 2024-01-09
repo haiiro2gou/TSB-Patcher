@@ -6,25 +6,25 @@
 #   asset:island/*/register/*
 #   asset:island/common/register
 #   asset_manager:island/**
-#declare storage asset:island
+    #declare storage asset:island
 
 #> Tag
 # @within *
 #   asset:island/*/register/
 #   asset_manager:island/**
 #   core:tick/
-#declare tag CursedArtifact
+    #declare tag CursedArtifact
 
 #> Tag
 # @within *
 #   asset_manager:island/**
 #   core:tick/
-#declare tag DispelledCursedArtifact
+    #declare tag DispelledCursedArtifact
 
 #> Tag
 # @within function
 #   asset_manager:island/register/*
-#declare tag CursedArtifactInit
+    #declare tag CursedArtifactInit
 
 #> Tag
 # @within function

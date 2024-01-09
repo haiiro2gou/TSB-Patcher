@@ -3,7 +3,7 @@
 
 #>
 # @within world_manager:gimmick/**
-#declare storage world_manager:gimmick
+    #declare storage world_manager:gimmick
 
 #> Tag
 # @within world_manager:gimmick/shard_processor/**

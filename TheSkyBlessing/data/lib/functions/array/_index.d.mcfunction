@@ -16,11 +16,11 @@
 
 #> Compare処理用
 # @within function lib:array/**compare*
-#declare score_holder $Temp
+    #declare score_holder $Temp
 
 #> sum処理用
 # @within function lib:array/**sum
-#declare score_holder $isNumeric
+    #declare score_holder $isNumeric
 
 #> 算術処理用
 # @within function

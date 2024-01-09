@@ -3,4 +3,4 @@
 
 #> 最初と最後のみに動作させるためのタグ
 # @within function player_manager:god/rumor/passive/*
-#declare tag PassiveBuff
+    #declare tag PassiveBuff

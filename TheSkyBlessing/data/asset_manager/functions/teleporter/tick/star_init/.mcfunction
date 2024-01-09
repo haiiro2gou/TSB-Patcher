@@ -6,7 +6,7 @@
 
 #> Val
 # @private
-#declare score_holder $ActivateStarCount
+    #declare score_holder $ActivateStarCount
 
 # EntityStorageを再度取得する
     execute as @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please

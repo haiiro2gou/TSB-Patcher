@@ -6,7 +6,7 @@
 
 #> Once
 # @private
-#declare tag TutorialFlag6
+    #declare tag TutorialFlag6
 
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 06

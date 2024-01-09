@@ -6,7 +6,7 @@
 
 #> Val
 # @private
-#declare score_holder $MaxHealth
+    #declare score_holder $MaxHealth
 
 # 追跡対象の設定
     tag @e[type=#lib:living,tag=BossbarTarget] remove BossbarTarget

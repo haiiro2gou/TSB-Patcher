@@ -3,4 +3,4 @@
 
 #> for moving player
 # @within function lib:spread_entity/core/player/*
-#declare tag TargetPlayer
+    #declare tag TargetPlayer

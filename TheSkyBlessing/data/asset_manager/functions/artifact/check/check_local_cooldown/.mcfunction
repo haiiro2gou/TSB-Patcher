@@ -6,7 +6,7 @@
 
 #> TickScore
 # @within function asset_manager:artifact/check/check_local_cooldown/*
-#declare score_holder $Tick
+    #declare score_holder $Tick
 
 # データをコピー
     data modify storage asset:artifact CopiedItem set from storage asset:artifact TargetItems

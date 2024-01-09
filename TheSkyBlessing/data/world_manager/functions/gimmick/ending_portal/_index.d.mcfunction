@@ -4,4 +4,4 @@
 #
 # @within function world_manager:gimmick/ending_portal/**
 
-#declare tag BetaEndingPortal
+    #declare tag BetaEndingPortal
