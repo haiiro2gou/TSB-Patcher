@@ -10,12 +10,12 @@
                 {
                     "weight": 75,
                     "type": "loot_table",
-                    "name": "common:sacred_shard/lv-1"
+                    "name": "common:shard/lv-1"
                 },
                 {
                     "weight": 25,
                     "type": "loot_table",
-                    "name": "common:sacred_shard/lv-2"
+                    "name": "common:shard/lv-2"
                 }
             ]
         },
