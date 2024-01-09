@@ -6,7 +6,7 @@
 
 #> for moving player
 # @private
-#declare tag SubstituteMarker
+    #declare tag SubstituteMarker
 
 # 実行座標を取得する
     summon marker ~ ~ ~ {Tags:["SubstituteMarker"]}

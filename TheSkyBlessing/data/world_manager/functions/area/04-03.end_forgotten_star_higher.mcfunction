@@ -6,7 +6,7 @@
 
 #> Val
 # @private
-#declare tag InLava
+    #declare tag InLava
 
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 02

@@ -6,7 +6,7 @@
 
 #> Temp
 # @private
-#declare score_holder $isDefenseCalcSkip
+    #declare score_holder $isDefenseCalcSkip
 
 # 計算式:
 # damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - min(5, resistanceLv) / 5) * (1 - (min(20, cappedEPF) / 25))

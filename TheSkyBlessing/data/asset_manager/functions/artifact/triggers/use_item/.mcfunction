@@ -6,7 +6,7 @@
 
 #> consumable判定用アマスタ
 # @private
-#declare tag CheckConsumableStand
+    #declare tag CheckConsumableStand
 
 # 食べたスロットを特定する
     # 下ごしらえ

@@ -6,7 +6,7 @@
 
 #> Temp
 # @private
-#declare score_holder $Mul
+    #declare score_holder $Mul
 
 # $EPF(e2) = min(20, $EPF(e0)) * e2 / 50
     scoreboard players operation $EPF Temporary < $20 Const

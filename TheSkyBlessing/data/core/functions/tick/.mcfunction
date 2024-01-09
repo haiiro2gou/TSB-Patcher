@@ -8,7 +8,7 @@
 
 #> Val
 # @private
-#declare score_holder $4tInterval
+    #declare score_holder $4tInterval
 
 # デバッグ用TickRate操作システム
     execute if data storage global {IsProduction:0b} if score $AwaitTime Global matches -2147483648..2147483647 run function debug:tps/watch
