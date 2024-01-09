@@ -6,7 +6,7 @@
 
 #> Val
 # @private
-#declare score_holder $isDimensionChanged
+    #declare score_holder $isDimensionChanged
 
 # ディメンションを取得する
     function api:data_get/dimension

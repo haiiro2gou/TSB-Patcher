@@ -11,7 +11,7 @@
 
 #> ScoreHolder
 # @private
-#declare score_holder $Remain
+    #declare score_holder $Remain
 
 # 対象スロットの残り使用回数取得
     execute store result score $Remain Temporary run data get storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount

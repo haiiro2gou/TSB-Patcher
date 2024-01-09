@@ -5,4 +5,4 @@
 # @within function
 #   core:tick/
 #   core:tick/check_item_meta/entity
-#declare tag ItemMetaChecked
+    #declare tag ItemMetaChecked

@@ -3,4 +3,4 @@
 
 #> 無敵であることが推奨されるプレイヤー
 # @public
-#declare tag PlayerShouldInvulnerable
+    #declare tag PlayerShouldInvulnerable

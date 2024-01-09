@@ -7,7 +7,7 @@
 
 #> Inv
 # @private
-#declare score_holder $InvSize
+    #declare score_holder $InvSize
 
 function api:data_get/inventory
 execute store result score $InvSize Lib if data storage api: Inventory[]

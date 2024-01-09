@@ -6,7 +6,7 @@
 
 #> For tellraw
 # @private
-#declare score_holder $ReadableHealth
+    #declare score_holder $ReadableHealth
 
 # 体力だけx10000なので戻す
     scoreboard players operation $ReadableHealth Temporary = $MaxHealth Global

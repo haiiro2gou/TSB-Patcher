@@ -8,7 +8,7 @@
 #   asset_manager:**
 #   mob_manager:**
 #   rom:**
-#declare storage rom:
+    #declare storage rom:
 
 #> Val
 # @within function

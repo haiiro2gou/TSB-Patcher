@@ -6,7 +6,7 @@
 
 #> for moving player
 # @private
-#declare tag SubstituteMarker
+    #declare tag SubstituteMarker
 
 # Pos取得
     function api:data_get/pos

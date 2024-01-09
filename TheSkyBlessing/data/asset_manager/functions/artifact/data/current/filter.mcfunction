@@ -8,7 +8,7 @@
 
 #> Private
 # @private
-#declare score_holder $nonIDEquals
+    #declare score_holder $nonIDEquals
 
 # 比較
     data modify storage asset:artifact Temp set from storage asset:artifact TargetID

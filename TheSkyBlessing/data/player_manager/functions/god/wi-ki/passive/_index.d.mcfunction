@@ -3,4 +3,4 @@
 
 #> 最初と最後のみに動作させるためのタグ
 # @within function player_manager:god/wi-ki/passive/*
-#declare tag PassiveDebuff
+    #declare tag PassiveDebuff
