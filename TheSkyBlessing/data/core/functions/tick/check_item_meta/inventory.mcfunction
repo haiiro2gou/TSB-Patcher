@@ -28,7 +28,7 @@
     execute store result storage core:temp OldItemCount int 1 run clear @s stick{display:{Name:'{"italic":false,"color":"aqua","text":"ミスティカシャード"}'},TSB:{Shard:1b,ShardRarity:4b}} 64
     loot insert 10000 0 10000 loot common:sacred_shard/lv-4
     data modify block 10000 0 10000 Items[-1].Count set from storage core:temp OldItemCount
-    execute store result storage core:temp OldItemCount int 1 run clear @s nether_star{display:{Name:'{"italic":false,"color":"yellow","text":"星のかけら"}'},Currency:1b} 64
+    execute store result storage core:temp OldItemCount int 1 run clear @s nether_star{display:{Name:'{"italic":false,"color":"yellow","text":"小さな星のかけら"}'},Currency:1b} 64
     loot insert 10000 0 10000 loot common:currency/
     data modify block 10000 0 10000 Items[-1].Count set from storage core:temp OldItemCount
     execute store result storage core:temp OldItemCount int 1 run clear @s nether_star{display:{Name:'{"italic":false,"color":"yellow","text":"大きな星のかけら"}'},Currency:2b} 64
