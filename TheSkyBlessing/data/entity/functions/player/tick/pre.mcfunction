@@ -16,4 +16,5 @@
 # インベントリ取得
     function entity:player/api/cache/inventory
 
-# フラグ管理
+# フラグ別条件チェック
+# 条件を満たしたものは対象Entityの処理キューに追加される
