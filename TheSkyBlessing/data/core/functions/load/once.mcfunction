@@ -127,3 +127,12 @@
     #       entity:player/tick/pre
     #       world:chunk_io_protect/*
         scoreboard objectives add ChunkLoadWaitingTime dummy {"text":"プレイヤーの周囲のチャンクロードが終了するまでの待ち時間"}
+
+    #> MobManager用スコアボード - 最大体力
+    # @within function
+    #   entity:mob/api/max_health*
+    #   asset_manager:mob/summon/set_data
+    #   entity:mob/init/modify_health
+    #   entity:mob/init/multiply/*
+        scoreboard objectives add MobHealthMax dummy
+        scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e1)"}
