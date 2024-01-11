@@ -59,6 +59,15 @@
     #   predicate lib:is_player_moving
         scoreboard objectives add PosPacketLossDetectAfterTick dummy
 
+    #> PlayerManager - 戦闘判定用スコアボード
+    # @within
+    #   function
+    #       core:tick/player/pre
+    #       mob_manager:entity_finder/attacked_entity/on_attack
+    #       mob_manager:entity_finder/attacking_entity/on_hurt
+    #   predicate lib:in_battle
+        scoreboard objectives add InBattleTick dummy
+
     #> 最大値用スコアホルダー
     # @within function
     #   core:patcher/load_once
