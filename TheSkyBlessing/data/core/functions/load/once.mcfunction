@@ -113,6 +113,10 @@
     # @within function core:load/once
         scoreboard objectives add Debug dummy {"text":"デバッグ"}
 
+    #> Mob - Public
+    # @public
+        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
+
     #> Player - Motionチェック用スコア
     # @within
     #   function
@@ -135,4 +139,4 @@
     #   entity:mob/init/modify_health
     #   entity:mob/init/multiply/*
         scoreboard objectives add MobHealthMax dummy
-        scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e1)"}
+        scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e2)"}
