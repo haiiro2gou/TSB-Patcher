@@ -15,6 +15,7 @@
     data modify storage asset:effect DurationOperation set from storage api: Argument.DurationOperation
     data modify storage asset:effect StackOperation set from storage api: Argument.StackOperation
 # API側Opt値のprefill
+    execute unless data storage asset:effect Duration run data modify storage asset:effect Duration set value 0
     execute unless data storage asset:effect Stack run data modify storage asset:effect Stack set value 1
     execute unless data storage asset:effect DurationOperation run data modify storage asset:effect DurationOperation set value "replace"
     execute unless data storage asset:effect StackOperation run data modify storage asset:effect StackOperation set value "replace"
