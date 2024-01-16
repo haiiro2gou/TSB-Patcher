@@ -68,7 +68,7 @@ jobs:
             env:
                 CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
                 REPOSITORY: haiiro2gou/TSB-Patcher
-                BRANCH: v1
+                BRANCH: master
                 VISIBILITY_FILTER: |
                     function@asset:artifact/artifact_name/trigger/2.check_condition
                     function@asset:artifact/artifact_name/trigger/3.main
