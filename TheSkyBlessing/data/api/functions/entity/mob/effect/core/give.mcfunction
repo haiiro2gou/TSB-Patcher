@@ -37,6 +37,8 @@
 # リセット
     data remove storage asset:effect ID
     data remove storage asset:effect Extends
+    data remove storage asset:effect Name
+    data remove storage asset:effect Description
     data remove storage asset:effect Duration
     data remove storage asset:effect Stack
     data remove storage asset:effect DurationOperation
