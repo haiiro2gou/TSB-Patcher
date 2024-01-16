@@ -16,6 +16,8 @@
 # @private
     #declare objective AttackEvent
     scoreboard objectives remove AttackEvent
+    scoreboard players reset $MaxHealth Global
+    scoreboard players reset $MaxMP Global
 
 #> ベクトル用等のシステム内汎用Entityのエイリアスの登録とsummon
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
@@ -66,8 +68,24 @@
     #   predicate lib:in_battle
         scoreboard objectives add InBattleTick dummy
 
+    #> 最大値用スコアホルダー
+    # @within function
+    #   core:patcher/load_once
+    #   core:handler/first_join
+    #   asset:artifact/0002.blessing/trigger/**
+        #declare score_holder $BonusHealth
+        #declare score_holder $BonusMP
+        #declare score_holder $AttackBonus
+        #declare score_holder $DefenseBonus
+    scoreboard players set $BonusHealth Global 0
+    scoreboard players set $BonusMP Global 0
+    scoreboard players set $AttackBonus Global 0
+    scoreboard players set $DefenseBonus Global 0
+
 #> 各Asset側のロード処理
     function #asset:artifact/load
+    function #asset:effect/load
+    function #asset:mob/load
 
 #> ROMを初期化する
 # @private
