@@ -39,6 +39,8 @@
     data modify storage asset:effect EffectData set value {}
 
     data modify storage asset:effect EffectData.ID set from storage asset:effect ID
+    data modify storage asset:effect EffectData.Name set from storage asset:effect Name
+    data modify storage asset:effect EffectData.Description set from storage asset:effect Description
     execute store result storage asset:effect EffectData.Duration int 1 run scoreboard players get $Duration Temporary
     execute store result storage asset:effect EffectData.Stack int 1 run scoreboard players get $Stack Temporary
     data modify storage asset:effect EffectData.IsBadEffect set from storage asset:effect IsBadEffect
