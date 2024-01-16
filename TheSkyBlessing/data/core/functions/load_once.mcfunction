@@ -307,7 +307,7 @@ team modify NoCollision collisionRule never
     #   core:load_once
     #   core:handler/first_join
     #   player_manager:bonus/**
-    #   asset:sacred_treasure/0002.blessing/trigger/**
+    #   asset:artifact/0002.blessing/trigger/**
         #declare score_holder $MaxHealth
         #declare score_holder $MaxMP
         #declare score_holder $AttackBonus
@@ -374,7 +374,6 @@ team modify NoCollision collisionRule never
 #> 各Asset側のロード処理
     function #asset:artifact/load
     function #asset:mob/load
-    function #asset:effect/load
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
