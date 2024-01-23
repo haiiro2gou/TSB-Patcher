@@ -24,7 +24,7 @@
         execute if data storage api: Argument{AttackType:"Physical"} unless data storage api: Modifiers.Physical run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{AttackType:"Magic"} store result score $Temp Temporary run data get storage api: Modifiers.Magic 100
         execute if data storage api: Argument{AttackType:"Magic"} unless data storage api: Modifiers.Magic run scoreboard players set $Temp Temporary 100
-        scoreboard players operation $Multiplier Temporary += $Temp Temporary
+        scoreboard players operation $Multiplier Temporary = $Temp Temporary
     # 第二属性
         execute if data storage api: Argument{ElementType:"None"} run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{ElementType:"Fire"} store result score $Temp Temporary run data get storage api: Modifiers.Fire 100
@@ -33,13 +33,13 @@
         execute if data storage api: Argument{ElementType:"Water"} unless data storage api: Modifiers.Water run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{ElementType:"Thunder"} store result score $Temp Temporary run data get storage api: Modifiers.Thunder 100
         execute if data storage api: Argument{ElementType:"Thunder"} unless data storage api: Modifiers.Thunder run scoreboard players set $Temp Temporary 100
-        scoreboard players operation $Multiplier Temporary += $Temp Temporary
-        scoreboard players remove $Multiplier Temporary 100
+        scoreboard players operation $Multiplier Temporary *= $Temp Temporary
     # 補正値の計算
         scoreboard players operation $Modifier Temporary *= $Multiplier Temporary
-        scoreboard players operation $Modifier Temporary /= $100 Const
+        scoreboard players operation $Modifier Temporary /= $10000 Const
 # 最低値設定
-    scoreboard players operation $Modifier Temporary > $10 Const
+    scoreboard players operation $Modifier Temporary > $25 Const
+    execute if predicate api:global_vars/difficulty/min/hard run scoreboard players operation $Modifier Temporary > $10 Const
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
