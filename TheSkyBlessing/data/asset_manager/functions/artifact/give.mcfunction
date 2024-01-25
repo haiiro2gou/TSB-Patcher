@@ -6,8 +6,8 @@
 
 #> For calc
 # @private
-    #declare score_holder #CandidateLength
-    #declare score_holder #Argument.Index
+    #declare score_holder $CandidateLength
+    #declare score_holder $Argument.Index
 
 # セッション開ける
     function lib:array/session/open
@@ -17,10 +17,10 @@
     execute if data storage api: Argument{Rarity:3} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[3]
     execute if data storage api: Argument{Rarity:4} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[4]
 # データサイズを取得
-    execute store result score #CandidateLength Temporary if data storage lib: Array[]
+    execute store result score $CandidateLength Temporary if data storage lib: Array[]
 # 対象Indexを決定
-    execute store result score #Argument.Index Lib run function lib:random/
-    scoreboard players operation #Argument.Index Lib %= #CandidateLength Temporary
+    execute store result score $Argument.Index Lib run function lib:random/
+    scoreboard players operation $Argument.Index Lib %= $CandidateLength Temporary
 # 候補データを操作して対象Indexを-1に持ってくる
     function lib:array/move
 # asset:context idがある場合は退避
@@ -33,5 +33,5 @@
     function asset_manager:common/context_id/pop
 # リセット
     function lib:array/session/close
-    scoreboard players reset #CandidateLength Temporary
+    scoreboard players reset $CandidateLength Temporary
     data remove storage lib: Array

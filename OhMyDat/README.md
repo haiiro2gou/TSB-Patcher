@@ -23,7 +23,7 @@ data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataName
 ## 既知のストレージにIDでアクセスしたい場合 / If you want to use known storage by storage ID
 
 ```
-scoreboard players set # OhMyDatID <ID>
+scoreboard players set $ OhMyDatID <ID>
 function oh_its_dat:please
 ```
 

@@ -14,4 +14,4 @@
 #> from: ec624d1852620d3c7549df1cac0d0f9448cf6763
 # @private
     #declare objective MobHealthMax
-    scoreboard players operation * MobHealthMax /= #100 Const
+    scoreboard players operation * MobHealthMax /= $100 Const

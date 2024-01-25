@@ -3,4 +3,4 @@
 
 #> temp
 # @within lib:score_to_move/**
-    #declare score_holder #Move
+    #declare score_holder $Move

@@ -19,7 +19,7 @@
                                 {
                                     "score": {
                                         "objective": "Temporary",
-                                        "name": "#Int"
+                                        "name": "$Int"
                                     },
                                     "color": "white",
                                     "font": "damage"
@@ -32,7 +32,7 @@
                                 {
                                     "score": {
                                         "objective": "Temporary",
-                                        "name": "#Frac"
+                                        "name": "$Frac"
                                     },
                                     "color": "white",
                                     "font": "damage"

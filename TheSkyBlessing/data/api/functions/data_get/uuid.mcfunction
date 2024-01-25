@@ -8,7 +8,7 @@
 
 #>Temp
 # @private
-    #declare score_holder #NotLatestData
+    #declare score_holder $NotLatestData
 
 # EntityStorage呼び出し
     function oh_my_dat:please

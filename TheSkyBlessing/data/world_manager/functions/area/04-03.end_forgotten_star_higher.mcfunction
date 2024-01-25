@@ -9,7 +9,7 @@
     #declare tag InLava
 
 # エリアセット
-    scoreboard players set #NextInSubArea Temporary 02
+    scoreboard players set $NextInSubArea Temporary 02
 
 # 溶岩に入ったら死ぬほど痛いダメージを与える
     execute if block ~0.3 ~0.0 ~0.3 lava run tag @s add InLava
@@ -25,8 +25,8 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.FixedDamage set value true
 # デスログ
-    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1#sは溶岩の温度を甘く見ていた","with":[{"selector":"@s"}]}]'
-    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1#sは溶けた","with":[{"selector":"@s"}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは溶岩の温度を甘く見ていた","with":[{"selector":"@s"}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは溶けた","with":[{"selector":"@s"}]}]'
 # ダメージ (スペクテイターだろうがダメージを食らうようにする)
     execute if entity @s[gamemode=!creative,tag=InLava] run function lib:damage/
     function lib:damage/reset

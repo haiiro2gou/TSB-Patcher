@@ -27,7 +27,7 @@
 
 #> Inv
 # @private
-    #declare score_holder #InvSize
+    #declare score_holder $InvSize
 
 # Triggerの並列化
     execute unless data storage asset:artifact Triggers[0] run function asset:artifact/common/trigger/migrate
@@ -52,13 +52,13 @@
     execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
     execute if data storage asset:context {Type:"drop",Important:true} as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:artifact/common/protect
     execute if data storage asset:context {Type:"give"} run function api:inventory/get_size
-    execute if data storage asset:context {Type:"give"} if score #InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
-    execute if data storage asset:context {Type:"give"} if score #InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
-    execute if data storage asset:context {Type:"give"} if score #InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:artifact/common/protect
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:artifact/common/protect
     execute if data storage asset:context {Type:"replace"} run function asset:artifact/common/replace
 
 # リセット
-    scoreboard players reset #InvSize Lib
+    scoreboard players reset $InvSize Lib
     data remove storage asset:context Type
     data remove storage asset:artifact ID
     data remove storage asset:artifact Item

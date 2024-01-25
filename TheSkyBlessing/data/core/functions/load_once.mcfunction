@@ -107,8 +107,8 @@ team modify NoCollision collisionRule never
         # @private
             #declare tag Random
         summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
-        execute store result score #Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-        execute store result score #Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
+        execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
+        execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
 
     #> 定数類用スコアボード **変更厳禁**
@@ -308,14 +308,14 @@ team modify NoCollision collisionRule never
     #   core:handler/first_join
     #   player_manager:bonus/**
     #   asset:artifact/0002.blessing/trigger/**
-        #declare score_holder #MaxHealth
-        #declare score_holder #MaxMP
-        #declare score_holder #AttackBonus
-        #declare score_holder #DefenseBonus
-    scoreboard players set #MaxHealth Global 200000
-    scoreboard players set #MaxMP Global 100
-    scoreboard players set #AttackBonus Global 0
-    scoreboard players set #DefenseBonus Global 0
+        #declare score_holder $MaxHealth
+        #declare score_holder $MaxMP
+        #declare score_holder $AttackBonus
+        #declare score_holder $DefenseBonus
+    scoreboard players set $MaxHealth Global 200000
+    scoreboard players set $MaxMP Global 100
+    scoreboard players set $AttackBonus Global 0
+    scoreboard players set $DefenseBonus Global 0
 
     #> WorldManager用スコアボード - ChunkLoadProtect
     # @within

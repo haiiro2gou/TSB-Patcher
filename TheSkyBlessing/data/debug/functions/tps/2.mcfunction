@@ -6,4 +6,4 @@
 # @private
 
 function debug:tps/init
-scoreboard players set #AwaitTime Global 500
+scoreboard players set $AwaitTime Global 500

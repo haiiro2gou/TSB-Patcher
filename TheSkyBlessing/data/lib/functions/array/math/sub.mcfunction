@@ -29,5 +29,5 @@
 
 # リセット
     data remove storage lib: Array
-    scoreboard players reset #Temp Temporary
-    scoreboard players reset #Temp2 Temporary
+    scoreboard players reset $Temp Temporary
+    scoreboard players reset $Temp2 Temporary

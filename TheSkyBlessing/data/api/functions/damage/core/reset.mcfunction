@@ -17,5 +17,5 @@ data remove storage api: Argument.BypassResistance
 data remove storage api: Argument.DisableParticle
 data remove storage api: Argument.ReduceEnchantment
 
-scoreboard players reset #LatestModifiedUser UserID
-scoreboard players reset #LatestModifiedEntity MobUUID
+scoreboard players reset $LatestModifiedUser UserID
+scoreboard players reset $LatestModifiedEntity MobUUID

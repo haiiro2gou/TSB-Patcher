@@ -8,7 +8,7 @@
 
 #> private use
 # @private
-    #declare score_holder #Temp
+    #declare score_holder $Temp
 
 # 変更のあったスロットのデータをリセットする
     execute if data storage asset:artifact EquipmentChanges[00]._{_:false} run scoreboard players set @s Sneak.Mainhand 1

@@ -6,12 +6,12 @@
 
 #> ThisTag
 # @private
-    #declare score_holder #LatestAttacker
+    #declare score_holder $LatestAttacker
 
 # 攻撃者名を記録する
     function oh_my_dat:please
-    execute store result score #LatestAttacker Temporary run data get storage api: Argument.Attacker
-    execute at @s as @e[type=!player,distance=..150] if score @s MobUUID = #LatestAttacker Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name set from entity @s CustomName
+    execute store result score $LatestAttacker Temporary run data get storage api: Argument.Attacker
+    execute at @s as @e[type=!player,distance=..150] if score @s MobUUID = $LatestAttacker Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name set from entity @s CustomName
 # 攻撃属性をEnumとして保存する
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 0
     execute if data storage api: Argument{ElementType:"Fire"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 1
@@ -23,4 +23,4 @@
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage api: Argument.DeathMessage
 # リセット
-    scoreboard players reset #LatestAttacker Temporary
+    scoreboard players reset $LatestAttacker Temporary

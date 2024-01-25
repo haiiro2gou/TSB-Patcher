@@ -5,4 +5,4 @@
 # @within
 #   core:tick/
 #   debug:tps/**
-    #declare score_holder #AwaitTime
+    #declare score_holder $AwaitTime

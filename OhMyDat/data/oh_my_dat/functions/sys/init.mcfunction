@@ -30,5 +30,5 @@ data modify storage oh_my_dat: IDSet set value [I;]
     scoreboard objectives add OhMyDatID dummy
 #> 計算に使うスコアボード
 # @within function oh_*:**
-    #declare score_holder #LatestProvidedID
+    #declare score_holder $LatestProvidedID
     scoreboard objectives add OhMyDat dummy

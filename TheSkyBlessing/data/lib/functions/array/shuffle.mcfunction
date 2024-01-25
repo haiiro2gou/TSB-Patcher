@@ -15,7 +15,7 @@
     execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
 
 # 配列サイズを取得
-    execute store result score #ListSize Lib if data storage lib: Array[]
+    execute store result score $ListSize Lib if data storage lib: Array[]
 # 初期化
     data modify storage lib: ArrayO set value []
 # 再帰的にシャッフル

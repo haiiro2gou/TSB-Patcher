@@ -14,5 +14,5 @@
 # @within function
 #   api:rom/please
 #   rom:**
-    #declare score_holder #LatestProvidedAddress
-    #declare score_holder #Address
+    #declare score_holder $LatestProvidedAddress
+    #declare score_holder $Address

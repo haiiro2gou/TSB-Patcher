@@ -3,4 +3,4 @@
 
 #> PlayerManager
 # @within function player_manager:mp/viewer/**
-    #declare score_holder #NowLvP
+    #declare score_holder $NowLvP

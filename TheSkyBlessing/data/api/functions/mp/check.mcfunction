@@ -12,13 +12,13 @@
 
 #> temp
 # @private
-    #declare score_holder #CheckMP
+    #declare score_holder $CheckMP
 
 # 閾値を取得
-    execute store result score #CheckMP Temporary run data get storage api: Argument.Threshold
+    execute store result score $CheckMP Temporary run data get storage api: Argument.Threshold
 # Bypass
-    execute if entity @s[tag=DevPrivilege] run scoreboard players set #CheckMP Temporary 0
+    execute if entity @s[tag=DevPrivilege] run scoreboard players set $CheckMP Temporary 0
 # チェック
-    execute store success storage api: Return.IsThresholdOrMore byte 1 if score #CheckMP Temporary <= @s MP
+    execute store success storage api: Return.IsThresholdOrMore byte 1 if score $CheckMP Temporary <= @s MP
 # リセット
-    scoreboard players reset #CheckMP Temporary
+    scoreboard players reset $CheckMP Temporary

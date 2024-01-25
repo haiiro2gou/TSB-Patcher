@@ -6,7 +6,7 @@
 
 #> private use
 # @private
-    #declare score_holder #Temp
+    #declare score_holder $Temp
 
 # イベント発火前に実行するやつ
     function asset_manager:artifact/data/new/set_to_current
@@ -34,4 +34,4 @@
     data modify storage asset:artifact EquipmentChanges set from storage lib: CompareResult
 # リセット
     function lib:array/session/close
-    scoreboard players reset #Temp Temporary
+    scoreboard players reset $Temp Temporary

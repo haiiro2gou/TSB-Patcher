@@ -11,5 +11,5 @@
 # Mobに適用
     function api:damage/core/health_subtract/
 # リセット
-    scoreboard players reset #Health Temporary
-    scoreboard players reset #Damage Temporary
+    scoreboard players reset $Health Temporary
+    scoreboard players reset $Damage Temporary

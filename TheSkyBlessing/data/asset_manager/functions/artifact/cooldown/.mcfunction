@@ -47,9 +47,9 @@
 # 元に戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set from storage asset:artifact LCDs
 # リセット
-    scoreboard players reset #Value Temporary
-    scoreboard players reset #NormalizedValue Temporary
-    scoreboard players reset #Max Temporary
+    scoreboard players reset $Value Temporary
+    scoreboard players reset $NormalizedValue Temporary
+    scoreboard players reset $Max Temporary
     data remove storage asset:artifact LCDs
     data remove storage asset:artifact DecrementedCLDs
     data remove storage asset:artifact MainBarMessage

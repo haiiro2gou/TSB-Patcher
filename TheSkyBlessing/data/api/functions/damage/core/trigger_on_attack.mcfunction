@@ -9,7 +9,7 @@
     #declare tag TargetAttacker
 
 # プレイヤー特定
-    execute as @a if score @s UserID = #LatestModifiedUser UserID run tag @s add TargetAttacker
+    execute as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add TargetAttacker
 # 特定用タグ
     tag @s add VictimFromLibrary
 # トリガー

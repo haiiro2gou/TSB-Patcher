@@ -5,13 +5,13 @@
 # @deprecated change to `api:mp/set`
 # @input
 #   as player
-#   score #Set Argument
+#   score $Set Argument
 # @api
 
 #> temp
 # @private
-    #declare score_holder #Set
+    #declare score_holder $Set
 
-execute store result storage api: Argument.MP int 1 run scoreboard players get #Set Lib
+execute store result storage api: Argument.MP int 1 run scoreboard players get $Set Lib
 function api:mp/set
-scoreboard players reset #Set Lib
+scoreboard players reset $Set Lib

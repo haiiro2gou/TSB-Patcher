@@ -83,8 +83,8 @@
     "datapack.lint.nameOfScoreHolders": [
         "error",
         {
-            "label": "HashPrefix",
-            "prefix": "#"
+            "label": "DollerPrefix",
+            "prefix": "$"
         }
     ],
     "datapack.lint.nameOfTeams": [

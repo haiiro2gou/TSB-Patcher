@@ -11,7 +11,7 @@
     execute as 0-0-0-0-0 at @s run tp @s ^ ^ ^1
 # pitchのsin/cosを取得
     data modify storage lib: Pos set from entity 0-0-0-0-0 Pos
-    execute store result score #PitchSin Temporary run data get storage lib: Pos[0] -10000
-    execute store result score #PitchCos Temporary run data get storage lib: Pos[2] 10000
+    execute store result score $PitchSin Temporary run data get storage lib: Pos[0] -10000
+    execute store result score $PitchCos Temporary run data get storage lib: Pos[2] 10000
 # リセット
     data remove storage lib: Pos

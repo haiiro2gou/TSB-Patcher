@@ -6,7 +6,7 @@
 
 #> private
 # @private
-    #declare score_holder #IsList
+    #declare score_holder $IsList
 
     # 初期化
         data modify storage asset:temp Line1 set value ['""','{"text":"???"}','[{"text":"範囲-"},{"text":"不明","color":"gray"}]','""']
@@ -19,14 +19,14 @@
 
         # ダメージ量を表示 //未設定-???
             # Listかを確認
-                execute if data storage asset:temp Trigger.AttackInfo.Damage[0] run scoreboard players set #IsList Temporary 1
-                execute if data storage asset:temp Trigger{AttackInfo:{Damage:[]}} run scoreboard players set #IsList Temporary 1
+                execute if data storage asset:temp Trigger.AttackInfo.Damage[0] run scoreboard players set $IsList Temporary 1
+                execute if data storage asset:temp Trigger{AttackInfo:{Damage:[]}} run scoreboard players set $IsList Temporary 1
             # Literalのとき
-                execute unless score #IsList Temporary matches 1.. if data storage asset:temp Trigger.AttackInfo.Damage run data modify storage asset:temp Line1[1] set value '[{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage"}]'
+                execute unless score $IsList Temporary matches 1.. if data storage asset:temp Trigger.AttackInfo.Damage run data modify storage asset:temp Line1[1] set value '[{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage"}]'
             # List(要素数1)のとき
-                execute if score #IsList Temporary matches 1.. if data storage asset:temp Trigger.AttackInfo.Damage[0] run data modify storage asset:temp Line1[1] set value '[{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage[0]"}]'
+                execute if score $IsList Temporary matches 1.. if data storage asset:temp Trigger.AttackInfo.Damage[0] run data modify storage asset:temp Line1[1] set value '[{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage[0]"}]'
             # List(要素数2)のとき
-                execute if score #IsList Temporary matches 1.. if data storage asset:temp Trigger.AttackInfo.Damage[1] run data modify storage asset:temp Line1[1] set value '[{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage[0]"},{"text":"-"},{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage[1]"}]'
+                execute if score $IsList Temporary matches 1.. if data storage asset:temp Trigger.AttackInfo.Damage[1] run data modify storage asset:temp Line1[1] set value '[{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage[0]"},{"text":"-"},{"storage":"asset:temp","nbt":"Trigger.AttackInfo.Damage[1]"}]'
 
         # 単体/確率範囲/条件範囲/常時範囲 を表示 //未設定-不明
             execute if data storage asset:temp Trigger{AttackInfo:{IsRangeAttack:never}} run data modify storage asset:temp Line1[2] set value '[{"text":"単体"}]'
@@ -58,4 +58,4 @@
     # リセット
         data remove storage asset:temp Line1
         data remove storage asset:temp Line2
-        scoreboard players reset #IsList Temporary
+        scoreboard players reset $IsList Temporary

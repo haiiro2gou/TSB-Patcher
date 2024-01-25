@@ -3,5 +3,5 @@
 
 #> Temp
 # @within function lib:integer_to_bit_array/**
-    #declare score_holder #Argument.Number
-    #declare score_holder #i
+    #declare score_holder $Argument.Number
+    #declare score_holder $i

@@ -6,4 +6,4 @@
 
 
 # エリアセット
-    scoreboard players set #NextInSubArea Temporary 01
+    scoreboard players set $NextInSubArea Temporary 01

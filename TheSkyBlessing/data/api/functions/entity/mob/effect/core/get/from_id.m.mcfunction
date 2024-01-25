@@ -6,4 +6,4 @@
 
 data remove storage api: Return.Effect
 function oh_my_dat:please
-#data modify storage api: Return.Effect set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:#(ID)}]
+$data modify storage api: Return.Effect set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID)}]

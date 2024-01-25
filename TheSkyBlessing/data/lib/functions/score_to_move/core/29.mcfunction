@@ -4,6 +4,6 @@
 #
 # @within lib:score_to_move/core/30
 
-scoreboard players operation #Move Lib += #Move Lib
-execute if score #Move Lib matches 0.. run function lib:score_to_move/core/28
-execute if score #Move Lib matches ..-1 positioned ^ ^ ^53687.0912 run function lib:score_to_move/core/28
+scoreboard players operation $Move Lib += $Move Lib
+execute if score $Move Lib matches 0.. run function lib:score_to_move/core/28
+execute if score $Move Lib matches ..-1 positioned ^ ^ ^53687.0912 run function lib:score_to_move/core/28

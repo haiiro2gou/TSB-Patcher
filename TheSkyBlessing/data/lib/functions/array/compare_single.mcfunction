@@ -30,4 +30,4 @@
     data remove storage lib: Array
     data remove storage lib: CopiedArray
     data remove storage lib: CompareTarget
-    scoreboard players reset #Temp Temporary
+    scoreboard players reset $Temp Temporary

@@ -11,6 +11,6 @@
 #       Argument.Spread : float
 # @public
 
-scoreboard players set #CircleRandomizerMode Temporary 1
+scoreboard players set $CircleRandomizerMode Temporary 1
 function lib:forward_spreader/core/
-scoreboard players reset #CircleRandomizerMode Temporary
+scoreboard players reset $CircleRandomizerMode Temporary

@@ -48,6 +48,6 @@
 # リセット
     data remove storage lib: Picks
     data remove storage lib: ArrayTemp
-    scoreboard players reset #Prev Temporary
-    scoreboard players reset #Cur Temporary
-    scoreboard players reset #ListSize Temporary
+    scoreboard players reset $Prev Temporary
+    scoreboard players reset $Cur Temporary
+    scoreboard players reset $ListSize Temporary

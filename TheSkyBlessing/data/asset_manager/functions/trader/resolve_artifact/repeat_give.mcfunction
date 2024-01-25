@@ -11,6 +11,6 @@
     function api:artifact/give/from_id
 
 # 減らす
-    scoreboard players remove #N Temporary 1
+    scoreboard players remove $N Temporary 1
 # まだgiveする必要があるなら再帰
-    execute if score #N Temporary matches 1.. run function asset_manager:trader/resolve_artifact/repeat_give
+    execute if score $N Temporary matches 1.. run function asset_manager:trader/resolve_artifact/repeat_give

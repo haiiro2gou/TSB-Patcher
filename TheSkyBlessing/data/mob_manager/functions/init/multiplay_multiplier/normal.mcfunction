@@ -10,24 +10,24 @@
 
 #> Val
 # @private
-    #declare score_holder #NearbyPlayerCount
-    #declare score_holder #MultiplayMultiplierBase
-    #declare score_holder #MultiplayMultiplier
+    #declare score_holder $NearbyPlayerCount
+    #declare score_holder $MultiplayMultiplierBase
+    #declare score_holder $MultiplayMultiplier
 
 # 周囲のプレイヤー数を取得する (e0)
-    execute at @s store result score #NearbyPlayerCount Temporary if entity @a[distance=..75]
+    execute at @s store result score $NearbyPlayerCount Temporary if entity @a[distance=..75]
 # ベース倍率 0.80(e2)
-    scoreboard players set #MultiplayMultiplierBase Temporary 80
+    scoreboard players set $MultiplayMultiplierBase Temporary 80
 # マルチ補正倍率 0.20(e2)
-    scoreboard players set #MultiplayMultiplier Temporary 20
+    scoreboard players set $MultiplayMultiplier Temporary 20
 # マルチ補正倍率の計算 0.20(e2) * N(e0) + 0.80(e2)
-    scoreboard players operation #MultiplayMultiplier Temporary *= #NearbyPlayerCount Temporary
-    scoreboard players operation #MultiplayMultiplier Temporary += #MultiplayMultiplierBase Temporary
+    scoreboard players operation $MultiplayMultiplier Temporary *= $NearbyPlayerCount Temporary
+    scoreboard players operation $MultiplayMultiplier Temporary += $MultiplayMultiplierBase Temporary
 # マルチ補正倍率の保存
-    scoreboard players operation @s MobMaxHealthMultiplier = #MultiplayMultiplier Temporary
+    scoreboard players operation @s MobMaxHealthMultiplier = $MultiplayMultiplier Temporary
 # マルチ補正の適用 (e2)
-    scoreboard players operation @s MobHealthMax *= #MultiplayMultiplier Temporary
+    scoreboard players operation @s MobHealthMax *= $MultiplayMultiplier Temporary
 # リセット
-    scoreboard players reset #NearbyPlayerCount Temporary
-    scoreboard players reset #MultiplayMultiplier Temporary
-    scoreboard players reset #MultiplayMultiplierBase Temporary
+    scoreboard players reset $NearbyPlayerCount Temporary
+    scoreboard players reset $MultiplayMultiplier Temporary
+    scoreboard players reset $MultiplayMultiplierBase Temporary

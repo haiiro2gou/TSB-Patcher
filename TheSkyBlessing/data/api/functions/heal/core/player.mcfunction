@@ -6,13 +6,13 @@
 
 #> Private
 # @private
-    #declare score_holder #Fluctuation
+    #declare score_holder $Fluctuation
 
 # 負数の場合の処理
-    execute store result score #Fluctuation Temporary run data get storage api: Argument.Heal
-    execute if score #Fluctuation Temporary matches ..-1 run data modify storage api: Argument.Heal set value 0
+    execute store result score $Fluctuation Temporary run data get storage api: Argument.Heal
+    execute if score $Fluctuation Temporary matches ..-1 run data modify storage api: Argument.Heal set value 0
 # リセット
-    scoreboard players reset #Fluctuation Temporary
+    scoreboard players reset $Fluctuation Temporary
 # 被回復量補正を掛ける
     execute unless data storage lib: Argument{FixedHeal:true} run function api:heal/core/receive_modifier
 # 代入

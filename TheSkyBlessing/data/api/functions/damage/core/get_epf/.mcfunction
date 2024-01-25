@@ -14,7 +14,7 @@
     # 総和を取る
         data modify storage lib: Array append from storage api: Enchantments[{id:"minecraft:protection"}].lvl
         function lib:array/math/sum
-        execute store result score #EPF Temporary run data get storage lib: SumResult
+        execute store result score $EPF Temporary run data get storage lib: SumResult
     # セッション閉じる
         function lib:array/session/close
 # protection以外のなんらかのエンチャントで軽減できる場合の計算処理

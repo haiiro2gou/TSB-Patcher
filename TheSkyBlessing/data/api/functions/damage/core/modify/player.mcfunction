@@ -5,7 +5,7 @@
 # @within function api:damage/modifier*
 
 # プレイヤー情報の記録
-    scoreboard players operation #LatestModifiedUser UserID = @s UserID
+    scoreboard players operation $LatestModifiedUser UserID = @s UserID
 # ダメージに補正値を掛ける
     execute if data storage api: Argument{BypassModifier:false} run function oh_my_dat:please
     execute if data storage api: Argument{BypassModifier:false} run data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Attack

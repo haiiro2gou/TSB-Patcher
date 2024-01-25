@@ -8,14 +8,14 @@
 
 #> Private
 # @private
-    #declare score_holder #RequireClearLv
+    #declare score_holder $RequireClearLv
 
 # 移動
     data modify storage asset:effect TargetEffect set from storage asset:effect Effects[-1]
     data remove storage asset:effect Effects[-1]
 # 牛乳チェック
-    execute if score @s UsedMilk matches 1.. store result score #RequireClearLv Temporary run data get storage asset:effect TargetEffect.RequireClearLv
-    execute if score @s UsedMilk matches 1.. if score #RequireClearLv Temporary matches ..3 run data modify storage asset:effect TargetEffect.Duration set value -1
+    execute if score @s UsedMilk matches 1.. store result score $RequireClearLv Temporary run data get storage asset:effect TargetEffect.RequireClearLv
+    execute if score @s UsedMilk matches 1.. if score $RequireClearLv Temporary matches ..3 run data modify storage asset:effect TargetEffect.Duration set value -1
 # 効果時間を減少させる
     execute unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
 # context作成
@@ -44,7 +44,7 @@
 # 残っていれば引継ぎ
     execute if data storage asset:effect TargetEffect run data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
 # リセット
-    scoreboard players reset #RequireClearLv Temporary
+    scoreboard players reset $RequireClearLv Temporary
     data remove storage asset:context this
     data remove storage asset:context id
     data remove storage asset:effect TargetEffect

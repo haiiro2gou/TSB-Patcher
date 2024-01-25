@@ -6,8 +6,8 @@
 
 #> Temp
 # @private
-    #declare score_holder #Temp
-    #declare score_holder #TypeModifier
+    #declare score_holder $Temp
+    #declare score_holder $TypeModifier
 
 # ReduceEnchantmentIdのデータ正規化
 execute if data storage lib: Argument.ReduceEnchantment.id run data modify storage lib: ReduceEnchantmentID set from storage lib: Argument.ReduceEnchantment.id
@@ -33,20 +33,20 @@ execute unless data storage lib: Argument.ReduceEnchantment.id run data modify s
     data remove storage lib: Temp
     function lib:array/math/sum
 # 計算結果を取得する
-    execute store result score #Temp Temporary run data get storage lib: SumResult
+    execute store result score $Temp Temporary run data get storage lib: SumResult
 # セッションを閉じる
     function lib:array/session/close
 # エンチャント係数を取得する
-    execute if data storage lib: Argument.ReduceEnchantment.modifier store result score #TypeModifier Temporary run data get storage lib: Argument.ReduceEnchantment.modifier
-    execute unless score #TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:      "minecraft:fire_protection"} run scoreboard players set #TypeModifier Temporary 2
-    execute unless score #TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:     "minecraft:blast_protection"} run scoreboard players set #TypeModifier Temporary 2
-    execute unless score #TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:"minecraft:projectile_protection"} run scoreboard players set #TypeModifier Temporary 2
-    execute unless score #TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:      "minecraft:feather_falling"} run scoreboard players set #TypeModifier Temporary 3
-    execute unless score #TypeModifier Temporary matches -2147483648.. run scoreboard players set #TypeModifier Temporary 1
+    execute if data storage lib: Argument.ReduceEnchantment.modifier store result score $TypeModifier Temporary run data get storage lib: Argument.ReduceEnchantment.modifier
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:      "minecraft:fire_protection"} run scoreboard players set $TypeModifier Temporary 2
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:     "minecraft:blast_protection"} run scoreboard players set $TypeModifier Temporary 2
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:"minecraft:projectile_protection"} run scoreboard players set $TypeModifier Temporary 2
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:      "minecraft:feather_falling"} run scoreboard players set $TypeModifier Temporary 3
+    execute unless score $TypeModifier Temporary matches -2147483648.. run scoreboard players set $TypeModifier Temporary 1
 # エンチャント係数を掛ける
-    scoreboard players operation #Temp Temporary *= #TypeModifier Temporary
+    scoreboard players operation $Temp Temporary *= $TypeModifier Temporary
 # EPFに加算する
-    scoreboard players operation #EPF Temporary += #Temp Temporary
+    scoreboard players operation $EPF Temporary += $Temp Temporary
 # リセット
-    scoreboard players reset #Temp Temporary
-    scoreboard players reset #TypeModifier Temporary
+    scoreboard players reset $Temp Temporary
+    scoreboard players reset $TypeModifier Temporary

@@ -9,7 +9,7 @@
     #declare tag TutorialFlag3
 
 # エリアセット
-    scoreboard players set #NextInSubArea Temporary 03
+    scoreboard players set $NextInSubArea Temporary 03
 # メッセージ
     execute unless entity @s[tag=TutorialFlag3] run function lib:message/tutorial/artifact
 # 二度と表示されなくする

@@ -5,6 +5,6 @@
 # @within function world_manager:area/01.god_boundaries/on_tick
 
 # エリアセット
-    scoreboard players set #NextInSubArea Temporary 13
+    scoreboard players set $NextInSubArea Temporary 13
 # 神殿の処理
     execute unless score @s InSubArea matches 13 run function player_manager:god/urban/in_temple

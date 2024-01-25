@@ -3,8 +3,8 @@
 
 #> Global Vars
 # @public
-    #declare score_holder #PlayerCount
-    #declare score_holder #LoadTime
+    #declare score_holder $PlayerCount
+    #declare score_holder $LoadTime
 
 # TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
 #> Global Vars - Private
@@ -15,7 +15,7 @@
 #       world_manager:force_difficulty
 #   predicate
 #       api:global_vars/difficulty/**
-    #declare score_holder #Difficulty
+    #declare score_holder $Difficulty
 
 #> DeathTag
 # @public
@@ -29,4 +29,4 @@
 
 #> DistributedIntervalGroup
 # @within function **6_distributed_interval
-    #declare score_holder #DistributeGroup
+    #declare score_holder $DistributeGroup
