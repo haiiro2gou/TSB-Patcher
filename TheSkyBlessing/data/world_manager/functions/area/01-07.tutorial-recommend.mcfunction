@@ -9,7 +9,7 @@
     #declare tag TutorialFlag7
 
 # エリアセット
-    scoreboard players set $NextInSubArea Temporary 07
+    scoreboard players set #NextInSubArea Temporary 07
 # メッセージ
     execute unless entity @s[tag=TutorialFlag7] run function lib:message/tutorial/recommend
 # 盲目

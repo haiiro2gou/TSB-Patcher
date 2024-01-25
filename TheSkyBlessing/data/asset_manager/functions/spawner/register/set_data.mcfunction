@@ -21,7 +21,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxSpawnDelay set from storage asset:spawner MaxSpawnDelay
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxNearbyEntities set from storage asset:spawner MaxNearbyEntities
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.RequiredPlayerRange set from storage asset:spawner RequiredPlayerRange
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentialsWeightSum int 1 run scoreboard players get $SpawnPotentialsWeightSum Temporary
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentialsWeightSum int 1 run scoreboard players get #SpawnPotentialsWeightSum Temporary
 # リセット
     data remove storage asset:spawner NormalizedSpawnPotentials
     tag @s remove SpawnerInit

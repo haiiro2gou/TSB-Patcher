@@ -18,13 +18,13 @@
     execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
 
 # 初期化
-    scoreboard players set $Sum Temporary 0
+    scoreboard players set #Sum Temporary 0
 # 総和を計算する
     function lib:array/core/math/sum
 # 総和をSumResultに突っ込む
-    execute if score $isNumeric Temporary matches 0 store result storage lib: SumResult int 1.00 run scoreboard players get $Sum Temporary
-    execute if score $isNumeric Temporary matches 1 store result storage lib: SumResult double 0.01 run scoreboard players get $Sum Temporary
+    execute if score #isNumeric Temporary matches 0 store result storage lib: SumResult int 1.00 run scoreboard players get #Sum Temporary
+    execute if score #isNumeric Temporary matches 1 store result storage lib: SumResult double 0.01 run scoreboard players get #Sum Temporary
 # リセット
-    scoreboard players reset $Sum Temporary
-    scoreboard players reset $Temp Temporary
-    scoreboard players reset $isNumeric Temporary
+    scoreboard players reset #Sum Temporary
+    scoreboard players reset #Temp Temporary
+    scoreboard players reset #isNumeric Temporary

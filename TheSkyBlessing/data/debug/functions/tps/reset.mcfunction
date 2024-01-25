@@ -5,4 +5,4 @@
 # @user
 # @private
 
-scoreboard players reset $AwaitTime Global
+scoreboard players reset #AwaitTime Global

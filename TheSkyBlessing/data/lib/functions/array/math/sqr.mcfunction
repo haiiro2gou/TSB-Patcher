@@ -26,5 +26,5 @@
 # リセット
     data remove storage lib: Array
     data remove storage lib: CopiedArray
-    scoreboard players reset $Mul Temporary
-    scoreboard players reset $Temp Temporary
+    scoreboard players reset #Mul Temporary
+    scoreboard players reset #Temp Temporary

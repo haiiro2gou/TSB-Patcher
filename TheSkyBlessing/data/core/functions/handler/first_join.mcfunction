@@ -6,11 +6,11 @@
 
 #> UserIDのIndex
 # @private
-    #declare score_holder $UserIDIndex
+    #declare score_holder #UserIDIndex
 
 # 固有ユーザーID
-    scoreboard players add $UserIDIndex Global 1
-    scoreboard players operation @s UserID = $UserIDIndex Global
+    scoreboard players add #UserIDIndex Global 1
+    scoreboard players operation @s UserID = #UserIDIndex Global
 # お友達(概念)
     tag @s add Friend
 # 無信仰にする

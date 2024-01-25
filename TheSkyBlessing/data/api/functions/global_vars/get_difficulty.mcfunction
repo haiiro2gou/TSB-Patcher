@@ -10,4 +10,4 @@
 # @output storage api: Return.Difficulty : int @ 1..6
 # @api
 
-execute store result storage api: Return.Difficulty int 1 run scoreboard players get $Difficulty Global
+execute store result storage api: Return.Difficulty int 1 run scoreboard players get #Difficulty Global

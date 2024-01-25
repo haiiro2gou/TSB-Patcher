@@ -5,10 +5,10 @@
 
 # 加算
     data modify storage lib: Array append value -1d
-    execute store result score $Temp Temporary run data get storage lib: ArrayA[-1] 1000
-    execute store result score $Temp2 Temporary run data get storage lib: ArrayB[-1] 1000
-    scoreboard players operation $Temp Temporary += $Temp2 Temporary
-    execute store result storage lib: Array[-1] double 0.001 run scoreboard players get $Temp Temporary
+    execute store result score #Temp Temporary run data get storage lib: ArrayA[-1] 1000
+    execute store result score #Temp2 Temporary run data get storage lib: ArrayB[-1] 1000
+    scoreboard players operation #Temp Temporary += #Temp2 Temporary
+    execute store result storage lib: Array[-1] double 0.001 run scoreboard players get #Temp Temporary
 # 末尾削除
     data remove storage lib: ArrayA[-1]
     data remove storage lib: ArrayB[-1]

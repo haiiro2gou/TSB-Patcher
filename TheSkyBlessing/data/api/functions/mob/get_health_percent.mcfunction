@@ -7,16 +7,16 @@
 
 #> 計算用スコアホルダー
 # @private
-    #declare score_holder $Health
-    #declare score_holder $MaxHealth
+    #declare score_holder #Health
+    #declare score_holder #MaxHealth
 
 # 現在体力を割合で出す
-    scoreboard players operation $Health Temporary = @s MobHealth
-    execute store result score $MaxHealth Temporary run function api:mob/get_max_health
+    scoreboard players operation #Health Temporary = @s MobHealth
+    execute store result score #MaxHealth Temporary run function api:mob/get_max_health
 
 # 計算結果を api: Return.HealthPer
-    execute store result storage api: Return.HealthPer double 0.01 run scoreboard players operation $Health Temporary /= $MaxHealth Temporary
+    execute store result storage api: Return.HealthPer double 0.01 run scoreboard players operation #Health Temporary /= #MaxHealth Temporary
 
 # リセット
-    scoreboard players reset $Health Temporary
-    scoreboard players reset $MaxHealth Temporary
+    scoreboard players reset #Health Temporary
+    scoreboard players reset #MaxHealth Temporary

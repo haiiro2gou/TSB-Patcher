@@ -8,6 +8,6 @@
     function oh_my_dat:please
     data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense
     function api:damage/core/modify_damage
-    execute store result score $Damage Temporary run data get storage api: ModifiedDamage 100
+    execute store result score #Damage Temporary run data get storage api: ModifiedDamage 100
 # リセット
     data remove storage api: ModifiedDamage

@@ -4,6 +4,6 @@
 #
 # @within lib:score_to_move/core/1
 
-scoreboard players operation $Move Lib += $Move Lib
-execute if score $Move Lib matches 0.. run tp @s ~ ~ ~
-execute if score $Move Lib matches ..-1 positioned ^ ^ ^0.0001 run tp @s ~ ~ ~
+scoreboard players operation #Move Lib += #Move Lib
+execute if score #Move Lib matches 0.. run tp @s ~ ~ ~
+execute if score #Move Lib matches ..-1 positioned ^ ^ ^0.0001 run tp @s ~ ~ ~

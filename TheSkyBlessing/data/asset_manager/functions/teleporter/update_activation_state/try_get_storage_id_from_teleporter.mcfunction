@@ -4,8 +4,8 @@
 #
 # @input storage api: Argument.ID : int
 # @output score
-#   $ OhMyDatID
-#   $TeleporterExists Temporary : int @ 0..1
+#   # OhMyDatID
+#   #TeleporterExists Temporary : int @ 0..1
 # @within function asset_manager:teleporter/update_activation_state/
 
 # セッション開く
@@ -19,8 +19,8 @@
     data modify storage lib: Array append from storage asset:teleporter TeleporterOMDMap[].OhMyDatID
     data modify storage lib: Masks set from storage lib: CompareResult
     function lib:array/mask_inverted
-    execute store result score $ OhMyDatID run data get storage lib: Array[0]
+    execute store result score # OhMyDatID run data get storage lib: Array[0]
 # EntityStorage取得
-    execute store success score $TeleporterExists Temporary if data storage lib: Array[0]
+    execute store success score #TeleporterExists Temporary if data storage lib: Array[0]
 # リセット
     function lib:array/session/close

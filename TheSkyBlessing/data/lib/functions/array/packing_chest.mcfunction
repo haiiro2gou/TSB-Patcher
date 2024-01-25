@@ -17,8 +17,8 @@
     execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
 
 # 初期化
-    scoreboard players set $Index Temporary 0
+    scoreboard players set #Index Temporary 0
 # 箱詰め
     function lib:array/core/packing_chest
 # リセット
-    scoreboard players reset $Index Temporary
+    scoreboard players reset #Index Temporary

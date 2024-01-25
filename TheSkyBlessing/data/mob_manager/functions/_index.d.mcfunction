@@ -21,7 +21,7 @@
 # @within function
 #   mob_manager:init/
 #   asset_manager:island/dispel/boss/summon
-    #declare score_holder $FlagIndex
+    #declare score_holder #FlagIndex
 
 #> FindFlag
 # @within *

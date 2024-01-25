@@ -17,7 +17,7 @@
 #   asset_manager:artifact/use/
 #   asset_manager:artifact/tick/
 #   core:tick/
-    #declare score_holder $ArtifactSpecialCooldown
+    #declare score_holder #ArtifactSpecialCooldown
 
 #> Trigger検知用
 # @within function
@@ -40,7 +40,7 @@
 
 #> スニークの閾値用スコアホルダー
 # @within function asset_manager:artifact/triggers/sneak/*
-    #declare score_holder $SneakThreshold
+    #declare score_holder #SneakThreshold
 
 #> use_itemの誤検知対策タグ
 # @within function
@@ -63,12 +63,12 @@
 
 #> クールダウン表示用
 # @within function asset_manager:artifact/cooldown/**
-    #declare score_holder $Cooldown
-    #declare score_holder $Value
-    #declare score_holder $NormalizedValue
-    #declare score_holder $Max
+    #declare score_holder #Cooldown
+    #declare score_holder #Value
+    #declare score_holder #NormalizedValue
+    #declare score_holder #Max
 
 #> リセット用
 # @within function asset_manager:artifact/triggers/equipments/update_cooldown/**
-    #declare score_holder $Tick
-    #declare score_holder $LatestUsedTick
+    #declare score_holder #Tick
+    #declare score_holder #LatestUsedTick

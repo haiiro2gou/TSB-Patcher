@@ -5,7 +5,7 @@
 # @within function lib:bit_array_to_integer/
 
 # 初期化
-    scoreboard players set $Return.Number Lib 0
+    scoreboard players set #Return.Number Lib 0
 # セッション開ける
     function lib:array/session/open
 # 反転
@@ -15,4 +15,4 @@
     function lib:bit_array_to_integer/core/recursive
 # リセット
     function lib:array/session/close
-    scoreboard players reset $bit Temporary
+    scoreboard players reset #bit Temporary

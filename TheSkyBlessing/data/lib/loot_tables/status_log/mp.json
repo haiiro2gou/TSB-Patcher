@@ -19,7 +19,7 @@
                                 {
                                     "score": {
                                         "objective": "Lib",
-                                        "name": "$Fluctuation"
+                                        "name": "#Fluctuation"
                                     },
                                     "color": "white",
                                     "font": "magic"

@@ -9,12 +9,12 @@
 
 #> temp
 # @private
-    #declare score_holder $MP
+    #declare score_holder #MP
 
 # 取得
-    execute store result score $MP Temporary run data get storage api: Argument.MP
+    execute store result score #MP Temporary run data get storage api: Argument.MP
 # セット
-    scoreboard players operation @s MP = $MP Temporary
+    scoreboard players operation @s MP = #MP Temporary
 # リセット
-    scoreboard players reset $MP Temporary
+    scoreboard players reset #MP Temporary
     data remove storage api: Argument.MP

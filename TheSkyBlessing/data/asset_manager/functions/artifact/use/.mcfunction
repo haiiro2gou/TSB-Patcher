@@ -11,9 +11,9 @@
 # MP減少処理
     function asset_manager:artifact/use/remove_mp with storage asset:artifact
 # 特殊クールダウン保存
-$execute if data storage asset:artifact TargetItems[0].tag.TSB.Triggers[$(Index)].SpecialCooldown store result score $ArtifactSpecialCooldown Global run data get storage asset:artifact TargetItems[0].tag.TSB.Triggers[$(Index)].SpecialCooldown
-$execute if data storage asset:artifact TargetItems[0].tag.TSB.Triggers[$(Index)].SpecialCooldown store result bossbar asset:special_cooldown max run scoreboard players get $ArtifactSpecialCooldown Global
-$execute if data storage asset:artifact TargetItems[0].tag.TSB.Triggers[$(Index)].SpecialCooldown run bossbar set asset:special_cooldown players @a
+#execute if data storage asset:artifact TargetItems[0].tag.TSB.Triggers[#(Index)].SpecialCooldown store result score #ArtifactSpecialCooldown Global run data get storage asset:artifact TargetItems[0].tag.TSB.Triggers[#(Index)].SpecialCooldown
+#execute if data storage asset:artifact TargetItems[0].tag.TSB.Triggers[#(Index)].SpecialCooldown store result bossbar asset:special_cooldown max run scoreboard players get #ArtifactSpecialCooldown Global
+#execute if data storage asset:artifact TargetItems[0].tag.TSB.Triggers[#(Index)].SpecialCooldown run bossbar set asset:special_cooldown players @a
 # すべてのアイテムについて更新処理を行う
     execute unless data storage asset:artifact {IgnoreItemUpdate:true} run function asset_manager:artifact/use/item/ with storage asset:artifact
 # リセット

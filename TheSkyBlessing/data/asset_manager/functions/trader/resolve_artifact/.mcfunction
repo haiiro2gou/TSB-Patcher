@@ -11,5 +11,5 @@
 # 再帰的に全部giveする
     function asset_manager:trader/resolve_artifact/foreach_artifact
 # リセット
-    scoreboard players reset $N Temporary
+    scoreboard players reset #N Temporary
     data remove storage asset:trader BoughtArtifacts

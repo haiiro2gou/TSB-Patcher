@@ -9,6 +9,6 @@
 
 #> 計算用
 # @within lib:status_log/**
-    #declare score_holder $Frac
-    #declare score_holder $Int
-    #declare score_holder $Fluctuation
+    #declare score_holder #Frac
+    #declare score_holder #Int
+    #declare score_holder #Fluctuation

@@ -35,4 +35,4 @@
 
 #> TeleporterExists
 # @within asset_manager:teleporter/update_activation_state/*
-    #declare score_holder $TeleporterExists
+    #declare score_holder #TeleporterExists

@@ -7,7 +7,7 @@
 #   player_manager:lost_item/give_all/packing.user
 
 # IDSetの取り出し
-    execute store result score $ OhMyDatID run data get storage oh_my_dat: IDSet[-1]
+    execute store result score # OhMyDatID run data get storage oh_my_dat: IDSet[-1]
     data remove storage oh_my_dat: IDSet[-1]
 # セッション開ける
     function lib:array/session/open

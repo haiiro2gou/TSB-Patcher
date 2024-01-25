@@ -15,7 +15,7 @@
     execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
 
 # Mulを取得する
-    execute store result score $Mul Temporary run data get storage lib: Mul 100
+    execute store result score #Mul Temporary run data get storage lib: Mul 100
 
 # 移行する
     data modify storage lib: CopiedArray set from storage lib: Array
@@ -32,5 +32,5 @@
     data remove storage lib: Array
     data remove storage lib: CopiedArray
     data remove storage lib: Mul
-    scoreboard players reset $Mul Temporary
-    scoreboard players reset $Temp Temporary
+    scoreboard players reset #Mul Temporary
+    scoreboard players reset #Temp Temporary

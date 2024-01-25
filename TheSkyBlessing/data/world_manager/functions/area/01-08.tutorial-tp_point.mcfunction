@@ -9,7 +9,7 @@
     #declare tag TutorialFlag8
 
 # エリアセット
-    scoreboard players set $NextInSubArea Temporary 08
+    scoreboard players set #NextInSubArea Temporary 08
 # 盲目を1秒にする
     effect clear @s blindness
     effect give @s blindness 1 0 true

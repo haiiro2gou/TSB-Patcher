@@ -16,8 +16,8 @@
 # @private
     #declare objective AttackEvent
     scoreboard objectives remove AttackEvent
-    scoreboard players reset $MaxHealth Global
-    scoreboard players reset $MaxMP Global
+    scoreboard players reset #MaxHealth Global
+    scoreboard players reset #MaxMP Global
 
 #> ベクトル用等のシステム内汎用Entityのエイリアスの登録とsummon
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
@@ -25,7 +25,7 @@
 
 #> スコアボード類
     #> 常に値が設定される変数用スコアボード
-        scoreboard players set $Difficulty Global 2
+        scoreboard players set #Difficulty Global 2
 
     #> AssetManager: Mob -Public
     # @public
@@ -73,14 +73,14 @@
     #   core:patcher/load_once
     #   core:handler/first_join
     #   asset:artifact/0002.blessing/trigger/**
-        #declare score_holder $BonusHealth
-        #declare score_holder $BonusMP
-        #declare score_holder $AttackBonus
-        #declare score_holder $DefenseBonus
-    scoreboard players set $BonusHealth Global 0
-    scoreboard players set $BonusMP Global 0
-    scoreboard players set $AttackBonus Global 0
-    scoreboard players set $DefenseBonus Global 0
+        #declare score_holder #BonusHealth
+        #declare score_holder #BonusMP
+        #declare score_holder #AttackBonus
+        #declare score_holder #DefenseBonus
+    scoreboard players set #BonusHealth Global 0
+    scoreboard players set #BonusMP Global 0
+    scoreboard players set #AttackBonus Global 0
+    scoreboard players set #DefenseBonus Global 0
 
 #> 各Asset側のロード処理
     function #asset:artifact/load

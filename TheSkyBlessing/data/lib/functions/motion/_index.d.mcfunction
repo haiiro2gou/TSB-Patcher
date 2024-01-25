@@ -3,5 +3,5 @@
 
 #> Val
 # @within function lib:motion/core/*
-    #declare score_holder $VectorMagnitude
-    #declare score_holder $KnockbackResist
+    #declare score_holder #VectorMagnitude
+    #declare score_holder #KnockbackResist

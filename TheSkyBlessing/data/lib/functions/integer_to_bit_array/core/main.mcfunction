@@ -5,6 +5,6 @@
 # @within function lib:integer_to_bit_array/
 
 data modify storage lib: Return.Array set value []
-scoreboard players set $i Temporary 0
+scoreboard players set #i Temporary 0
 function lib:integer_to_bit_array/core/recursive
-scoreboard players reset $i Temporary
+scoreboard players reset #i Temporary

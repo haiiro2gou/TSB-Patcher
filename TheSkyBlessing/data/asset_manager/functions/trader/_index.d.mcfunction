@@ -21,4 +21,4 @@
 #> number of give
 # @within
 #   asset_manager:trader/resolve_artifact/**
-    #declare score_holder $N
+    #declare score_holder #N
