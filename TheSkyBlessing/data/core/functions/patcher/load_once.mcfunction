@@ -68,6 +68,14 @@
     #   predicate lib:in_battle
         scoreboard objectives add InBattleTick dummy
 
+    #> PlayerManager用スコアボード
+    # @within
+    #   function core:handler/first_join
+    #   function core:load_once
+    #   * api:**
+    #   * player_manager:**
+        scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
+
     #> 最大値用スコアホルダー
     # @within function
     #   core:patcher/load_once
