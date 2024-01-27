@@ -5,7 +5,7 @@
 # @within function core:patcher/load_once_pre
 
 #> バージョン情報の設定
-    data modify storage global Patcher.Version set value "v0.4.7"
+    data modify storage global Patcher.Version set value "v0.4.8"
     tellraw @a [{"text":"================================","color":"gold"}]
     tellraw @a [{"text":"TSB-Patcher ","color":"green"},{"nbt":"Patcher.Version","storage":"minecraft:global","color":"dark_gray"},{"text":" by はいいろ。","color":"gray"}]
     tellraw @a [{"text":""}]
@@ -91,9 +91,7 @@
     scoreboard players set $DefenseBonus Global 0
 
 #> 各Asset側のロード処理
-    function #asset:artifact/load
     function #asset:effect/load
-    function #asset:mob/load
 
 #> ROMを初期化する
 # @private

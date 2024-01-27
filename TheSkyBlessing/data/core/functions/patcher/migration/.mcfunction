@@ -24,3 +24,4 @@ execute if data storage global Patcher{Version:"v0.4.3"} run function core:patch
 execute if data storage global Patcher{Version:"v0.4.4"} run function core:patcher/migration/v0.4.5/
 execute if data storage global Patcher{Version:"v0.4.5"} run function core:patcher/migration/v0.4.6/
 execute if data storage global Patcher{Version:"v0.4.6"} run function core:patcher/migration/v0.4.7/
+execute if data storage global Patcher{Version:"v0.4.7"} run function core:patcher/migration/v0.4.8/
