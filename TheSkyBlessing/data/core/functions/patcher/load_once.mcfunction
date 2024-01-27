@@ -44,7 +44,6 @@
     # @within function
     #   asset_manager:artifact/triggers/**
     #   player_manager:vanilla_attack/**
-    #   core:patcher/load_once
     #   core:handler/*
     #   core:tick/**
         scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
@@ -69,7 +68,6 @@
     #> PlayerManager用スコアボード
     # @within
     #   function core:handler/first_join
-    #   function core:patcher/load_once
     #   * api:**
     #   * player_manager:**
         scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
