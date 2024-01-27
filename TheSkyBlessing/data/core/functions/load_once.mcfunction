@@ -155,7 +155,6 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
-        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
 
     #> AssetManager: Mob -Private
     # @within function
@@ -173,11 +172,6 @@ team modify NoCollision collisionRule never
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
 
-    #> AssetManager: Teleporter
-    # @within function
-    #   asset_manager:teleporter/**
-        scoreboard objectives add TeleporterLogCD dummy {"text":"他のテレポーターが発見できなかった際のログのクールダウン"}
-
     #> AssetManager: Island
     # @within function
     #   asset_manager:island/**
@@ -193,7 +187,7 @@ team modify NoCollision collisionRule never
     #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
-        scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
+        scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
@@ -381,9 +375,5 @@ team modify NoCollision collisionRule never
     function #asset:artifact/load
     function #asset:mob/load
 
-
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
-
-#> ROMを初期化する
-    function rom:init

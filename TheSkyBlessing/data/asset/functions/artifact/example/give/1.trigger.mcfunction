@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:artifact/give
 
-execute if data storage asset:context {id:2147483647} run function asset:artifact/example/give/2.give
+execute if data storage asset:context {id:65535} run function asset:artifact/example/give/2.give
