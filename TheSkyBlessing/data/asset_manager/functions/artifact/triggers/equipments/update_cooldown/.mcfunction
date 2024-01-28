@@ -24,7 +24,7 @@
     data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[7].tag.TSB
     data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[8].tag.TSB
 # それぞれについて更新
-    function asset_manager:artifact/triggers/equipments/update_cooldown/foreach
+    function asset_manager:artifact/triggers/equipments/update_cooldown/foreach/
 # 反転
     function lib:array/reverse
 # 設定

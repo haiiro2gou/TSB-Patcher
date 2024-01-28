@@ -12,4 +12,3 @@
     data remove storage api: Argument.UUID
     data remove storage api: Argument.Amount
     data remove storage api: Argument.Operation
-    
