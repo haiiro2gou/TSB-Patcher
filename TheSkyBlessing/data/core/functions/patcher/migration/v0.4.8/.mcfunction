@@ -1,4 +1,4 @@
-#> core:patcher/migration/v0.4.8/
+#> core:patcher/migration/v0.4.7/
 #
 # v0.4.7 -> v0.4.8
 #
@@ -12,11 +12,9 @@
     scoreboard objectives add InBattleTick dummy
 
 #> from: 7becfd697948bd42e65429cdf454c0e6fc114d2d
-# @private
     scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
     scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
     function #asset:effect/load
 
 #> from: c77cb610003d23df1d78d8d90c9322b6dc1378ae
-# @private
     scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
