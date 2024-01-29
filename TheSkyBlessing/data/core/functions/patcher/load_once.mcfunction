@@ -16,6 +16,8 @@
 # @private
     #declare objective AttackEvent
     scoreboard objectives remove AttackEvent
+    scoreboard players reset $MaxHealth Global
+    scoreboard players reset $MaxMP Global
 
 #> ベクトル用等のシステム内汎用Entityのエイリアスの登録とsummon
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
@@ -44,6 +46,7 @@
     # @within function
     #   asset_manager:artifact/triggers/**
     #   player_manager:vanilla_attack/**
+    #   core:patcher/load_once
     #   core:handler/*
     #   core:tick/**
         scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
@@ -71,6 +74,20 @@
     #   * api:**
     #   * player_manager:**
         scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
+
+    #> 最大値用スコアホルダー
+    # @within function
+    #   core:patcher/load_once
+    #   core:handler/first_join
+    #   asset:artifact/0002.blessing/trigger/**
+        #declare score_holder $BonusHealth
+        #declare score_holder $BonusMP
+        #declare score_holder $AttackBonus
+        #declare score_holder $DefenseBonus
+    scoreboard players set $BonusHealth Global 0
+    scoreboard players set $BonusMP Global 0
+    scoreboard players set $AttackBonus Global 0
+    scoreboard players set $DefenseBonus Global 0
 
 #> 各Asset側のロード処理
     function #asset:effect/load
