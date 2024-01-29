@@ -27,5 +27,8 @@
     execute unless data storage api: active_effects[{id:"minecraft:jump_boost"}] run scoreboard players set $JumpBoost Temporary -10
     scoreboard players add $JumpBoost Temporary 10
 
+# 低速落下がついていたら問答無用で0にする
+    execute if data storage api: active_effects[{id:"minecraft:slow_falling"}] run scoreboard players set $FallDistance Temporary 0
+
 # リセット
     scoreboard players reset $YVec Temporary
