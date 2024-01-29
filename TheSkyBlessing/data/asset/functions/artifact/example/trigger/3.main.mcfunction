@@ -23,10 +23,11 @@
     scoreboard players operation $Count Temporary *= $5 Const
     scoreboard players operation $Count Temporary += $10 Const
     scoreboard players operation $Health Temporary *= $Count Temporary
-    execute store result storage lib: Argument.Damage float 0.0001 run scoreboard players get $Health Temporary
+    execute store result storage api: Argument.Damage float 0.0001 run scoreboard players get $Health Temporary
 # ダメージ/その他の設定
-    data modify storage lib: Argument.AttackType set value "Magic"
-    data modify storage lib: Argument.ElementType set value "Thunder"
-    data modify storage lib: Argument.FixedDamage set value 1b
-    function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..70,limit=1] run function lib:damage/
+    data modify storage api: Argument.AttackType set value "Magic"
+    data modify storage api: Argument.ElementType set value "Thunder"
+    data modify storage api: Argument.FixedDamage set value 1b
+    function api:damage/modifier
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..70,limit=1] run function api:damage/
+    function api:damage/reset
