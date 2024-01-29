@@ -41,21 +41,17 @@
     execute store result storage asset:artifact Item.tag.TSB.UUID int 1 run scoreboard players get $ArtifactIndex Global
 # 扱える神のエイリアスを修正する
     execute if data storage asset:artifact {CanUsedGod:"ALL"} run data modify storage asset:artifact CanUsedGod set value ['Flora','Urban','Nyaptov','Wi-ki','Rumor']
+# 使用回数の最大値（デフォルト）
+    execute unless data storage asset:artifact RemainingCountMax run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
 # そのまま入れれるやつ
     data modify storage asset:artifact Item.id set from storage asset:artifact BaseItem
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
     data modify storage asset:artifact Item.tag.TSB.rawName set from storage asset:artifact Name
     data modify storage asset:artifact Item.tag.TSB.ID set from storage asset:artifact ID
-    data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact Trigger
-    data modify storage asset:artifact Item.tag.TSB.MPCost set from storage asset:artifact MPCost
-    data modify storage asset:artifact Item.tag.TSB.MPRequire set from storage asset:artifact MPRequire
+    data modify storage asset:artifact Item.tag.TSB.Triggers set from storage asset:artifact Triggers
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCountMax
-    data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
-    data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
-    data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
-    data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
 
 # 名前
     # 残り回数が存在する場合

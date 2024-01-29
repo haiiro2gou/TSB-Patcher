@@ -6,8 +6,8 @@
 #   asset_manager:artifact/**
 #   asset:artifact/*/register
 #   asset:artifact/*/give/2.give
-#   asset:artifact/*/trigger/2.check_condition
-#   asset:artifact/*/trigger/3.main
+#   asset:artifact/*/trigger/**check_condition
+#   asset:artifact/*/trigger/**main
 #   asset:artifact/common/**
     #declare storage asset:artifact
 
@@ -69,6 +69,6 @@
     #declare score_holder $Max
 
 #> リセット用
-# @within function asset_manager:artifact/triggers/equipments/update_cooldown/*
+# @within function asset_manager:artifact/triggers/equipments/update_cooldown/**
     #declare score_holder $Tick
     #declare score_holder $LatestUsedTick
