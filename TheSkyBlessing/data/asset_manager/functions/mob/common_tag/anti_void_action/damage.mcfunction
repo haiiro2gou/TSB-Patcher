@@ -15,8 +15,8 @@
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.FixedDamage set value 1b
 # 補正
-    execute as @e[tag=AntiVoidTarget,distance=..0.01,limit=1] run function lib:damage/modifier
+    execute as @e[tag=AntiVoidTarget,distance=..0.01,limit=1] run function api:damage/modifier
 # ダメージ
-    function lib:damage/
+    function api:damage/
 # リセット
-    function lib:damage/reset
+    function api:damage/reset

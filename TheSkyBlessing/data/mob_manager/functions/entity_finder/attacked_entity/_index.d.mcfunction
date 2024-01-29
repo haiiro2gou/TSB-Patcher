@@ -15,7 +15,7 @@
     #declare storage mob_manager:attacked_entity
     #declare score_holder $AttackedEntityIndex
 
-#> lib:damage/からの攻撃検出用
+#> api:damage/からの攻撃検出用
 # @within function
 #   mob_manager:entity_finder/attacked_entity/on_attack
 #   api:damage/core/trigger_on_attack
