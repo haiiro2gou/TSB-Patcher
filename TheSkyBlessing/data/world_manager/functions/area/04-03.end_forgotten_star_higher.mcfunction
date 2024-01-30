@@ -28,7 +28,7 @@
     data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは溶岩の温度を甘く見ていた","with":[{"selector":"@s"}]}]'
     data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは溶けた","with":[{"selector":"@s"}]}]'
 # ダメージ (スペクテイターだろうがダメージを食らうようにする)
-    execute if entity @s[gamemode=!creative,tag=InLava] run function lib:damage/
-    function lib:damage/reset
+    execute if entity @s[gamemode=!creative,tag=InLava] run function api:damage/
+    function api:damage/reset
 # リセット
     tag @s remove InLava
