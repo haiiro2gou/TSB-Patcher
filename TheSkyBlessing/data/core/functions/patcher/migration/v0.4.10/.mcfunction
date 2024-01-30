@@ -11,7 +11,7 @@
 # @private
     scoreboard players operation $BonusHealth Global = $MaxHealth Global
     scoreboard players remove $BonusHealth Global 200000
-    scoreboard players operation $BonusHealth Global /= $10^4 Const
+    scoreboard players operation $BonusHealth Global /= $10000 Const
     scoreboard players operation $BonusMP Global = $MaxMP Global
     scoreboard players remove $BonusMP Global 100
     scoreboard players reset $MaxHealth Global
