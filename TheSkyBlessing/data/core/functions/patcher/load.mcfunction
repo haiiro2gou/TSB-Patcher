@@ -10,3 +10,6 @@
 
 # マイグレーション
     function core:patcher/migration/
+
+# 二次創作のロード処理
+    function #core:patcher/load
