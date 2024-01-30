@@ -20,3 +20,4 @@
 #> from: c77cb610003d23df1d78d8d90c9322b6dc1378ae
 # @private
     scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
+    gamerule fallDamage false
