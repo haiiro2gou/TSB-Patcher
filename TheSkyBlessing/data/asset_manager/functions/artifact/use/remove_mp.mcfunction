@@ -16,7 +16,7 @@
     $execute store result score $Fluctuation Temporary run data get storage asset:artifact TargetItems[0].tag.TSB.Triggers[$(Index)].MPCost
 # アイテム数だけ増やす
     # execute store result score $Length Temporary if data storage asset:artifact TargetItems[]
-    # scoreboard players operation $Fluctuation Lib *= $Length Temporary
+    # scoreboard players operation $Fluctuation Temporary *= $Length Temporary
 # 反転して減算
     execute store result storage api: Argument.Fluctuation int 1 run scoreboard players operation $Fluctuation Temporary *= $-1 Const
     data modify storage api: Argument.DisableLog set value true
