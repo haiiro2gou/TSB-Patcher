@@ -22,8 +22,8 @@
                                         "text": "消費アイテム: "
                                     },
                                     {
-                                        "storage": "asset:artifact",
-                                        "nbt": "CostText",
+                                        "storage": "asset:temp",
+                                        "nbt": "Trigger.CostText",
                                         "interpret": true
                                     }
                                 ]

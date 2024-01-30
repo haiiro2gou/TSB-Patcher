@@ -22,8 +22,8 @@
                                         "text": "使用条件: "
                                     },
                                     {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Condition",
+                                        "storage": "asset:temp",
+                                        "nbt": "Trigger.Condition",
                                         "interpret": true
                                     }
                                 ]
