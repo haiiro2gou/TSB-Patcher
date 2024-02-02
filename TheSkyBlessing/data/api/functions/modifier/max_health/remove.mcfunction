@@ -1,4 +1,11 @@
 #> api:modifier/max_health/remove
+#
+#
+#
+# @input
+#   as player
+#   storage api:
+#       Argument.UUID : [int] @ 4
 # @api
 
 # データ検証
