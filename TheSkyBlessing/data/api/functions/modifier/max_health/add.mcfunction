@@ -1,4 +1,13 @@
 #> api:modifier/max_health/add
+#
+#
+#
+# @input
+#   as player
+#   storage api:
+#       Argument.UUID : [int] @ 4
+#       Argument.Amount : double
+#       Argument.Operation : "add" || "multiply_base" || "multiply"
 # @api
 
 # データ検証

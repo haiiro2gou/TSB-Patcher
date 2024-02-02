@@ -1,4 +1,10 @@
 #> api:modifier/max_health/get
+#
+#
+#
+# @input as player
+# @output storage api:
+#   Return.MaxHealth : double
 # @api
 
 function oh_my_dat:please
