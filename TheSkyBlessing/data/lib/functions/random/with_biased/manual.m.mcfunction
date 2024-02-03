@@ -45,4 +45,4 @@
     data remove storage lib: RecentHits
 
 # 値を返すために get する
-    $data get storage lib: RecentHitsData.$(key)[-1]
+    $return run data get storage lib: RecentHitsData.$(key)[-1]
