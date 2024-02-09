@@ -11,7 +11,6 @@
     execute if entity @s[tag=!Enemy] run scoreboard players operation @s MobHealthMax *= $100 Const
 # 現在体力を設定する
     scoreboard players operation @s MobHealth = @s MobHealthMax
-# 体力を引き上げて無敵にする
+# 体力を引き上げる
     attribute @s generic.max_health base set 1024
-    effect give @s[type=!#lib:undead] instant_health infinite 100 true
-    effect give @s[type=#lib:undead] instant_damage infinite 100 true
+    data modify entity @s Health set value 512f
