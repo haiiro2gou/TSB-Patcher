@@ -90,7 +90,9 @@
     scoreboard players set $DefenseBonus Global 0
 
 #> 各Asset側のロード処理
+    function #asset:artifact/load
     function #asset:effect/load
+    function #asset:mob/load
 
 #> ROMを初期化する
 # @private
