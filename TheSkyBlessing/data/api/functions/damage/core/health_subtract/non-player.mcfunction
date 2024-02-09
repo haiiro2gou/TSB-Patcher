@@ -9,6 +9,12 @@
     #declare score_holder $Fluctuation
     #declare tag UUIDAttacker
 
+#> Attacked
+# @within
+#   function api:damage/core/health_subtract/non-player
+#   advancement asset_manager:artifact/attack/melee
+    #declare tag Attacked
+
 # ダメージ表示
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
     scoreboard players operation $Fluctuation Lib /= $-100 Const
