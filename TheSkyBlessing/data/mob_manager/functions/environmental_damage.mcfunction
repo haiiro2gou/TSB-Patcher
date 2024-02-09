@@ -12,6 +12,7 @@
     execute store result score $Damage Temporary run data get entity @s Health 100
     scoreboard players remove $Damage Temporary 51200
     scoreboard players operation @s MobHealth += $Damage Temporary
+    scoreboard players operation @s MobHealth < @s MobHealthMax
 
 # ログ表示
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
