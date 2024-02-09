@@ -9,8 +9,8 @@
 
 data modify storage asset:artifact ID set value 65535
 data modify storage asset:artifact Item set value "minecraft:stick"
-data modify storage asset:artifact Name set value '{"text":"","extra":[{"text":"テスト君"},{"text":"二式","color":"yellow"}]}'
-data modify storage asset:artifact Lore set value ['{"text":"Trigger並列化の先行版。"}','{"text":"これで神器のバリエーションが増えるといいな。"}']
+data modify storage asset:artifact Name set value '{"text":"","extra":[{"text":"テスト君"},{"text":"弐式","color":"yellow"}]}'
+data modify storage asset:artifact Lore set value ['{"text":"複数Triggerを有する神器の先行版。"}','{"text":"ダメージの桁を1個上げてやりたい放題しよう。"}']
 # data modify storage asset:artifact CostText set value '{"text":""}'
 # data modify storage asset:artifact RemainingCount set value
 data modify storage asset:artifact Triggers set value []
