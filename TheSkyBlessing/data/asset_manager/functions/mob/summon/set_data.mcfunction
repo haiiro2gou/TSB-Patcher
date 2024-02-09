@@ -57,7 +57,7 @@
     # 適用
         data modify entity @s Attributes set from storage asset:mob Attributes
     # 体力 (e2)
-        data modify entity @s Health set value 1024f
+        data modify entity @s Health set value 512f
         execute store result score @s MobHealthMax run data get storage asset:mob Health 1
         execute if data storage asset:mob {Type:"Enemy"} run function mob_manager:init/multiplay_multiplier/normal
         execute if data storage asset:mob {Type:"Enemy.Boss"} run function mob_manager:init/multiplay_multiplier/angel
