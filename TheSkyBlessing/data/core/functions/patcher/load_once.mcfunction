@@ -62,7 +62,7 @@
     #> PlayerManager - 戦闘判定用スコアボード
     # @within
     #   function
-    #       core:tick/player/pre
+    #       player_manager:in_battle_tick_score
     #       mob_manager:entity_finder/attacked_entity/on_attack
     #       mob_manager:entity_finder/attacking_entity/on_hurt
     #   predicate lib:in_battle
