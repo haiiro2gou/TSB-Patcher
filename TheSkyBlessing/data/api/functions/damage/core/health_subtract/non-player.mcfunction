@@ -16,11 +16,9 @@
     #declare tag Attacked
 
 # ダメージ表示
-    scoreboard players operation $Fluctuation Lib = $Damage Temporary
-    scoreboard players operation $Fluctuation Lib /= $-100 Const
+    scoreboard players set $Fluctuation Lib 0
+    scoreboard players operation $Fluctuation Lib -= $Damage Temporary
     execute at @s run function lib:status_log/show_health
-# ダメージを一桁下げる
-    scoreboard players operation $Damage Temporary /= $10 Const
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage Temporary < $Health Temporary
 # 減算
@@ -35,7 +33,6 @@
 # ノックバック無効を削除
     attribute @s minecraft:generic.knockback_resistance modifier remove 3-0-1-0-100000001
 # 代入 / kill
-    execute if score $Health Temporary matches 1.. run scoreboard players operation $Health Temporary /= $10 Const
     execute if score $Health Temporary matches 1.. run scoreboard players operation @s MobHealth = $Health Temporary
     execute if score $Health Temporary matches ..0 as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add Killer
     execute if score $Health Temporary matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
