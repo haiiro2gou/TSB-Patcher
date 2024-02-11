@@ -38,7 +38,7 @@
         scoreboard players operation $Modifier Temporary *= $Multiplier Temporary
         scoreboard players operation $Modifier Temporary /= $10000 Const
 # 最低値設定
-    scoreboard players operation $Modifier Temporary > $25 Const
+    execute if predicate api:global_vars/difficulty/max/normal run scoreboard players operation $Modifier Temporary > $25 Const
     execute if predicate api:global_vars/difficulty/min/hard run scoreboard players operation $Modifier Temporary > $10 Const
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
