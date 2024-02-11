@@ -10,7 +10,3 @@
 #> from: 2cbeb9857b62ebfcc48b513b8a70d8f5fe94a5aa
     function #asset:artifact/load
     function #asset:mob/load
-
-#> from: 0b1d140031172e249d98eb9946ae1e19b12009cd
-    effect clear @e[type=!#lib:undead,type=!player] instant_health
-    effect clear @e[type= #lib:undead,type=!player] instant_damage
