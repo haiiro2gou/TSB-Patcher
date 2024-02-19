@@ -22,8 +22,8 @@
                                         "text": "必要MP: "
                                     },
                                     {
-                                        "storage": "asset:artifact",
-                                        "nbt": "MPRequire"
+                                        "storage": "asset:temp",
+                                        "nbt": "Trigger.MPRequire"
                                     }
                                 ]
                             ]

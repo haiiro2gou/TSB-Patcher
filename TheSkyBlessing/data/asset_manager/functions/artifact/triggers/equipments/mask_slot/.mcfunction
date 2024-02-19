@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:artifact/triggers/*equip
+# @within function asset_manager:artifact/triggers/*equip/
 
 # 元配列
     function asset_manager:artifact/data/current/equips/init

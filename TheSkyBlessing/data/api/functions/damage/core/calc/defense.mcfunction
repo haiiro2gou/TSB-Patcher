@@ -14,7 +14,7 @@
     #declare score_holder $CalcD
     #declare score_holder $CalcE
 
-# $CalcA(e2) = $defensePoints(e2) * e2 / 5 / e2
+# $CalcA(e2) = $defensePoints(e2) / 5
     scoreboard players operation $CalcA Temporary = $defensePoints Temporary
     scoreboard players operation $CalcA Temporary /= $5 Const
 # $CalcB1(e2) = 2 * e2 + $toughness(e2) / 4
@@ -44,6 +44,7 @@
     execute if score $Damage Temporary matches 1000000.. run scoreboard players operation $CalcE Temporary /= $100 Const
     execute if score $Damage Temporary matches ..999999 run scoreboard players operation $CalcE Temporary /= $1000 Const
     scoreboard players operation $Damage Temporary = $CalcE Temporary
+
 # リセット
     scoreboard players reset $CalcA Temporary
     scoreboard players reset $CalcB Temporary

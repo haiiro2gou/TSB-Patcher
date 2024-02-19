@@ -22,8 +22,8 @@
                                         "text": "消費MP: "
                                     },
                                     {
-                                        "storage": "asset:artifact",
-                                        "nbt": "MPCost"
+                                        "storage": "asset:temp",
+                                        "nbt": "Trigger.MPCost"
                                     }
                                 ]
                             ]

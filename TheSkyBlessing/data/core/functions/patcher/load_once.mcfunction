@@ -2,7 +2,7 @@
 #
 # #load時に一回のみ実行される前処理群
 #
-# @within function core:patcher/load_once_pre
+# @within function core:patcher/load
 
 #> バージョン情報の設定
     data modify storage global Patcher.Version set value "v0.4.16"
