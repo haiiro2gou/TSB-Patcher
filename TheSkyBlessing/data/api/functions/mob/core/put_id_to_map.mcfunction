@@ -14,10 +14,10 @@
 # キーからROMを呼び出す
     function api:rom/please
 
-# データを保存しつつ、すでにデータが入っているかを確認する
+# データを保存する
     data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends set from storage asset:mob Extends[-1]
 
-# リセット
+# 末尾の要素を削除する
     data remove storage asset:mob Extends[-1]
 
 # まだExtendsが残っていれば再帰する
