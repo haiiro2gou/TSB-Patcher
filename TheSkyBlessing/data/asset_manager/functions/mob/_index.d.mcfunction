@@ -46,7 +46,7 @@
 # @within *
 #   asset_manager:mob/triggers/death/*
 #   api:damage/core/health_subtract/non-player
-#   player_manager:vanilla_attack/calculate
+#   player_manager:vanilla_attack
 #   asset:mob/*/death/**
     #declare tag Killer
 

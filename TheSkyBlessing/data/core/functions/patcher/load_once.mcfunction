@@ -45,7 +45,7 @@
     #> イベントハンドラ用スコアボード
     # @within function
     #   asset_manager:artifact/triggers/**
-    #   player_manager:vanilla_attack/**
+    #   player_manager:vanilla_attack
     #   core:patcher/load_once
     #   core:handler/*
     #   core:tick/**

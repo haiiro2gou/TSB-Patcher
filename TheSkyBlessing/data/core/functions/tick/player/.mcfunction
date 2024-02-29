@@ -7,7 +7,7 @@
 #> this
 # @within *
 #   core:tick/player/
-#   player_manager:vanilla_attack/**
+#   player_manager:vanilla_attack
 #   asset_manager:artifact/triggers/**
 #   asset:artifact/**
 #   asset_manager:teleporter/tick/**
