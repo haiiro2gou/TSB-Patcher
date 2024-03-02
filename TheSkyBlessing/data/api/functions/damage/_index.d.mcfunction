@@ -16,7 +16,7 @@
 # @within
 #   function api:damage/core/health_subtract/non-player
 #   advancement asset_manager:artifact/attack/melee
-    #declare tag Attacked
+    #declare tag AttackedByApi
 
 #> Declare
 # @within function api:damage/core/trigger_on_damage/**
