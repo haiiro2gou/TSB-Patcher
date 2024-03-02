@@ -9,4 +9,4 @@
 # asset_managerへの引継ぎ
     tag @s add TriggerFlag.Attack
 # Reset
-    scoreboard players reset @s AttackEvent
+    advancement revoke @s only core:handler/attack

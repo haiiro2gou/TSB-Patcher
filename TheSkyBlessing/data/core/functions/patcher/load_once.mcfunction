@@ -42,15 +42,6 @@
         scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
         scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
 
-    #> イベントハンドラ用スコアボード
-    # @within function
-    #   asset_manager:artifact/triggers/**
-    #   player_manager:vanilla_attack
-    #   core:patcher/load_once
-    #   core:handler/*
-    #   core:tick/**
-        scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
-
     #> PlayerManager - Motionチェック用スコアボード
     # @within
     #   function

@@ -9,8 +9,8 @@
     #declare score_holder $Damage
 
 # 攻撃処理
-    scoreboard players operation $Damage Temporary = @p[tag=this] AttackEvent
-    scoreboard players operation $Damage Temporary *= $-10 Const
+    execute store result score $Damage Temporary run data get entity @s Health 100
+    scoreboard players remove $Damage Temporary 51200
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
     function lib:status_log/show_health
     scoreboard players operation @s MobHealth += $Damage Temporary
