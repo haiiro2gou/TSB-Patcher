@@ -18,8 +18,8 @@
 # allを分解
     execute if data storage asset:artifact {IgnoreCondition:"all"} run data modify storage asset:artifact IgnoreCondition set value ["believe","specialcd","mp","localcd"]
 # 処理用ストレージに移動
-execute unless data storage asset:artifact TargetItems[0].tag.TSB.Triggers[0] run function asset_manager:artifact/data/migrate
-$data modify storage asset:temp Trigger set from storage asset:artifact TargetItems[0].tag.TSB.Triggers[$(Index)]
+    execute unless data storage asset:artifact TargetItems[-1].tag.TSB.Triggers[-1] run function asset_manager:artifact/data/migrate
+    $data modify storage asset:temp Trigger set from storage asset:artifact TargetItems[-1].tag.TSB.Triggers[$(Index)]
 # 条件を満たしてなかったらtag削除
     # 信仰による制限
         execute unless data storage asset:artifact {IgnoreCondition:["believe"]} run function asset_manager:artifact/check/check_believe
