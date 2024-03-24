@@ -8,6 +8,8 @@
 
 # indexをとる
     scoreboard players add $SlotIndex Temporary 1
+    scoreboard players operation $FixedSlotIndex Temporary = $SlotIndex Temporary
+    scoreboard players operation $FixedSlotIndex Temporary < $7 Const
 
 # 装備のModifierを取得
     execute if data storage asset:artifact NewItems[-1].tag.TSB.Modifiers[0] run data modify storage asset:artifact Modifiers set from storage asset:artifact NewItems[-1].tag.TSB.Modifiers

@@ -9,15 +9,12 @@
 #> Private
 # @private
     #declare score_holder $CustomModifier
-    #declare score_holder $FixedSlotIndex
 
 # 初期化
     scoreboard players set $CustomModifier Temporary 0
     data modify storage asset:artifact Modifier set from storage asset:artifact Modifiers[-1]
     data modify storage asset:artifact Modifier.UUID set value [I;1,1,0,0]
     data modify storage asset:artifact Modifier.UUID[2] set from storage asset:artifact NewItems[-1].tag.TSB.ID
-    scoreboard players operation $FixedSlotIndex Temporary = $SlotIndex Temporary
-    scoreboard players operation $FixedSlotIndex Temporary < $7 Const
     execute store result storage asset:artifact Modifier.UUID[3] int 1 run scoreboard players get $FixedSlotIndex Temporary
 
 # apiに代入
@@ -69,7 +66,6 @@
     execute if score $CustomModifier Temporary matches 0 run function asset_manager:artifact/triggers/equip/modifier/apply.m with storage asset:artifact Modifier
 
 # リセット
-    scoreboard players reset $FixedSlotIndex Temporary
     scoreboard players reset $CustomModifier Temporary
     data remove storage api: Argument.Amount
     data remove storage api: Argument.Operation
