@@ -25,6 +25,7 @@
 #   SetID? : int
 #   Modifiers : Component[]
 #   ├ Type : string
+#   ├ Slot : Slot
 #   ├ RequiredParts? : int
 #   ├ Amount : double
 #   └ Operation : "add" | "multiply_base" | "multiply"
