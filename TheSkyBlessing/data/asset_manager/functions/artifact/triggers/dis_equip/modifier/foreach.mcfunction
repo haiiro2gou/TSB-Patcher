@@ -64,10 +64,7 @@
     execute if score $CustomModifier Temporary matches 0 run function asset_manager:artifact/triggers/dis_equip/modifier/apply.m with storage asset:artifact Modifier
 
 # リセット
-    scoreboard players reset $FixedSlotIndex Temporary
     scoreboard players reset $CustomModifier Temporary
-    data remove storage api: Argument.Amount
-    data remove storage api: Argument.Operation
     data remove storage api: Argument.UUID
     data remove storage asset:artifact Modifier
     data remove storage asset:artifact Modifiers[-1]
