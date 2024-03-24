@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/set_cooltime
+#> asset_manager:artifact/create/trigger/cooltime
 #
 # 普通のクールタイムを秒数に変換 クールタイムが1tickだったりすると正確な秒数が出ない
 #
-# @within function asset_manager:artifact/create/trigger_loop
+# @within function asset_manager:artifact/create/trigger/
 
 #> Temp
 # @private

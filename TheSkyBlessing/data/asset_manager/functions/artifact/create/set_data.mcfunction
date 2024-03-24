@@ -10,16 +10,25 @@
 #       Name : TextComponent
 #       Lore : TextComponent[]
 #       RemainingCount? : int
-#       Slot : Slot
-#       Trigger : Trigger
-#       Condition? : TextComponent
-#       AttackInfo? : Component
-#       MPCost : int
-#       MPRequire : int
-#       CostText? : TextComponent
-#       LocalCooldown : int
-#       SpecialCooldown : int
+#       RemainingCountMax? : int
+#       Triggers : Component[]
+#       ├ Slot : Slot
+#       ├ Trigger : Trigger
+#       ├ Condition? : TextComponent
+#       ├ AttackInfo? : Component
+#       ├ MPCost : int
+#       ├ MPRequire? : int
+#       ├ CostText? : TextComponent
+#       ├ LocalCooldown? : int
+#       ├ SpecialCooldown? : int
+#       ├ DisableCooldownMessage? : boolean
+#       └ DisableMPMessage? : boolean
 #       CanUsedGod : God[]
+#       SetID? : int
+#       Modifiers : Component[]
+#       ├ Type : string
+#       ├ Amount : double
+#       └ Operation : "add" | "multiply_base" | "multiply"
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give
 
@@ -41,8 +50,6 @@
     execute store result storage asset:artifact Item.tag.TSB.UUID int 1 run scoreboard players get $ArtifactIndex Global
 # 扱える神のエイリアスを修正する
     execute if data storage asset:artifact {CanUsedGod:"ALL"} run data modify storage asset:artifact CanUsedGod set value ['Flora','Urban','Nyaptov','Wi-ki','Rumor']
-# 使用回数の最大値（デフォルト）
-    execute unless data storage asset:artifact RemainingCountMax run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
 # そのまま入れれるやつ
     data modify storage asset:artifact Item.id set from storage asset:artifact BaseItem
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
@@ -52,6 +59,8 @@
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCountMax
+    tellraw @a {"storage":"asset:artifact","nbt":"Modifiers"}
+    data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
 
 # 名前
     # 残り回数が存在する場合

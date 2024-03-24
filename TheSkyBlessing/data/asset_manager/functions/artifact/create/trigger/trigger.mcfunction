@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/set_trigger
+#> asset_manager:artifact/create/trigger/trigger
 #
 # 使用の条件を設定します
 #
-# @within function asset_manager:artifact/create/trigger_loop
+# @within function asset_manager:artifact/create/trigger/
 
 # スロット
     execute if data storage asset:temp Trigger{Slot:"auto"} run data modify storage asset:temp Temp.Trigger.A set value "どちらかの手に所持"
