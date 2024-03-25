@@ -10,6 +10,5 @@
     #declare tag CanUsed
 
 #> 処理用一時storage
-# @within *
-#   asset*:**
+# @within * asset:**
     #declare storage asset:temp
