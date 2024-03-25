@@ -10,7 +10,8 @@
     function asset_manager:artifact/create/lore_append
 # 装備時効果
     data modify storage asset:temp Modifiers set from storage asset:artifact Modifiers
-    execute if data storage asset:temp Modifiers[0] run function asset_manager:artifact/create/modifier/
+    execute if data storage asset:temp Modifiers[0] run data modify storage asset:artifact Items.tag.display.Lore append value '""'
+    execute if data storage asset:temp Modifiers[0] run function asset_manager:artifact/create/set_modifier
     data remove storage asset:temp Modifiers
 # スキル設定
     data modify storage asset:temp Triggers set from storage asset:artifact Triggers
