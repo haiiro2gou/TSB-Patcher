@@ -3,4 +3,4 @@
 #   Type : string
 # @within function asset_manager:artifact/create/modifier/
 
-$data modify storage asset:temp Line[1] set value '{"translate":"attribute.name.$(Type)","color":"gray"}'
+$data modify storage asset:temp Line[1] set value '{"translate":"attribute.name.$(Type)"}'
