@@ -1,6 +1,5 @@
 #> asset_manager:artifact/data/migrate
-# @within function
-#   asset_manager:artifact/**/.m
+# @within function asset_manager:artifact/**/.m
 
 # Triggersの空配列を用意
     data modify storage asset:artifact TargetItems[-1].tag.TSB.Triggers append value {}
