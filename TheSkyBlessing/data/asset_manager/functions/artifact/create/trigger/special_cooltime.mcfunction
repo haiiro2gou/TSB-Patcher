@@ -11,10 +11,10 @@
     #declare score_holder $CooldownMinutes
 
 # 5? スペシャル☆クールタイムを秒数に変換
-    execute store result score $Cooldown Temporary run data get storage asset:temp Trigger.SpecialCooldown
+    execute store result score $Cooldown Temporary run data get storage asset:artifact Trigger.SpecialCooldown
     scoreboard players operation $Cooldown Temporary /= $20 Const
 # 5? スペシャル☆クールタイムの小数第一位まで求める
-    execute store result score $CooldownDecimal Temporary run data get storage asset:temp Trigger.SpecialCooldown
+    execute store result score $CooldownDecimal Temporary run data get storage asset:artifact Trigger.SpecialCooldown
     scoreboard players operation $CooldownDecimal Temporary %= $20 Const
     scoreboard players operation $CooldownDecimal Temporary *= $5 Const
 # 5? 秒数を分に変換
@@ -25,9 +25,9 @@
     # 分がいるかをloot_table側で判断するためのフラグ
         execute if score $CooldownMinutes Temporary matches 1.. run scoreboard players set @s Temporary 1
 # 5?ストレージに入れる
-    execute store result storage asset:temp SpecialCooldownSecond int 1 run scoreboard players get $Cooldown Temporary
-    execute store result storage asset:temp SpecialCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
-    execute store result storage asset:temp SpecialCooldownMinutes int 1 run scoreboard players get $CooldownMinutes Temporary
+    execute store result storage asset:artifact SpecialCooldownSecond int 1 run scoreboard players get $Cooldown Temporary
+    execute store result storage asset:artifact SpecialCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
+    execute store result storage asset:artifact SpecialCooldownMinutes int 1 run scoreboard players get $CooldownMinutes Temporary
 
 # lootする
     loot replace block 10000 0 10000 container.7 loot asset_manager:artifact/generate_lore/special_cooldown
@@ -37,6 +37,6 @@
     scoreboard players reset $CooldownDecimal
     scoreboard players reset $CooldownMinutes
     scoreboard players reset @s Temporary
-    data remove storage asset:temp SpecialCooldownSecond
-    data remove storage asset:temp SpecialCooldownDecimal
-    data remove storage asset:temp SpecialCooldownMinutes
+    data remove storage asset:artifact SpecialCooldownSecond
+    data remove storage asset:artifact SpecialCooldownDecimal
+    data remove storage asset:artifact SpecialCooldownMinutes

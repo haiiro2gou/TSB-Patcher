@@ -11,10 +11,10 @@
 
 # データ取得
     execute store result score $Tick Temporary run time query gametime
-    data modify storage asset:temp Triggers set from storage asset:artifact ItemData[-1].Triggers
+    data modify storage asset:artifact CopiedTriggers set from storage asset:artifact ItemData[-1].Triggers
     function asset_manager:artifact/triggers/equipments/update_cooldown/foreach/get_cooldown
-    execute store result storage asset:temp MaxLCD int 1 run scoreboard players get $Max Temporary
-    function asset_manager:artifact/triggers/equipments/update_cooldown/foreach/get_tick with storage asset:temp
+    execute store result storage asset:artifact MaxLCD int 1 run scoreboard players get $Max Temporary
+    function asset_manager:artifact/triggers/equipments/update_cooldown/foreach/get_tick.m with storage asset:artifact
 # 使用してからの時間を取得
     scoreboard players operation $Current Temporary = $Max Temporary
     scoreboard players operation $Tick Temporary -= $LatestUsedTick Temporary
@@ -27,7 +27,7 @@
 # 末尾削除
     data remove storage asset:artifact ItemData[-1]
 # リセット
-    data remove storage asset:temp Triggers
+    data remove storage asset:artifact CopiedTriggers
     scoreboard players reset $Max Temporary
     scoreboard players reset $Current Temporary
 # 要素があれば再帰

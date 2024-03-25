@@ -6,8 +6,8 @@
 #   as player
 #   storage asset:artifact TargetItems : [ItemData]
 # @within function
-#   asset_manager:artifact/check/
-#   asset_manager:artifact/use/item/
+#   asset_manager:artifact/check/.m
+#   asset_manager:artifact/use/item/.m
 
 #> ScoreHolder
 # @private

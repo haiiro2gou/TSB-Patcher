@@ -22,15 +22,15 @@
                                         "text": "使用方法: "
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.Trigger.A"
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.Trigger.AB"
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.Trigger.B"
                                     }
                                 ]
