@@ -59,7 +59,6 @@
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCountMax
-    tellraw @a {"storage":"asset:artifact","nbt":"Modifiers"}
     data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
 
 # 名前
