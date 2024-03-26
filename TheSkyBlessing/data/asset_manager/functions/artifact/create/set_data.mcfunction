@@ -60,6 +60,7 @@
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCountMax
     data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
+    data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
 
 # 名前
     # 残り回数が存在する場合

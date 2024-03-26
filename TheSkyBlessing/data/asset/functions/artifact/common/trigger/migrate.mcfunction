@@ -5,6 +5,7 @@
     execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
     execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
     # execute unless data storage asset:artifact Condition run
+    # execute unless data storage asset:artifact EnableDuplication run
     # execute unless data storage asset:artifact AttackInfo run
     execute unless data storage asset:artifact MPCost run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"}]
     # execute unless data storage asset:artifact MPRequire run
@@ -19,6 +20,7 @@
     data modify storage asset:artifact Triggers[0].Slot set from storage asset:artifact Slot
     data modify storage asset:artifact Triggers[0].Trigger set from storage asset:artifact Trigger
     data modify storage asset:artifact Triggers[0].Condition set from storage asset:artifact Condition
+    data modify storage asset:artifact Triggers[0].EnableDuplication set from storage asset:artifact EnableDuplication
     data modify storage asset:artifact Triggers[0].AttackInfo set from storage asset:artifact AttackInfo
     data modify storage asset:artifact Triggers[0].MPCost set from storage asset:artifact MPCost
     data modify storage asset:artifact Triggers[0].MPRequire set from storage asset:artifact MPRequire
@@ -32,6 +34,7 @@
     data remove storage asset:artifact Slot
     data remove storage asset:artifact Trigger
     data remove storage asset:artifact Condition
+    data remove storage asset:artifact EnableDuplication
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire
