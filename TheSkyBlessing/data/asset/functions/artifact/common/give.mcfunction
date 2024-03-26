@@ -20,6 +20,7 @@
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
+#   DisableBreakSound? : boolean
 #   CanUsedGod : God[]
 #   CustomNBT? : Component
 # @output item 神器
@@ -67,5 +68,6 @@
     data remove storage asset:artifact RemainingCount
     data remove storage asset:artifact RemainingCountMax
     data remove storage asset:artifact Triggers
+    data remove storage asset:artifact DisableBreakSound
     data remove storage asset:artifact CanUsedGod
     data remove storage asset:artifact CustomNBT
