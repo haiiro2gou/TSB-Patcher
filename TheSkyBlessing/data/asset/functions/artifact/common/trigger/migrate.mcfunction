@@ -19,6 +19,7 @@
     data modify storage asset:artifact Triggers[0].Slot set from storage asset:artifact Slot
     data modify storage asset:artifact Triggers[0].Trigger set from storage asset:artifact Trigger
     data modify storage asset:artifact Triggers[0].Condition set from storage asset:artifact Condition
+    data modify storage asset:artifact Triggers[0].EnableDuplication set from storage asset:artifact EnableDuplication
     data modify storage asset:artifact Triggers[0].AttackInfo set from storage asset:artifact AttackInfo
     data modify storage asset:artifact Triggers[0].MPCost set from storage asset:artifact MPCost
     data modify storage asset:artifact Triggers[0].MPRequire set from storage asset:artifact MPRequire
@@ -32,6 +33,7 @@
     data remove storage asset:artifact Slot
     data remove storage asset:artifact Trigger
     data remove storage asset:artifact Condition
+    data remove storage asset:artifact EnableDuplication
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire

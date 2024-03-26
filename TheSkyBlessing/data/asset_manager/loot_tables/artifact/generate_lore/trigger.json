@@ -23,6 +23,10 @@
                                     },
                                     {
                                         "storage": "asset:temp",
+                                        "nbt": "Temp.EnableDuplication"
+                                    },
+                                    {
+                                        "storage": "asset:temp",
                                         "nbt": "Temp.Trigger.A"
                                     },
                                     {

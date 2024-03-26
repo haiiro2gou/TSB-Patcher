@@ -4,6 +4,9 @@
 #
 # @within function asset_manager:artifact/create/trigger_loop
 
+# 指定スロットがhotbarでかつ重複可能か
+    execute if data storage asset:temp Trigger{Slot:"hotbar",EnableDuplication:true} run data modify storage asset:artifact Temp.EnableDuplication set value "[重複可能] "
+
 # スロット
     execute if data storage asset:temp Trigger{Slot:"auto"} run data modify storage asset:temp Temp.Trigger.A set value "どちらかの手に所持"
     execute if data storage asset:temp Trigger{Slot:"mainhand"} run data modify storage asset:temp Temp.Trigger.A set value "メインハンドに所持"
