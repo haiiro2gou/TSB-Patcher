@@ -55,6 +55,7 @@
     execute if data storage asset:artifact Triggers[0] run data modify storage asset:temp Triggers set from storage asset:artifact Triggers
     execute if data storage asset:artifact Triggers[0] run function asset:artifact/common/trigger/check
     execute if data storage asset:artifact Triggers[0] run data remove storage asset:temp Triggers
+    # execute unless data storage asset:artifact DisableBreakSound run
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
     # execute unless data storage asset:artifact SetID run
     # execute unless data storage asset:artifact Modifiers[0] run
