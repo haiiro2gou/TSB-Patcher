@@ -2,15 +2,15 @@
 #
 # MP必要量が足りているかをチェックします
 #
-# @within function asset_manager:artifact/check/
+# @within function asset_manager:artifact/check/.m
 
 #> Private
 # @private
     #declare score_holder $Length
 
 # MP必要量を取得
-    execute if data storage asset:temp Trigger.MPRequire run data modify storage api: Argument.Threshold set from storage asset:temp Trigger.MPRequire
-    execute unless data storage asset:temp Trigger.MPRequire run data modify storage api: Argument.Threshold set from storage asset:temp Trigger.MPCost
+    execute if data storage asset:artifact Trigger.MPRequire run data modify storage api: Argument.Threshold set from storage asset:artifact Trigger.MPRequire
+    execute unless data storage asset:artifact Trigger.MPRequire run data modify storage api: Argument.Threshold set from storage asset:artifact Trigger.MPCost
 # アイテム数だけ増やす
     # execute store result score $Length Temporary if data storage asset:artifact TargetItems[]
     # scoreboard players operation $CheckMP Lib *= $Length Temporary

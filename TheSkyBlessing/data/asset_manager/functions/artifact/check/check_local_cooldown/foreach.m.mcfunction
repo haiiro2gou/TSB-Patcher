@@ -1,4 +1,4 @@
-#> asset_manager:artifact/check/check_local_cooldown/foreach
+#> asset_manager:artifact/check/check_local_cooldown/foreach.m
 #
 #
 #
@@ -25,4 +25,4 @@
     scoreboard players reset $LatestUsedTick Temporary
     scoreboard players reset $Tick Temporary
 # 要素がまだあるなら再帰
-    execute if data storage asset:artifact CopiedItem[0] run function asset_manager:artifact/check/check_local_cooldown/foreach
+    execute if data storage asset:artifact CopiedItem[0] run function asset_manager:artifact/check/check_local_cooldown/foreach.m with storage asset:artifact

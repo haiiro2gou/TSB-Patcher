@@ -5,6 +5,7 @@
 # @input
 #   as player
 #   storage asset:artifact TargetItems : ItemData
+#   args Index : int
 # @within function asset_manager:artifact/use/
 
 #> val

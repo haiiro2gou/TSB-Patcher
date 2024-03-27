@@ -1,10 +1,12 @@
-#> asset_manager:artifact/use/item/
+#> asset_manager:artifact/use/item/.m
 #
 #
 #
+# @input args
+#   Index : int
 # @within function
-#   asset_manager:artifact/use/
-#   asset_manager:artifact/use/item/
+#   asset_manager:artifact/use/.m
+#   asset_manager:artifact/use/item/.m
 
 # 古いデータを移行
     execute unless data storage asset:artifact TargetItems[-1].tag.TSB.Triggers[0] run function asset_manager:artifact/data/migrate
@@ -16,4 +18,4 @@
 # 末尾削除
     data remove storage asset:artifact TargetItems[-1]
 # 要素が残ってるなら再帰
-    execute if data storage asset:artifact TargetItems[0] run function asset_manager:artifact/use/item/ with storage asset:artifact
+    execute if data storage asset:artifact TargetItems[0] run function asset_manager:artifact/use/item/.m with storage asset:artifact

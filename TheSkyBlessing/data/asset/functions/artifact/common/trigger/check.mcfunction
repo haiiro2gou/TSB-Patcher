@@ -7,6 +7,7 @@
     execute unless data storage asset:temp Triggers[-1].Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
     execute unless data storage asset:temp Triggers[-1].Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
     # execute unless data storage asset:temp Triggers[-1].Condition run
+    # execute unless data storage asset:temp Triggers[-1].EnableDuplication run
     # execute unless data storage asset:temp Triggers[-1].AttackInfo run
     execute unless data storage asset:temp Triggers[-1].MPCost run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"}]
     # execute unless data storage asset:temp Triggers[-1].MPRequire run

@@ -22,14 +22,14 @@
                                         "text": "クールダウン: "
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "LocalCooldownSecond"
                                     },
                                     {
                                         "text": "."
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "LocalCooldownDecimal"
                                     },
                                     {
@@ -67,21 +67,21 @@
                                         "text": "クールダウン: "
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "LocalCooldownMinutes"
                                     },
                                     {
                                         "text": "分"
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "LocalCooldownSecond"
                                     },
                                     {
                                         "text": "."
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "LocalCooldownDecimal"
                                     },
                                     {

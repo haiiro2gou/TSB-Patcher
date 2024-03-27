@@ -22,7 +22,7 @@
                                         "text": "消費アイテム: "
                                     },
                                     {
-                                        "storage": "asset:temp",
+                                        "storage": "asset:artifact",
                                         "nbt": "Trigger.CostText",
                                         "interpret": true
                                     }

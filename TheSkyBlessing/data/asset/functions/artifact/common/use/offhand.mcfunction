@@ -6,5 +6,5 @@
 
 data modify storage asset:artifact TargetSlot set value 'offhand'
 execute unless data storage asset:artifact Index run data modify storage asset:artifact Index set value 0
-function asset_manager:artifact/use/ with storage asset:artifact
+function asset_manager:artifact/use/.m with storage asset:artifact
 tag @s remove CanUsed
