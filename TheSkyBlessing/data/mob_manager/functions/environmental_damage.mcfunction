@@ -18,6 +18,9 @@
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
     execute at @s run function lib:status_log/show_health
 
+# プレイヤーが攻撃していれば攻撃判定を与える
+    execute if entity @s[tag=AttackedEntity] at @a if score @s AttackedEntity = @p UserID run damage @s 0 player_attack by @p
+
 # キル処理
     execute if score @s MobHealth matches ..0 run kill @s
 # 回復

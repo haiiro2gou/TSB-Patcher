@@ -363,7 +363,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/triggers/attack
     #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
-    #   core:handler/attack
+    #   mob_manager:environmental_damage
         scoreboard objectives add AttackedEntity dummy
 
     #> MobManager - Teams
