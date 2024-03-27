@@ -13,6 +13,8 @@
     execute if data storage asset:artifact CopiedModifiers[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
     execute if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/create/modifier/
     data remove storage asset:artifact CopiedModifiers
+# セット効果
+    execute if data storage asset:artifact EquipID run function asset_manager:artifact/create/set_equipment
 # スキル設定
     data modify storage asset:artifact CopiedTriggers set from storage asset:artifact Triggers
     execute if data storage asset:artifact CopiedTriggers[0] run function asset_manager:artifact/create/trigger/

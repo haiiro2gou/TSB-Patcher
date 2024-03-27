@@ -87,5 +87,6 @@
     data remove storage asset:artifact Triggers
     data remove storage asset:artifact DisableBreakSound
     data remove storage asset:artifact CanUsedGod
+    data remove storage asset:artifact EquipID
     data remove storage asset:artifact Modifiers
     data remove storage asset:artifact CustomNBT
