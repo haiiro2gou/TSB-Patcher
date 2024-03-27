@@ -24,10 +24,11 @@
 #       ├ DisableCooldownMessage? : boolean
 #       └ DisableMPMessage? : boolean
 #       CanUsedGod : God[]
-#       SetID? : int
+#       EquipID? : int
 #       Modifiers : Component[]
 #       ├ Type : string
 #       ├ Amount : double
+#       ├ Slot : Slot
 #       └ Operation : "add" | "multiply_base" | "multiply"
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give

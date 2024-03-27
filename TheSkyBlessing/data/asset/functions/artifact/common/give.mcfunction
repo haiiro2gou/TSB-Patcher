@@ -24,11 +24,10 @@
 #   └ DisableMPMessage? : boolean
 #   DisableBreakSound? : boolean
 #   CanUsedGod : God[]
-#   SetID? : int
+#   EquipID? : int
 #   Modifiers : Component[]
 #   ├ Type : string
 #   ├ Slot : Slot
-#   ├ RequiredParts? : int
 #   ├ Amount : double
 #   └ Operation : "add" | "multiply_base" | "multiply"
 #   CustomNBT? : Component
@@ -57,7 +56,7 @@
     execute if data storage asset:artifact Triggers[0] run data remove storage asset:temp Triggers
     # execute unless data storage asset:artifact DisableBreakSound run
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
-    # execute unless data storage asset:artifact SetID run
+    # execute unless data storage asset:artifact EquipID run
     # execute unless data storage asset:artifact Modifiers[0] run
     execute if data storage asset:artifact Modifiers[0] run data modify storage asset:temp Modifiers set from storage asset:artifact Modifiers
     execute if data storage asset:artifact Modifiers[0] run function asset:artifact/common/modifier/check
