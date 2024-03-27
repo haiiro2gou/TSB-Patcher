@@ -4,7 +4,7 @@
 #
 # @input storage api:
 #   Argument.ID : int
-#   Argument.Duration? : int (default: 0)
+#   Argument.Duration? : int | "infinite" (default: 0)
 #   Argument.Stack? : int (default: 1)
 #   Argument.DurationOperation? : "forceReplace" | "replace" | "add" (default: "replace")
 #   Argument.StackOperation? : "forceReplace" | "replace" | "add" (default: "replace")
