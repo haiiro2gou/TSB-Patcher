@@ -46,7 +46,7 @@
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
 # 条件を満たしてない && 使用回数が存在する && トリガーがitemUse ならば使用回数を減らす
-    execute if entity @s[tag=!CanUsed] if data storage asset:artifact Trigger.RemainingCount if data storage asset:artifact Trigger{Trigger:"itemUse"} run function asset_manager:artifact/use/item/has_remain
+    execute if entity @s[tag=!CanUsed] if data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount if data storage asset:artifact Trigger{Trigger:"itemUse"} run function asset_manager:artifact/use/item/has_remain
 # リセット
     data remove storage asset:artifact Trigger
     data remove storage asset:artifact TargetSlot
