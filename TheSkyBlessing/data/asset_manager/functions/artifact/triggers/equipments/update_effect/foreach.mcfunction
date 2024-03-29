@@ -9,9 +9,10 @@
 # セット効果を更新
     data modify storage api: Argument.ID set from storage asset:artifact Equip.SetID
     function asset_manager:artifact/triggers/equipments/update_effect/parts_count.m with storage asset:artifact Equip
-    execute unless data storage api: Argument{Stack:0} run function api:entity/mob/effect/give
-    execute unless data storage api: Argument{Stack:0} run data modify storage asset:artifact Equip.New.IDList append from storage asset:artifact Equip.SetID
+    tellraw @a [{"text":"ID: "},{"storage":"api:","nbt":"Argument.ID"},{"text":" Stack: "},{"storage":"api:","nbt":"Argument.Stack"}]
     execute if data storage api: Argument{Stack:0} run function api:entity/mob/effect/remove/from_id
+    execute unless data storage api: Argument{Stack:0} run data modify storage asset:artifact Equip.New.IDList append from storage asset:artifact Equip.SetID
+    execute unless data storage api: Argument{Stack:0} run function api:entity/mob/effect/give
 
 # リセット&ループ
     data remove storage api: Argument.Stack

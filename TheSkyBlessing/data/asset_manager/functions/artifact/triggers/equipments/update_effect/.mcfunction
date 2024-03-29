@@ -32,7 +32,7 @@
 
 # それぞれ部位数チェック
     data modify storage asset:artifact Equip.New.IDList set value []
-    function asset_manager:artifact/triggers/equipments/update_effect/foreach
+    execute if data storage asset:artifact Equip.Old.IDList[0] run function asset_manager:artifact/triggers/equipments/update_effect/foreach
 
 # チェック後のセットIDのリストを戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EquipIDList set from storage asset:artifact Equip.New.IDList

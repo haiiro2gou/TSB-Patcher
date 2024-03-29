@@ -13,12 +13,16 @@
 # 空行セパレータ
     data modify storage asset:artifact Item.tag.display.Lore append value '""'
 # 名前をLoreに組み込む
-    data modify storage asset:artifact Item.tag.display.Lore append from storage asset:effect Name
+    data modify storage asset:artifact EquipName set from storage asset:effect Name
+    loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/equipment
+    data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[0]
 # 説明文をLoreに組み込む
-    execute if data storage asset:effect Description[0] run data modify storage asset:artifact Item.tag.display.Lore append from storage asset:effect Description[]
+    data modify storage asset:artifact Lore set from storage asset:effect Description
+    execute if data storage asset:artifact Lore[0] run function asset_manager:artifact/create/lore_append
 
 # リセット
-    data remove storage asset:artifact Line
+    data remove storage asset:artifact EquipName
+    data remove storage asset:artifact Lore
     data remove storage asset:effect ExtendsSafe
     data remove storage asset:effect ID
     data remove storage asset:effect Name
