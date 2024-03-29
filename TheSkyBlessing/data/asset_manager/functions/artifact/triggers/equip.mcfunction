@@ -1,4 +1,4 @@
-#> asset_manager:artifact/triggers/equip/
+#> asset_manager:artifact/triggers/equip
 #
 # 各神器処理へデータ受け渡し
 #

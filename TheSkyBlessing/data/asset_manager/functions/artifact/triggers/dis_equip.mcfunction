@@ -1,4 +1,4 @@
-#> asset_manager:artifact/triggers/dis_equip/
+#> asset_manager:artifact/triggers/dis_equip
 #
 # 各神器処理へデータ受け渡し
 #
