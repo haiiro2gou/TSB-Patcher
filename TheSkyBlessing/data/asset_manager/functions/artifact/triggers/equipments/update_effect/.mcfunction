@@ -1,41 +1,43 @@
 #> asset_manager:artifact/triggers/equipments/update_effect/
 #
-# セット効果を更新する
+# 装備時効果を更新する
 #
-# @within function asset_manager:artifact/triggers/*equip/
+# @within function asset_manager:artifact/triggers/
 
-# 今の装備を取得する
-    data modify storage asset:artifact Equip.Items set value []
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.mainhand
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.offhand
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.feet
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.legs
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.chest
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.head
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[0]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[1]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[2]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[3]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[4]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[5]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[6]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[7]
-    data modify storage asset:artifact Equip.Items append from storage asset:context Items.hotbar[8]
-# 装備セットIDを取得
-    data modify storage asset:artifact Equip.IDList append from storage asset:artifact Equip.Items[].tag.TSB.EquipID
-
-# 自分の抱える装備セットデータを取得
+# ユーザーストレージ呼び出し
     function oh_my_dat:please
-    data modify storage asset:artifact Equip.Old.IDList set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EquipIDList
-# 既存のセットと合体
-    execute if data storage asset:artifact Equip.IDList[0] run function asset_manager:artifact/triggers/equipments/update_effect/merge/
 
-# それぞれ部位数チェック
-    data modify storage asset:artifact Equip.New.IDList set value []
-    execute if data storage asset:artifact Equip.Old.IDList[0] run function asset_manager:artifact/triggers/equipments/update_effect/foreach
-
-# チェック後のセットIDのリストを戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EquipIDList set from storage asset:artifact Equip.New.IDList
+# データの初期化
+    data modify storage asset:artifact Old.Modifiers set value []
+    data modify storage asset:artifact EquipIDList set value []
+    data modify storage asset:artifact New.Modifiers set value []
+    data modify storage asset:artifact New.EquipIDList set value []
+# 前データを回収
+    data modify storage asset:artifact Old.Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.Modifiers
+    data modify storage asset:artifact EquipIDList set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.IDList
+# Modifierを一旦削除
+    execute if data storage asset:artifact Old.Modifiers[0] run function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 
 # リセット
-    data remove storage asset:artifact Equip
+    data remove storage asset:artifact Old.Modifiers
+
+# データを取得
+    data modify storage asset:artifact CopiedItemData set from storage asset:artifact ItemData
+# 装備条件のチェック
+    scoreboard players set $SlotIndex Temporary 15
+    function asset_manager:artifact/triggers/equipments/update_effect/mask_condition/
+
+# データを処理する
+    execute if data storage asset:artifact Modifiers[0] run function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/
+    execute if data storage asset:artifact EquipIDList[0] run function asset_manager:artifact/triggers/equipments/update_effect/equip_set
+# 抽出したデータを戻す
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.Modifiers set from storage asset:artifact New.Modifiers
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.IDList set from storage asset:artifact New.EquipIDList
+
+# リセット
+    data remove storage asset:artifact CopeidItemData
+    data remove storage asset:artifact EquipList
+    data remove storage asset:artifact Modifiers
+    data remove storage asset:artifact EquipIDList
+    data remove storage asset:artifact New.Modifiers
+    data remove storage asset:artifact New.EquipIDList

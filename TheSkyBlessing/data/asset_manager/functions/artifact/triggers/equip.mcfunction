@@ -10,10 +10,6 @@
     data modify storage asset:context id.all set from storage asset:context id
 # 変更のなかったスロットをマスクする
     function asset_manager:artifact/triggers/equipments/mask_slot/
-# 装備アイテムのModifier反映
-    function asset_manager:artifact/triggers/equip/modifier/
-# 装備セットチェック
-    function asset_manager:artifact/triggers/equipments/update_effect/
 # 神器側に受け渡し
     function #asset:artifact/equip
 # イベント発火後に実行するやつ

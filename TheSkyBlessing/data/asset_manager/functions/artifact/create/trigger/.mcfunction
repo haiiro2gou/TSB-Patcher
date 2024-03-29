@@ -7,7 +7,7 @@
 #   asset_manager:artifact/create/trigger/
 
 # move
-    data modify storage asset:artifact Trigger set from storage asset:artifact CopiedTriggers[-1]
+    data modify storage asset:artifact Trigger set from storage asset:artifact CopiedTriggers[0]
 
 # 空行セパレータ
     data modify storage asset:artifact Item.tag.display.Lore append value '""'
@@ -35,5 +35,5 @@
 
 # loop
     data remove storage asset:artifact Trigger
-    data remove storage asset:artifact CopiedTriggers[-1]
+    data remove storage asset:artifact CopiedTriggers[0]
     execute if data storage asset:artifact CopiedTriggers[0] run function asset_manager:artifact/create/trigger/

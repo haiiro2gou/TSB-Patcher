@@ -1,5 +1,5 @@
-#> asset_manager:artifact/triggers/dis_equip/modifier/custom_modifier
-# @within function asset_manager:artifact/triggers/dis_equip/modifier/foreach
+#> asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/custom
+# @within function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 
 execute if data storage asset:artifact Modifier{Type:"attackBase"} run scoreboard players set $CustomModifier Temporary 1
 execute if data storage asset:artifact Modifier{Type:"attackBase"} run function api:modifier/attack/base/remove
