@@ -41,7 +41,7 @@
     #declare score_holder $InvSize
 
 # Triggerの並列化
-    execute unless data storage asset:artifact Triggers[0] run function asset:artifact/common/trigger/migrate
+    execute unless data storage asset:artifact Triggers[0] if data storage asset:artifact Trigger run function asset:artifact/common/trigger/migrate
 # AttributeModifierの内部化
     execute if data storage asset:artifact CustomNBT.AttributeModifiers[0] run function asset:artifact/common/modifier/migrate
 
