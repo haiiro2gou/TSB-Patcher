@@ -15,7 +15,9 @@
     #declare tag Believe.Rumor
 
 #> storage for process
-# @within function player_manager:god/mercy/**
+# @within function
+#   player_manager:god/mercy/**
+#   player_manager:god/change_difficulty/**
     #declare storage player_manager:god
 
 #> Tag for Nyaptov Passive
@@ -30,3 +32,9 @@
 #   player_manager:god/none/set_tag
 #   asset_manager:artifact/triggers/
     #declare tag Believe.Changed
+
+#> Tag for Difficulty Change
+# @within function
+#   player_manager:god/change_difficulty/request/**
+#   player_manager:god/change_difficulty/confirm/**
+    #declare tag Difficulty.Request

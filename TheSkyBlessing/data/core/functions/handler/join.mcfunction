@@ -8,6 +8,8 @@
 
 # バージョンチェック
     function player_manager:version_check
+# 難易度チェック
+    function player_manager:difficulty_check
 #> v0.4.10+ modifier base
     function oh_my_dat:please
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base set value {Heal:1d,ReceiveHeal:1d,Attack:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},Defense:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},MaxMP:100d,MPRegen:1d,MaxHealth:20d}

@@ -25,7 +25,7 @@
 
 #> スコアボード類
     #> 常に値が設定される変数用スコアボード
-        scoreboard players set $Difficulty Global 2
+        difficulty normal
 
     #> AssetManager: Mob -Public
     # @public
