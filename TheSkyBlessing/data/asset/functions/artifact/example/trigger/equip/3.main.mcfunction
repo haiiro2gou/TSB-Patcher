@@ -16,5 +16,3 @@
     particle crit ~ ~1 ~ 0 0 0 0.5 10
     particle dust 100000000 1 1 1 ~ ~1.5 ~ 0.5 1 0.5 0 150
     playsound minecraft:block.beacon.activate player @a ~ ~ ~ 1 2
-# 補正を追加
-    function asset:artifact/example/trigger/add_modifier

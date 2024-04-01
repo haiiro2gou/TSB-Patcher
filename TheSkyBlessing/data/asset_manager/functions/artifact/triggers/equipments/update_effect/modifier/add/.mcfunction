@@ -1,13 +1,14 @@
-#> asset_manager:artifact/triggers/equipments/update_effect/modifier/add
+#> asset_manager:artifact/triggers/equipments/update_effect/modifier/add/
 # @within function
 #   asset_manager:artifact/triggers/equipments/update_effect/
-#   asset_manager:artifact/triggers/equipments/update_effect/modifier/add
+#   asset_manager:artifact/triggers/equipments/update_effect/modifier/add/
 
 # データを取得
     data modify storage asset:artifact New.Modifiers append from storage asset:artifact Modifiers[-1]
     data modify storage asset:artifact Modifier set from storage asset:artifact Modifiers[-1]
 
 # データを整える
+    execute if data storage asset:artifact Modifier{Slot:"hotbar"} run function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/calculate
     data modify storage asset:artifact Modifier.UUID set value [I;1,1,0,0]
     data modify storage asset:artifact Modifier.UUID[2] set from storage asset:artifact Modifier.ID
     function asset_manager:artifact/triggers/equipments/update_effect/modifier/fourth_id

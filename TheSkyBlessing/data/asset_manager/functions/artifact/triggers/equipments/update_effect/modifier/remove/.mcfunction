@@ -1,7 +1,7 @@
-#> asset_manager:artifact/triggers/equipments/update_effect/modifier/remove
+#> asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 # @within function
 #   asset_manager:artifact/triggers/equipments/update_effect/
-#   asset_manager:artifact/triggers/equipments/update_effect/modifier/remove
+#   asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 
 # データを取得
     data modify storage asset:artifact Modifier set from storage asset:artifact Old.Modifiers[-1]
