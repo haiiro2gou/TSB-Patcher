@@ -1,4 +1,4 @@
-#> asset_manager:artifact/use/
+#> asset_manager:artifact/use/.m
 #
 # 神器使用時の処理を実行します
 #

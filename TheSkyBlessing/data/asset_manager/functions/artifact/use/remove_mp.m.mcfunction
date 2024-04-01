@@ -6,7 +6,7 @@
 #   as player
 #   storage asset:artifact TargetItems : ItemData
 #   args Index : int
-# @within function asset_manager:artifact/use/
+# @within function asset_manager:artifact/use/.m
 
 #> val
 # @private

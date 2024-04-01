@@ -1,4 +1,4 @@
-#> asset_manager:artifact/check/
+#> asset_manager:artifact/check/.m
 #
 # 実行可能かどうかのチェックを行う
 #
