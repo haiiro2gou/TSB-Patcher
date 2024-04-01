@@ -10,7 +10,7 @@
     data modify storage asset:artifact Trigger set from storage asset:artifact CopiedTriggers[0]
 
 # 空行セパレータ
-    data modify storage asset:artifact Item.tag.display.Lore append value '""'
+    execute if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
 # 0 使用方法
     function asset_manager:artifact/create/trigger/trigger
 # 1? 使用条件
