@@ -50,6 +50,11 @@
     #   predicate lib:is_player_moving
         scoreboard objectives add PosPacketLossDetectAfterTick dummy
 
+    #> PlayerManager - 信仰
+    # @within function player_manager:god/**
+        scoreboard objectives add Believe4 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe5 trigger {"text":"信仰のユーザー入力"}
+
     #> PlayerManager - 戦闘判定用スコアボード
     # @within
     #   function
