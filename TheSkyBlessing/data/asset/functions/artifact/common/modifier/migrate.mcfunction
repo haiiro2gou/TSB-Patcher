@@ -4,7 +4,7 @@
 #   asset:artifact/common/modifier/migrate
 
 # 前データの用意
-    data modify storage asset:temp Modifier set from storage asset:artifact CustomNBT.AttributeModifiers[-1]
+    data modify storage asset:temp Modifier set from storage asset:artifact CustomNBT.AttributeModifiers[0]
     data modify storage asset:artifact Modifiers append value {}
 # データを移し替える
     data modify storage asset:artifact Modifiers[-1].Type set from storage asset:temp Modifier.AttributeName
@@ -16,5 +16,5 @@
 
 # 他の要素があればループ
     data remove storage asset:temp Modifier
-    data remove storage asset:artifact CustomNBT.AttributeModifiers[-1]
+    data remove storage asset:artifact CustomNBT.AttributeModifiers[0]
     execute if data storage asset:artifact CustomNBT.AttributeModifiers[0] run function asset:artifact/common/modifier/migrate
