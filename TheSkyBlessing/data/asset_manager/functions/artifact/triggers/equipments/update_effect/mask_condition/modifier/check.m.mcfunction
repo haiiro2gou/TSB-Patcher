@@ -19,6 +19,7 @@
 # 一致しているものがなければ追加
     execute if score $SameModifier Temporary matches 0 run data modify storage asset:artifact Modifiers append from storage asset:artifact Modifier
     execute if score $SameModifier Temporary matches 0 run data modify storage asset:artifact Modifiers[-1].Stack set value 1
+    execute if score $SameModifier Temporary matches 0 unless data storage asset:artifact Modifiers[-1].MaxStack run data modify storage asset:artifact Modifiers[-1].MaxStack set value 1
 # リセット
     scoreboard players reset $SameModifier Temporary
     scoreboard players reset $ModifierStack Temporary

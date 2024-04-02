@@ -13,7 +13,6 @@
     execute store result score $Amount Temporary run data get storage asset:artifact Modifier.Amount 1000
     execute store result score $MaxStack Temporary run data get storage asset:artifact Modifier.MaxStack
     execute store result score $StackReduction Temporary run data get storage asset:artifact Modifier.StackReduction 1000
-    execute if score $MaxStack Temporary matches 0 run scoreboard players set $MaxStack Temporary 9
 # 計算
     scoreboard players operation $Stack Temporary < $MaxStack Temporary
     scoreboard players operation $Amount Temporary *= $Stack Temporary

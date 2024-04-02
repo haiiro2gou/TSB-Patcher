@@ -36,10 +36,10 @@ data modify storage asset:artifact Triggers set value []
     # data modify storage asset:artifact Triggers[-1].SpecialCooldown set value 5
 # Modifier
     data modify storage asset:artifact Modifiers set value []
-    data modify storage asset:artifact Modifiers append value {Type:"attackBase",Slot:"hotbar",Amount:0.05d,Operation:"multiply"}
-    data modify storage asset:artifact Modifiers append value {Type:"defenseBase",Slot:"hotbar",Amount:0.05d,Operation:"multiply"}
-    data modify storage asset:artifact Modifiers append value {Type:"maxHealth",Slot:"hotbar",Amount:0.025d,Operation:"multiply"}
-    data modify storage asset:artifact Modifiers append value {Type:"maxMP",Slot:"hotbar",Amount:0.025d,Operation:"multiply"}
+    data modify storage asset:artifact Modifiers append value {Type:"attackBase",Slot:"hotbar",Amount:0.05d,Operation:"multiply_base",MaxStack:9}
+    data modify storage asset:artifact Modifiers append value {Type:"defenseBase",Slot:"hotbar",Amount:0.05d,Operation:"multiply_base",MaxStack:9}
+    data modify storage asset:artifact Modifiers append value {Type:"maxHealth",Slot:"hotbar",Amount:0.025d,Operation:"multiply_base",MaxStack:9}
+    data modify storage asset:artifact Modifiers append value {Type:"maxMP",Slot:"hotbar",Amount:0.025d,Operation:"multiply_base",MaxStack:9}
 data modify storage asset:artifact CanUsedGod set value "ALL"
 # data modify storage asset:artifact CustomNBT set value {}
 

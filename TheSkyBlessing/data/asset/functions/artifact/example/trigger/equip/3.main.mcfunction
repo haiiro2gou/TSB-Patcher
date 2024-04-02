@@ -5,6 +5,7 @@
 # @within function asset:artifact/example/trigger/equip/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
+    data modify storage asset:artifact Index set value 1
     function asset:artifact/common/use/hotbar
 
 # ここから先は神器側の効果の処理を書く
