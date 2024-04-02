@@ -24,9 +24,5 @@
     execute unless score @s MobHealth matches ..0 run attribute @s generic.max_health base set 1024
     execute unless score @s MobHealth matches ..0 run data modify entity @s Health set value 512f
 
-#> v0.4.14+ エフェクト削除
-    effect clear @s[type=!#lib:undead] instant_health
-    effect clear @s[type= #lib:undead] instant_damage
-
 # リセット
     scoreboard players reset $Damage Temporary
