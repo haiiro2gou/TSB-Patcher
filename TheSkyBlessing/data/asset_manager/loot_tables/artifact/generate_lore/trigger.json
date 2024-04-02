@@ -23,10 +23,6 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "Temp.EnableDuplication"
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
                                         "nbt": "Temp.Trigger.A"
                                     },
                                     {

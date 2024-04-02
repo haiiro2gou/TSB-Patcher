@@ -29,7 +29,9 @@
 #       ├ Type : string
 #       ├ Amount : double
 #       ├ Slot : Slot
-#       └ Operation : "add" | "multiply_base" | "multiply"
+#       ├ Operation : "add" | "multiply_base" | "multiply"
+#       ├ MaxStack : int
+#       └ StackReduction : double
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give
 

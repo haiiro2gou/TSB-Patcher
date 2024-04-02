@@ -37,6 +37,11 @@
                                         "storage": "asset:artifact",
                                         "nbt": "Line[4]",
                                         "interpret": true
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "Line[5]",
+                                        "interpret": true
                                     }
                                 ]
                             ]

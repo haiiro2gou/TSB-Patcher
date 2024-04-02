@@ -16,7 +16,7 @@
 # 変数を用意
     scoreboard players set $CustomModifier Temporary 0
     data modify storage asset:artifact Modifier set from storage asset:artifact CopiedModifiers[0]
-    data modify storage asset:artifact Line set value ['{"text":"","color":"green","italic":false}','""','" +"','{"translate":"%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"}]}','""']
+    data modify storage asset:artifact Line set value ['{"text":"","color":"green","italic":false}','""','" +"','{"translate":"%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"}]}','""','""']
 
 # カスタムModifier
     execute if data storage asset:artifact Modifier{Type:"attackBase"} run scoreboard players set $CustomModifier Temporary 1
@@ -75,6 +75,7 @@
     execute store result storage asset:artifact Amount.Int int 1 run scoreboard players get $AmountInt Temporary
     execute store result storage asset:artifact Amount.Frac int 1 run scoreboard players get $AmountFrac Temporary
     execute if score $AmountFrac Temporary matches 1.. run data modify storage asset:artifact Line[3] set value '{"translate":"%s.%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"},{"storage":"asset:artifact","nbt":"Amount.Frac"}]}'
+    execute if data storage asset:artifact Modifier{Slot:"hotbar"} run data modify storage asset:artifact Line[5] set value '{"translate":" [装着可能数: %s]","color":"white","with":[{"storage":"asset:artifact","nbt":"Modifier.MaxStack"}]}'
 # Lore追加
     loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/modifier
     data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]

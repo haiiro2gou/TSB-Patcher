@@ -13,7 +13,6 @@
 #   ├ Slot : Slot
 #   ├ Trigger : Trigger
 #   ├ Condition? : TextComponent
-#   ├ EnableDuplication? : boolean
 #   ├ AttackInfo? : Component
 #   ├ MPCost : int
 #   ├ MPRequire? : int
