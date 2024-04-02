@@ -61,6 +61,8 @@
     execute unless score $AmountFrac Temporary matches 0.. run data modify storage asset:artifact Line[0] set value '{"text":"","color":"red","italic":false}'
     execute unless score $AmountFrac Temporary matches 0.. run data modify storage asset:artifact Line[2] set value '" -"'
     execute unless score $AmountFrac Temporary matches 0.. run scoreboard players operation $AmountFrac Temporary *= $-1 Const
+    execute if score $AmountFrac Temporary matches 0 run data modify storage asset:artifact Line[0] set value '{"text":"","color":"gray","italic":false}'
+    execute if score $AmountFrac Temporary matches 0 run data modify storage asset:artifact Line[2] set value '" "'
     scoreboard players operation $AmountInt Temporary = $AmountFrac Temporary
     scoreboard players operation $AmountInt Temporary /= $1000 Const
     scoreboard players operation $AmountFrac Temporary %= $1000 Const
