@@ -23,6 +23,9 @@
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
     summon armor_stand 0.0 0.0 0.0 {UUID:[I;0,0,0,1],Marker:1b,Invisible:1b}
 
+#> スポーン地点の設定
+    setworldspawn 4093 165 -468 270
+
 #> スコアボード類
     #> 常に値が設定される変数用スコアボード
         difficulty normal
