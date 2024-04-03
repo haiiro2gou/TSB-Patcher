@@ -12,12 +12,17 @@
     tellraw @a [{"text":"Thanks for installation!"}]
     tellraw @a [{"text":"================================","color":"gold"}]
 
+#> gameruleの設定
+    function core:define_gamerule
+
 #> リセット必須オブジェクト等の削除
 # @private
     #declare objective AttackEvent
+    #declare storage asset:trader
+    #declare tag Trader
     scoreboard objectives remove AttackEvent
-    scoreboard players reset $MaxHealth Global
-    scoreboard players reset $MaxMP Global
+    data remove storage asset:trader DPR
+    kill @e[type=villager,tag=Trader]
 
 #> ベクトル用等のシステム内汎用Entityのエイリアスの登録とsummon
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
@@ -80,10 +85,15 @@
         #declare score_holder $BonusMP
         #declare score_holder $AttackBonus
         #declare score_holder $DefenseBonus
-    scoreboard players set $BonusHealth Global 0
-    scoreboard players set $BonusMP Global 0
-    scoreboard players set $AttackBonus Global 0
-    scoreboard players set $DefenseBonus Global 0
+        scoreboard players operation $BonusHealth Global = $MaxHealth Global
+        scoreboard players operation $BonusHealth Global /= $10000 Const
+        scoreboard players remove $BonusHealth Global 20
+        scoreboard players operation $BonusMP Global = $MaxMP Global
+        scoreboard players remove $BonusMP Global 100
+        scoreboard players set $AttackBonus Global 0
+        scoreboard players set $DefenseBonus Global 0
+        scoreboard players reset $MaxHealth Global
+        scoreboard players reset $MaxMP Global
 
 #> 各Asset側のロード処理
     function #asset:artifact/load
