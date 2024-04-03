@@ -21,6 +21,8 @@
 # 神器クールダウンの初期化
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set value [{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0}]
 
+# あるべき場所へ送る
+    tp @s 4093 165 -468 270 0
 # 共通Join処理
     function core:handler/join
 
