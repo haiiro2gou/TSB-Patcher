@@ -26,6 +26,7 @@
     execute store result score $JumpBoost Temporary run data get storage api: active_effects[{id:"minecraft:jump_boost"}].amplifier 10
     execute unless data storage api: active_effects[{id:"minecraft:jump_boost"}] run scoreboard players set $JumpBoost Temporary -10
     scoreboard players add $JumpBoost Temporary 10
+    execute unless score $JumpBoost Temporary matches 0.. run scoreboard players operation $JumpBoost Temporary *= $-1 Const
 
 # 低速落下がついていたら問答無用で0にする
     execute if data storage api: active_effects[{id:"minecraft:slow_falling"}] run scoreboard players set $FallDistance Temporary 0
