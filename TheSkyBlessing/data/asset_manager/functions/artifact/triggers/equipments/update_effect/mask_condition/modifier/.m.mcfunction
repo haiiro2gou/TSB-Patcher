@@ -7,7 +7,7 @@
 # 一つ抽出
     data modify storage asset:artifact Modifier set from storage asset:artifact CopiedModifiers[-1]
 # スロットが正しければチェック
-    $execute if data storage asset:artifact Modifier{Slot:"$(TargetSlot)"} run data modify storage asset:artifact Modifier.ID set from storage asset:artifact CopiedItemData[-1].ID
+    data modify storage asset:artifact Modifier.ID set from storage asset:artifact CopiedItemData[-1].ID
     $execute if data storage asset:artifact Modifier{Slot:"$(TargetSlot)"} run function asset_manager:artifact/triggers/equipments/update_effect/mask_condition/modifier/check.m with storage asset:artifact Modifier
 # リセット&ループ
     data remove storage asset:artifact Modifier

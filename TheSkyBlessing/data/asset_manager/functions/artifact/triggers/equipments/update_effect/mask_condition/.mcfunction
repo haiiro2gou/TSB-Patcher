@@ -3,10 +3,6 @@
 #   asset_manager:artifact/triggers/equipments/update_effect/
 #   asset_manager:artifact/triggers/equipments/update_effect/mask_condition/
 
-#> Private
-# @private
-    #declare score_holder $CanUsed
-
 # データの初期化
     scoreboard players set $CanUsed Temporary 0
 
