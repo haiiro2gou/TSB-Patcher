@@ -2,7 +2,9 @@
 #
 # gameruleを定義します
 #
-# @within function core:load_once
+# @within function
+#   core:load_once
+#   core:patcher/load_once
 
 gamerule announceAdvancements true
 gamerule blockExplosionDropDecay true
