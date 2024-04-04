@@ -22,6 +22,7 @@
     function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/custom
 # バニラでModifierで処理
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/third_id/
+    execute unless score $CustomModifier Temporary matches 1 if data storage asset:artifact Modifier{Type:"generic.knockback_resistance"} store result storage asset:artifact Modifier.Amount double 0.1 run data get storage asset:artifact Modifier.Amount
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/generic.m with storage asset:artifact Modifier
 
 # リセット&ループ
