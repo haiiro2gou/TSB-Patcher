@@ -36,6 +36,13 @@
     # @public
         scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
 
+    #> AssetManager: Island -Public
+    # @public
+        #declare score_holder $Island
+        #declare score_holder $IslandTotal
+        scoreboard players set $Island Global 0
+        scoreboard players set $IslandTotal Global 50
+
     #> AssetManager: Teleporter
     # @within function
     #   asset_manager:teleporter/**
