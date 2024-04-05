@@ -10,6 +10,7 @@
 #       Argument.Damage : float
 #       Argument.AttackType : Enum
 #       Argument.ElementType? : Enum
+#       Argument.DamageType? : Enum
 #       Argument.FixedDamage? : boolean
 #       ├ Argument.BypassModifier? : boolean
 #       ├ Argument.BypassArmorDefense? : boolean
@@ -25,6 +26,7 @@
     execute unless data storage api: Argument.Damage run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Damage","color":"red"}]
     execute unless data storage api: Argument.AttackType run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" AttackType","color":"red"}]
     execute unless data storage api: Argument.ElementType run data modify storage api: Argument.ElementType set value "None"
+    execute unless data storage api: Argument.DamageType run data modify storage api: Argument.DamageType set value "Melee"
     execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassModifier set value true
     execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassArmorDefense set value true
     execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassToughness set value true
