@@ -7,6 +7,7 @@
 data remove storage api: Argument.Damage
 data remove storage api: Argument.AttackType
 data remove storage api: Argument.ElementType
+data remove storage api: Argument.DamageType
 data remove storage api: Argument.DeathMessage
 data remove storage api: Argument.FixedDamage
 data remove storage api: Argument.BypassModifier
