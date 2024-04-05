@@ -17,11 +17,9 @@
     execute if score @s MobHealth matches ..0 run tag @p[tag=this] add Killer
     execute if score @s MobHealth matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
     execute if score @s MobHealth matches ..0 run effect clear @s resistance
-    tag @s add AttackedByApi
-    execute if entity @p[tag=this,advancements={asset_manager:artifact/attack/projectile=true}] run tag @s add KilledByProjectile
+    execute if score @s MobHealth matches ..0 if entity @p[tag=this,advancements={asset_manager:artifact/attack/projectile=true}] run tag @s add AttackedByProjectile
     execute if score @s MobHealth matches ..0 run damage @s 9999 minecraft:player_attack by @p[tag=Killer]
-    tag @s remove AttackedByApi
-    tag @s remove KilledByProjectile
+    tag @s remove AttackedByProjectile
     execute if score @s MobHealth matches ..0 run kill @s
 # 回復
     execute unless score @s MobHealth matches ..0 run data modify entity @s Health set value 512f

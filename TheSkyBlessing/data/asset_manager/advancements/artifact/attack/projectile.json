@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "trigger": {
+        "generic": {
             "trigger": "player_hurt_entity",
             "conditions": {
                 "damage": {
@@ -14,6 +14,26 @@
                     }
                 }
             }
+        },
+        "api": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"AttackedByProjectile\"]}"
+                        }
+                    }
+                ]
+            }
         }
-    }
+    },
+    "requirements": [
+        [
+            "generic",
+            "api"
+        ]
+    ]
 }

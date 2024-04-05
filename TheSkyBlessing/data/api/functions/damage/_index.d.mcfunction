@@ -18,11 +18,8 @@
 #       api:damage/core/health_subtract/non-player
 #       player_manager:vanilla_attack
 #   advancement
-#       asset_manager:artifact/attack/melee
-#       asset_manager:artifact/killed/*
-    #declare tag AttackedByApi
-    #declare tag KilledByMelee
-    #declare tag KilledByProjectile
+#       asset_manager:artifact/**
+    #declare tag AttackedByProjectile
 
 #> Declare
 # @within function api:damage/core/trigger_on_damage/**
