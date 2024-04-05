@@ -4,6 +4,12 @@
 #
 # @within function asset_manager:artifact/tick/player
 
+execute if entity @s[advancements={asset_manager:artifact/attack/melee=true}] run tellraw @a "a"
+execute if entity @s[advancements={asset_manager:artifact/attack/projectile=true}] run tellraw @a "b"
+execute if entity @s[advancements={asset_manager:artifact/killed/melee=true}] run tellraw @a "c"
+execute if entity @s[advancements={asset_manager:artifact/killed/projectile=true}] run tellraw @a "d"
+
+
 # 神器のリログ対策用トリガー呼び出し
     execute if entity @s[tag=TriggerFlag.Rejoin] run function #asset:rejoin
 # IDの代入

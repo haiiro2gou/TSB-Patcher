@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "trigger": {
+        "generic": {
             "trigger": "player_killed_entity",
             "conditions": {
                 "killing_blow": {
@@ -10,7 +10,19 @@
                             "expected": false
                         }
                     ]
-                }
+                },
+                "entity": [
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"KilledByProjectile\"]}"
+                            }
+                        }
+                    }
+                ]
             }
         }
     }
