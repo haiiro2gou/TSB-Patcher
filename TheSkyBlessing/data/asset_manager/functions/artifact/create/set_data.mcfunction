@@ -48,6 +48,7 @@
 
 # Version
     data modify storage asset:artifact Item.tag.TSB.Version set from storage global GameVersion
+    data modify storage asset:artifact Item.tag.TSB.PatchVersion set from storage global Patcher.Version
 # Unique Universal Identifier
     scoreboard players add $ArtifactIndex Global 1
     execute store result storage asset:artifact Item.tag.TSB.UUID int 1 run scoreboard players get $ArtifactIndex Global

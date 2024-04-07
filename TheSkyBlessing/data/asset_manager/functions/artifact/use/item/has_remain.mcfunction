@@ -19,7 +19,7 @@
     scoreboard players remove $Remain Temporary 1
 # アイテム更新処理
     execute store result storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount int 1 run scoreboard players get $Remain Temporary
-    execute if score $Remain Temporary matches 1.. run function asset_manager:artifact/use/item/update
+    execute if score $Remain Temporary matches 1.. run function asset_manager:artifact/use/item/update/
 # 破壊処理
     execute if score $Remain Temporary matches ..0 run function asset_manager:artifact/use/item/break
 # リセット

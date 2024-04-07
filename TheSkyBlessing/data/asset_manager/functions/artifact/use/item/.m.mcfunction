@@ -13,7 +13,7 @@
 # 最終使用tick保存
     $execute store result storage asset:artifact TargetItems[-1].tag.TSB.Triggers[$(Index)].LatestUseTick int 1 run time query gametime
 # アイテム更新
-    execute unless data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run function asset_manager:artifact/use/item/update
+    execute unless data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run function asset_manager:artifact/use/item/update/
     execute if data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run function asset_manager:artifact/use/item/has_remain
 # 末尾削除
     data remove storage asset:artifact TargetItems[-1]

@@ -1,4 +1,4 @@
-#> asset_manager:artifact/use/item/update
+#> asset_manager:artifact/use/item/update/
 #
 # アイテムを更新します
 #
@@ -6,8 +6,16 @@
 #   asset_manager:artifact/use/item/*
 #   asset_manager:artifact/use/item/has_remain
 
+#> private
+# @private
+    #declare score_holder $DifferentVersion
+
+# バージョンチェック
+    execute store success score $DifferentVersion Temporary run data modify storage asset:artifact TargetItems[-1].tag.TSB.Version set from storage global GameVersion
+    execute if score $DifferentVersion Temporary matches 0 store success score $DifferentVersion Temporary run data modify storage asset:artifact TargetItems[-1].tag.TSB.PatchVersion set from storage global Patcher.Version
+    execute unless score $DifferentVersion Temporary matches 0 run function asset_manager:artifact/use/item/update/version
 # CT設定
-    function asset_manager:artifact/use/item/update_local_cooldown/
+    function asset_manager:artifact/use/item/update/local_cooldown/
 # データ更新処理
     data modify storage asset:artifact Name set from storage asset:artifact TargetItems[-1].tag.TSB.rawName
     # 残り回数が存在する場合
@@ -40,5 +48,6 @@
     data modify storage asset:artifact ProcessedItem set from storage asset:artifact TargetItems[-1]
     function asset_manager:artifact/data/current/update/
 # リセット
+    scoreboard players reset $DifferentVersion Temporary
     data remove storage asset:artifact Name
     data remove storage asset:artifact CopiedSlot
