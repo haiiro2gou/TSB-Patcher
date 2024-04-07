@@ -10,3 +10,4 @@
 data modify storage asset:artifact TargetSlot set value 'hotbar'
 execute unless data storage asset:artifact Index run data modify storage asset:artifact Index set value 0
 function asset_manager:artifact/check/.m with storage asset:artifact
+data remove storage asset:artifact Index
