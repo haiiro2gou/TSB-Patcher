@@ -1,4 +1,4 @@
-#> asset_manager:artifact/use/item/update_local_cooldown/hotbar
+#> asset_manager:artifact/use/item/update_local_cooldown/hotbar.m
 #
 #
 #

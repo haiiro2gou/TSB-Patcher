@@ -1,4 +1,4 @@
-#> asset_manager:artifact/use/remove_mp
+#> asset_manager:artifact/use/remove_mp.m
 #
 # MPを減少させます
 #
