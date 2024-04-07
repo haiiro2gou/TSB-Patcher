@@ -1,9 +1,9 @@
 #> asset_manager:island/patcher/init
-# @within function asset_manager:island/tick/
+# @within function core:tick/
 
 #> tag
 # @within function
-#   asset_manager:island/tick/
+#   core:tick/
 #   asset_manager:island/patcher/init
     #declare tag Patcher.CursedArtifactInit
 

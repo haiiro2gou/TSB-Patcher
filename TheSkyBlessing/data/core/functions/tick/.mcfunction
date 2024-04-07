@@ -42,6 +42,7 @@
     function asset_manager:common/reset_all_context
 
 # 解呪処理
+    execute as @e[type=armor_stand,tag=CursedArtifact,tag=!Patcher.CursedArtifactInit] at @s run function asset_manager:island/patcher/init
     execute as @e[type=armor_stand,tag=CursedArtifact,tag=!DispelledCursedArtifact] at @s run function asset_manager:island/tick/
 
 # スポナー処理部
