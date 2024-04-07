@@ -4,7 +4,7 @@
 #
 # @input storage asset:artifact ProcessedItem : SlottedItem
 # @within function
-#   asset_manager:artifact/use/item/update
+#   asset_manager:artifact/use/item/update/
 #   asset_manager:artifact/use/item/break
 
 # ターゲットスロットを設定する

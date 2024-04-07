@@ -1,11 +1,11 @@
-#> asset_manager:artifact/use/item/update_local_cooldown/non-hotbar.m
+#> asset_manager:artifact/use/item/update/local_cooldown/non-hotbar.m
 #
 #
 #
-# @within function asset_manager:artifact/use/item/update_local_cooldown/
+# @within function asset_manager:artifact/use/item/update/local_cooldown/
 
 execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} store result storage asset:artifact SpecificTargetSlot byte 1 run data get storage asset:context SelectedItemSlot
-execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} run function asset_manager:artifact/use/item/update_local_cooldown/hotbar.m with storage asset:artifact
+execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} run function asset_manager:artifact/use/item/update/local_cooldown/hotbar.m with storage asset:artifact
 $execute if data storage asset:artifact {TargetDefaultSlot:"offhand"} store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[0].Value int 1 store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[0].Max int 1 run data get storage asset:artifact TargetItems[-1].tag.TSB.Triggers[$(Index)].LocalCooldown
 $execute if data storage asset:artifact {TargetDefaultSlot:"feet"} store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[1].Value int 1 store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[1].Max int 1 run data get storage asset:artifact TargetItems[-1].tag.TSB.Triggers[$(Index)].LocalCooldown
 $execute if data storage asset:artifact {TargetDefaultSlot:"legs"} store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[2].Value int 1 store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[2].Max int 1 run data get storage asset:artifact TargetItems[-1].tag.TSB.Triggers[$(Index)].LocalCooldown

@@ -1,10 +1,10 @@
-#> asset_manager:artifact/use/item/update_local_cooldown/hotbar.m
+#> asset_manager:artifact/use/item/update/local_cooldown/hotbar.m
 #
 #
 #
 # @within function
-#   asset_manager:artifact/use/item/update_local_cooldown/
-#   asset_manager:artifact/use/item/update_local_cooldown/non-hotbar.m
+#   asset_manager:artifact/use/item/update/local_cooldown/
+#   asset_manager:artifact/use/item/update/local_cooldown/non-hotbar.m
 
 # 設定
     $execute if data storage asset:artifact {SpecificTargetSlot:0b} store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[05].Value int 1 store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[05].Max int 1 run data get storage asset:artifact TargetItems[-1].tag.TSB.Triggers[$(Index)].LocalCooldown
