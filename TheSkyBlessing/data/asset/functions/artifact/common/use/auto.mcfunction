@@ -8,3 +8,4 @@ data modify storage asset:artifact TargetSlot set value 'auto'
 execute unless data storage asset:artifact Index run data modify storage asset:artifact Index set value 0
 function asset_manager:artifact/use/.m with storage asset:artifact
 tag @s remove CanUsed
+data remove storage asset:artifact Index
