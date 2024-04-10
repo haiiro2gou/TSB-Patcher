@@ -43,6 +43,7 @@
     execute unless data storage asset:artifact Triggers[0] if data storage asset:artifact Trigger run function asset:artifact/common/trigger/migrate
 # AttributeModifierの内部化
     execute if data storage asset:artifact CustomNBT.AttributeModifiers[0] run function asset:artifact/common/modifier/migrate
+    data modify storage asset:artifact CustomNBT.AttributeModifiers set value []
 
 # storage検証
     execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
