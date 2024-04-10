@@ -14,6 +14,16 @@
 					}
 				},
 				"entity": [
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"AttackedByApi\"]}"
+                            }
+                        }
+                    },
 					{
 						"condition": "inverted",
 						"term": {

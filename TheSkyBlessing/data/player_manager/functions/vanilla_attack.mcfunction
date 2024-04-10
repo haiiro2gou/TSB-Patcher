@@ -12,7 +12,7 @@
     execute store result score $Damage Temporary run data get entity @s Health 100
     scoreboard players remove $Damage Temporary 51200
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
-    function lib:status_log/show_health
+    execute unless score $Fluctuation Lib matches 0 run function lib:status_log/show_health
     scoreboard players operation @s MobHealth += $Damage Temporary
     execute if score @s MobHealth matches ..0 run tag @p[tag=this] add Killer
     execute if score @s MobHealth matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
