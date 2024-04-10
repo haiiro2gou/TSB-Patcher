@@ -4,6 +4,8 @@
 # shulker_boxにデータを放り込む
     data modify storage api: Argument.ID set from storage asset:artifact TargetItems[-1].tag.TSB.ID
     function api:artifact/box/from_id
+# Slotを上書き
+    data modify block 10000 0 10000 Items[0].Slot set from storage asset:artifact TargetItems[-1].Slot
 # RemainingCountを上書き
     execute if data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run data modify block 10000 0 10000 Items[0].tag.TSB.RemainingCount set from storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount
 # TargetItemsに戻す
