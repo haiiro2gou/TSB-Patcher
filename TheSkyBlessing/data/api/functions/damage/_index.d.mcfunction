@@ -19,6 +19,7 @@
 #       player_manager:vanilla_attack
 #   advancement
 #       asset_manager:artifact/**
+    #declare tag AttackedByApi
     #declare tag AttackedByProjectile
 
 #> Declare
