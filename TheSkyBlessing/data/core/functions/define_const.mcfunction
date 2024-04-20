@@ -335,7 +335,7 @@ scoreboard players set $1000000000 Const 1000000000
 scoreboard players set $1500000000 Const 1500000000
 scoreboard players set $2000000000 Const 2000000000
 
-#回転周り
+# 回転周り
 scoreboard players set $90 Const 90
 scoreboard players set $180 Const 180
 scoreboard players set $270 Const 270
