@@ -18,12 +18,12 @@
     scoreboard players operation $LatestGC IndexStorage *= $-1 Const
 # (#GCDuration)tick経過していたらgcループを発火
     # 存在しないデータを削除
-        execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage run scoreboard players set $GCIndex IndexStorage -1
+        execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage run scoreboard players set $GCIndex IndexStorage 0
         execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage run function indexstorage:gc/main/loop
     # 配列のリサイズ
         # 現存するエンティティの中のIDの最大値を取得
             execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage run scoreboard players operation $ResizeIndex IndexStorage = $StorageIDIndex IndexStorage
-            execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage run scoreboard players set $StorageIDIndex IndexStorage -1
+            execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage run scoreboard players set $StorageIDIndex IndexStorage 0
             execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage run scoreboard players operation $StorageIDIndex IndexStorage > * IndexStorageID
         # データの整理
             execute if score $LatestGC IndexStorage >= $GCInterval IndexStorage if score $ResizeIndex IndexStorage > $StorageIDIndex IndexStorage run function indexstorage:gc/resize/data

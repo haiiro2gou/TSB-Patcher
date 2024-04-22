@@ -14,7 +14,7 @@
     scoreboard objectives add IndexStorageID dummy {"text":"IndexStorage: Storage ID"}
     scoreboard objectives add IndexStorage dummy {"text":"IndexStorage: Score for Calcuration"}
     data modify storage indexstorage: _ set value {}
-    data modify storage indexstorage: data set value []
+    data modify storage indexstorage: data set value [{}]
     data modify storage indexstorage:core UnusedID set value [I;]
-    scoreboard players set $StorageIDIndex IndexStorage -1
-    scoreboard players set $GCInterval IndexStorage 20
+    scoreboard players set $StorageIDIndex IndexStorage 0
+    scoreboard players set $GCInterval IndexStorage 1200
