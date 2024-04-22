@@ -12,7 +12,7 @@
 # セッション開ける
     function lib:array/session/open
 # UserStorage呼び出し
-    function oh_its_dat:please
+    function indexstorage:pull/from_id
 # Arrayに移す
     data modify storage lib: Array set from storage indexstorage: _.LostItems
 # Chests構造へ梱包して追加
