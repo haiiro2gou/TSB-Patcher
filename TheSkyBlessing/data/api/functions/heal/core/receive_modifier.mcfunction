@@ -10,10 +10,10 @@
     #declare score_holder $Modifier
 
 # ユーザーストレージ呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 必要なデータ取得
     execute store result score $Heal Temporary run data get storage api: Argument.Heal 100
-    execute store result score $Modifier Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.ReceiveHeal 100
+    execute store result score $Modifier Temporary run data get storage indexstorage: _.Modifiers.ReceiveHeal 100
 # 補正
     scoreboard players operation $Heal Temporary *= $Modifier Temporary
 # 代入

@@ -11,11 +11,11 @@
     #declare score_holder $NotLatestData
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # outputをきれいにする
     data remove storage api: active_effects
 # 最新のものかチェックし、最新じゃなければ取得
-    execute store result score $NotLatestData Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.active_effects.Time set from storage global Time
+    execute store result score $NotLatestData Temporary run data modify storage indexstorage: _.DataCache.active_effects.Time set from storage global Time
     execute if score $NotLatestData Temporary matches 1 run function api:data_get/active_effects_fetch
 # outputのstorageに移す
-    data modify storage api: active_effects set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.active_effects.Data
+    data modify storage api: active_effects set from storage indexstorage: _.DataCache.active_effects.Data

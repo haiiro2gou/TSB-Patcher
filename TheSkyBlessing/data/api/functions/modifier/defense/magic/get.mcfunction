@@ -7,6 +7,6 @@
 #   Return.Defense.Magic : double
 # @api
 
-function oh_my_dat:please
+function indexstorage:pull/
 data remove storage api: Return.Defense.Magic
-data modify storage api: Return.Defense.Magic set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense.Magic
+data modify storage api: Return.Defense.Magic set from storage indexstorage: _.Modifiers.Defense.Magic

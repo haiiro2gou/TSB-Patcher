@@ -7,6 +7,6 @@
 #   Return.MaxHealth : double
 # @api
 
-function oh_my_dat:please
+function indexstorage:pull/
 data remove storage api: Return.MaxHealth
-data modify storage api: Return.MaxHealth set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MaxHealth
+data modify storage api: Return.MaxHealth set from storage indexstorage: _.Modifiers.MaxHealth

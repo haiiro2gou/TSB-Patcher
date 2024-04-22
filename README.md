@@ -33,10 +33,13 @@ The fork of TSB with latest updates applied
 
 ### ライセンス (License)
 
-このリポジトリでは、以下のディレクトリを除き、ProjectTSBにより[CC0-1.0 Universal](LICENSE)ライセンスが適用されています。
+このリポジトリでは、以下のディレクトリを除き、[CC0-1.0 Universal](LICENSE)ライセンスが適用されています。
 
-- [Asset](Asset/data/asset/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/Asset/LICENSE) / Copyright by ProjectTSB)
-- [TheSkyBlessing/data/rom](TheSkyBlessing/data/rom/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/TheSkyBlessing/blob/master/OhMyDat/LICENSE) / Copyright by 赤石愛)
+- [Asset](Asset/data/asset/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/Asset/blob/master/Asset/LICENSE) / Copyright by ProjectTSB)
+- [IndexStorage](https://github.com/haiiro2gou/IndexStorage)ディレクトリ ([Apache-2.0 License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/IndexStorage/LICENSE) / Copyright by 赤石愛)
+- [NaturalMergeSort](https://github.com/Ai-Akaishi/NaturalMergeSort)ディレクトリ ([MIT License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
+- [TheSkyBlessing/data/rom](TheSkyBlessing/data/rom/functions)ディレクトリ ([MIT License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/OhMyDat/LICENSE) / Copyright by 赤石愛)
+- [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)ディレクトリ ([Apache-2.0 License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/ScoreToHealth/LICENSE) / Copyright by 赤石愛)
 
 ### 謝辞 (Special Thanks)
 
@@ -52,6 +55,10 @@ The fork of TSB with latest updates applied
 - [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 - [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
 - [ScoreToMove](https://github.com/Ai-Akaishi/ScoreToMove)
+
+#### [はいいろ](https://x.com/blanoir3298)
+
+- [IndexStorage](https://github.com/haiiro2gou/IndexStorage)
 
 ### 各種リンク (Contact)
 

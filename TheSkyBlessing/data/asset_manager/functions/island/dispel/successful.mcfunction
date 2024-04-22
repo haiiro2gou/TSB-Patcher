@@ -18,16 +18,16 @@
 # アイテム返す
     function player_manager:lost_item/give_all/
 # データ取得
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 二度と祈れないようにする
     tag @s add DispelledCursedArtifact
 # テレポーターを起動する
-    data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    data modify storage api: Argument.ID set from storage indexstorage: _.IslandData.ID
     data modify storage api: Argument.ActivationState set value "Activate"
     function api:teleporter/set_activation_state/from_id
 # DispelPhaseを進める
-    function oh_my_dat:please
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
+    function indexstorage:pull/
+    data modify storage indexstorage: _.IslandData.DispelPhase set value 3b
 # Dispelledトリガーを発火する
-    data modify storage asset:context id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    data modify storage asset:context id set from storage indexstorage: _.IslandData.ID
     function #asset:island/dispelled

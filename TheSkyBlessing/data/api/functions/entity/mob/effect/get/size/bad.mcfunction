@@ -5,6 +5,6 @@
 # @api
 
 # storage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # エフェクト数を取得
-    execute store result storage api: Return.EffectSize.Bad int 1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{IsBadEffect: 1b}]
+    execute store result storage api: Return.EffectSize.Bad int 1 if data storage indexstorage: _.Effects[{IsBadEffect: 1b}]

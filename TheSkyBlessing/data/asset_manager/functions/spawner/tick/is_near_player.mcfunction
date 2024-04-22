@@ -20,10 +20,10 @@
     execute store result score $PlayerY Temporary run data get storage api: Pos[1] 10
     execute store result score $PlayerZ Temporary run data get storage api: Pos[2] 10
 # スポナーの座標データ取得
-    execute as @e[type=snowball,tag=this,distance=..0.01] run function oh_my_dat:please
-    execute store result score $SpawnerX Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[0] 10
-    execute store result score $SpawnerY Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[1] 10
-    execute store result score $SpawnerZ Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[2] 10
+    execute as @e[type=snowball,tag=this,distance=..0.01] run function indexstorage:pull/
+    execute store result score $SpawnerX Temporary run data get storage indexstorage: _.SpawnerData.Pos[0] 10
+    execute store result score $SpawnerY Temporary run data get storage indexstorage: _.SpawnerData.Pos[1] 10
+    execute store result score $SpawnerZ Temporary run data get storage indexstorage: _.SpawnerData.Pos[2] 10
 # ユークリッド距離の二乗を計算する
     scoreboard players operation $PlayerX Temporary -= $SpawnerX Temporary
     scoreboard players operation $PlayerY Temporary -= $SpawnerY Temporary

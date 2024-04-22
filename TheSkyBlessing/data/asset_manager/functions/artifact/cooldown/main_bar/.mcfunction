@@ -5,15 +5,15 @@
 # @within function asset_manager:artifact/cooldown/
 
 # 該当スロットからCooldownの情報を取得する
-    execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[5]
-    execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[6]
-    execute if data storage api: {SelectedItemSlot:2} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[7]
-    execute if data storage api: {SelectedItemSlot:3} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[8]
-    execute if data storage api: {SelectedItemSlot:4} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[9]
-    execute if data storage api: {SelectedItemSlot:5} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[10]
-    execute if data storage api: {SelectedItemSlot:6} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[11]
-    execute if data storage api: {SelectedItemSlot:7} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[12]
-    execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:artifact TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[13]
+    execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[5]
+    execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[6]
+    execute if data storage api: {SelectedItemSlot:2} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[7]
+    execute if data storage api: {SelectedItemSlot:3} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[8]
+    execute if data storage api: {SelectedItemSlot:4} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[9]
+    execute if data storage api: {SelectedItemSlot:5} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[10]
+    execute if data storage api: {SelectedItemSlot:6} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[11]
+    execute if data storage api: {SelectedItemSlot:7} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[12]
+    execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:artifact TargetLCD set from storage indexstorage: _.LocalCoolDown[13]
 # 取得
     execute store result score $Value Temporary run data get storage asset:artifact TargetLCD.Value
     execute store result score $Max Temporary run data get storage asset:artifact TargetLCD.Max

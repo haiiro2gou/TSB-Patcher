@@ -7,6 +7,6 @@
 # @api
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 取得する
-    return run execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[]
+    return run execute if data storage indexstorage: _.LostItems[]

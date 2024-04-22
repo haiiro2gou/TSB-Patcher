@@ -7,6 +7,6 @@
 #   Return.Attack.Thunder : double
 # @api
 
-function oh_my_dat:please
+function indexstorage:pull/
 data remove storage api: Return.Attack.Thunder
-data modify storage api: Return.Attack.Thunder set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Attack.Thunder
+data modify storage api: Return.Attack.Thunder set from storage indexstorage: _.Modifiers.Attack.Thunder

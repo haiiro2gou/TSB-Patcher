@@ -7,12 +7,12 @@
 # セッション開ける
     function lib:array/session/open
 # storage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # ID
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.ID set from storage asset:trader ID
+    data modify storage indexstorage: _.TraderData.ID set from storage asset:trader ID
 # Default位置
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultPos set from entity @s Pos
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultRotation set from storage asset:trader Rotation
+    data modify storage indexstorage: _.TraderData.DefaultPos set from entity @s Pos
+    data modify storage indexstorage: _.TraderData.DefaultRotation set from storage asset:trader Rotation
 # そのまま適用するやつ
     data modify entity @s CustomName set from storage asset:trader Name
     data modify entity @s Rotation[0] set from storage asset:trader Rotation

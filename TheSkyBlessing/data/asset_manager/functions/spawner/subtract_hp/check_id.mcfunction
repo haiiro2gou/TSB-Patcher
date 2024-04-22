@@ -5,9 +5,9 @@
 # @within function asset_manager:spawner/subtract_hp/check_already_find
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # MobIDを移す
-    data modify storage asset:spawner SpawnPotentials set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentials
+    data modify storage asset:spawner SpawnPotentials set from storage indexstorage: _.SpawnerData.SpawnPotentials
 # すべてのIDについてチェックする
     function asset_manager:spawner/subtract_hp/check_id_foreach
 # リセット

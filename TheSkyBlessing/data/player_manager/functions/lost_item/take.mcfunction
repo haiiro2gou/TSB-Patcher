@@ -11,15 +11,15 @@
 # 消滅の呪い付きアイテムを削除
     data remove storage player_manager:lost_item Temp[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 # UserStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # IDをIDSetに追加
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[-1] run data modify storage oh_my_dat: IDSet append value -2147483648
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[-1] store result storage oh_my_dat: IDSet[-1] int 1 run scoreboard players get @s OhMyDatID
+    execute unless data storage indexstorage: _.LostItems[-1] run data modify storage player_manager:lost_item IDSet append value -2147483648
+    execute unless data storage indexstorage: _.LostItems[-1] store result storage player_manager:lost_item IDSet[-1] int 1 run scoreboard players get @s IndexStorageID
 # Temp -> UserStorage
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems append from storage player_manager:lost_item Temp[]
+    data modify storage indexstorage: _.LostItems append from storage player_manager:lost_item Temp[]
     data remove storage player_manager:lost_item Temp
 # 名前の取得
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name run function lib:get_name/
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name set from storage lib: Return.Name
+    execute unless data storage indexstorage: _.Name run function lib:get_name/
+    execute unless data storage indexstorage: _.Name run data modify storage indexstorage: _.Name set from storage lib: Return.Name
 # インベントリclear
     clear @s

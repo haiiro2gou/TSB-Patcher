@@ -7,9 +7,9 @@
 # セッション開ける
     function lib:array/session/open
 # UserStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # picks用にlib: Arrayに入れる
-    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems
+    data modify storage lib: Array set from storage indexstorage: _.LostItems
 # 返却するスロット数だけ乱数を生成する
     data modify storage lib: Picks set value []
     execute store result score $ListLength Temporary if data storage lib: Array[]
@@ -17,7 +17,7 @@
 # 添字配列を元にアイテムを取得する
     function lib:array/picks
 # もう現Arrayは要らないのでUserStorageに戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems set from storage lib: Array
+    data modify storage indexstorage: _.LostItems set from storage lib: Array
 # Arrayに移す
     data modify storage lib: Array set from storage lib: Elements
 # 実行座標から降らす

@@ -5,7 +5,7 @@
 # @within function asset_manager:trader/tick/4_interval
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 移動
-    data modify entity @s Pos set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultPos
-    data modify entity @s Rotation[0] set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultRotation
+    data modify entity @s Pos set from storage indexstorage: _.TraderData.DefaultPos
+    data modify entity @s Rotation[0] set from storage indexstorage: _.TraderData.DefaultRotation

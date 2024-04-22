@@ -5,7 +5,7 @@
 # @within function asset_manager:teleporter/tick/star_init/summon_once
 
 # 対象のテレポーターを移す
-    data modify storage asset:teleporter TargetTeleporter set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Temp.Teleporters[-1]
+    data modify storage asset:teleporter TargetTeleporter set from storage indexstorage: _.Temp.Teleporters[-1]
 # 汎用entityを現地へ
     data modify entity @s Pos set from storage asset:teleporter TargetTeleporter.Pos
 # プレイヤーからその方向の1ブロック先に星を召喚する

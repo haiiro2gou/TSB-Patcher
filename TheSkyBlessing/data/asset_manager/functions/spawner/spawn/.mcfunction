@@ -12,18 +12,18 @@
 # 炎パーティクル
     particle flame ~ ~0.1 ~ 0.3 0.3 0.3 0 10
 # スポナーデータの取得
-    function oh_my_dat:please
+    function indexstorage:pull/
     data modify storage asset:spawner NearbyEntitiesCache set value []
-    data modify storage asset:spawner SpawnPotentials set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentials
-    execute store result score $SpawnPotentialsWeightSum Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentialsWeightSum
-    execute store result score $PosX Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[0] 100
-    execute store result score $PosY Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[1] 100
-    execute store result score $PosZ Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[2] 100
-    execute store result score $MinSpawnDelay Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MinSpawnDelay
-    execute store result score $MaxSpawnDelay Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxSpawnDelay
-    execute store result score $SpawnCount Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnCount
-    execute store result score $SpawnRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange 30
-    execute store result score $MaxNearbyEntities Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxNearbyEntities
+    data modify storage asset:spawner SpawnPotentials set from storage indexstorage: _.SpawnerData.SpawnPotentials
+    execute store result score $SpawnPotentialsWeightSum Temporary run data get storage indexstorage: _.SpawnerData.SpawnPotentialsWeightSum
+    execute store result score $PosX Temporary run data get storage indexstorage: _.SpawnerData.Pos[0] 100
+    execute store result score $PosY Temporary run data get storage indexstorage: _.SpawnerData.Pos[1] 100
+    execute store result score $PosZ Temporary run data get storage indexstorage: _.SpawnerData.Pos[2] 100
+    execute store result score $MinSpawnDelay Temporary run data get storage indexstorage: _.SpawnerData.MinSpawnDelay
+    execute store result score $MaxSpawnDelay Temporary run data get storage indexstorage: _.SpawnerData.MaxSpawnDelay
+    execute store result score $SpawnCount Temporary run data get storage indexstorage: _.SpawnerData.SpawnCount
+    execute store result score $SpawnRange Temporary run data get storage indexstorage: _.SpawnerData.SpawnRange 30
+    execute store result score $MaxNearbyEntities Temporary run data get storage indexstorage: _.SpawnerData.MaxNearbyEntities
 # 召喚するMobをランダムに選択する
     function asset_manager:spawner/spawn/choose_mob_id/
 # 周囲のEntity数を取得する

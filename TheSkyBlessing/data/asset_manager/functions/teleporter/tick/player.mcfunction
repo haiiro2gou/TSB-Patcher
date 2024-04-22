@@ -8,10 +8,10 @@
     tag @e[type=marker,tag=Teleporter,distance=..1,limit=1] add FromTeleporter
 
 # EntityStorageを取得する
-    execute as @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
+    execute as @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] run function indexstorage:pull/
 
 # テレポートのメイン処理
-    execute if entity @s[tag=!SuppressTeleport,predicate=lib:is_sneaking] if entity @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{ActivationState:"Activate"} run function asset_manager:teleporter/tick/active
+    execute if entity @s[tag=!SuppressTeleport,predicate=lib:is_sneaking] if entity @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] if data storage indexstorage: _.TeleporterData{ActivationState:"Activate"} run function asset_manager:teleporter/tick/active
 # テレポート後のタグ解除処理
     execute if entity @s[tag=SuppressTeleport,predicate=!lib:is_sneaking] run tag @s remove SuppressTeleport
 # キャンセル処理

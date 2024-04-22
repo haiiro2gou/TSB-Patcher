@@ -9,7 +9,7 @@
 # 追加するためのデータを加工する
     function asset_manager:effect/give/make_effect_data
 # Effectsに追加(または更新して元に戻す)
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects append from storage asset:effect EffectData
+    data modify storage indexstorage: _.Effects append from storage asset:effect EffectData
 # タグ付与
     tag @s add HasAssetEffect
 # リセット
