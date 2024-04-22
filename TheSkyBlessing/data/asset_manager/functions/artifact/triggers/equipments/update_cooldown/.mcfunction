@@ -5,7 +5,7 @@
 # @within function asset_manager:artifact/triggers/
 
 # UserStorage取得
-    function oh_my_dat:please
+    function indexstorage:pull/
 # セッション開く
     function lib:array/session/open
 # 配列として取得
@@ -16,7 +16,7 @@
 # 反転
     function lib:array/reverse
 # 設定
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set from storage lib: Array
+    data modify storage indexstorage: _.LocalCoolDown set from storage lib: Array
 # リセット
     function lib:array/session/close
     data remove storage asset:artifact CopiedItemData

@@ -4,22 +4,22 @@
 #
 # @input storage api: Argument.ID : int
 # @output score
-#   $ OhMyDatID
+#   $ IndexStorageID
 #   $TeleporterExists Temporary : int @ 0..1
 # @within function asset_manager:teleporter/update_activation_state/
 
 # セッション開く
     function lib:array/session/open
-# CompareResult = TeleporterOMDMap.map(v => v.TeleporterID == Argument.ID)
-    data modify storage lib: Array append from storage asset:teleporter TeleporterOMDMap[].TeleporterID
+# CompareResult = TeleporterISMap.map(v => v.TeleporterID == Argument.ID)
+    data modify storage lib: Array append from storage asset:teleporter TeleporterISMap[].TeleporterID
     data modify storage lib: CompareTarget set from storage api: Argument.ID
     function lib:array/compare_single
 # CompareResultを元に同一のIDの要素を取り出す
-# OyMyDatID = TeleporterOMDMap.map(v => v.OyMyDatID).filter((v, i) => CompareResult[i]).head
-    data modify storage lib: Array append from storage asset:teleporter TeleporterOMDMap[].OhMyDatID
+# IndexStorageID = TeleporterISMap.map(v => v.IndexStorageID).filter((v, i) => CompareResult[i]).head
+    data modify storage lib: Array append from storage asset:teleporter TeleporterISMap[].IndexStorageID
     data modify storage lib: Masks set from storage lib: CompareResult
     function lib:array/mask_inverted
-    execute store result score $ OhMyDatID run data get storage lib: Array[0]
+    execute store result score $ IndexStorageID run data get storage lib: Array[0]
 # EntityStorage取得
     execute store success score $TeleporterExists Temporary if data storage lib: Array[0]
 # リセット

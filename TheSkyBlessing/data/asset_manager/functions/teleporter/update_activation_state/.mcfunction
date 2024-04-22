@@ -13,9 +13,9 @@
     function asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter
 
 # テレポーターのEntityStorageを取得する
-    execute if score $TeleporterExists Temporary matches 1 run function oh_its_dat:please
+    execute if score $TeleporterExists Temporary matches 1 run function indexstorage:pull/from_id
 # 状態を更新する
-    execute if score $TeleporterExists Temporary matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set from storage api: Argument.ActivationState
+    execute if score $TeleporterExists Temporary matches 1 run data modify storage indexstorage: _.TeleporterData.ActivationState set from storage api: Argument.ActivationState
 
 # IDから対象テレポーターのマスタデータを取得する
     execute if score $TeleporterExists Temporary matches 1 run function asset_manager:teleporter/update_activation_state/pop_master_data_from_teleporter_id

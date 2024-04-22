@@ -11,9 +11,9 @@
     #declare score_holder $AmountFloat
 
 # UserStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 回復量計算
-    execute store result score $Fluctuation Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MPRegen 10
+    execute store result score $Fluctuation Temporary run data get storage indexstorage: _.Modifiers.MPRegen 10
     scoreboard players operation $Fluctuation Temporary *= @s MPMax
     scoreboard players operation $Fluctuation Temporary /= $100 Const
 # 負数を強制する

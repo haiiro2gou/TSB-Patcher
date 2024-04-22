@@ -11,11 +11,11 @@
     #declare score_holder $NotLatestData
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # outputをきれいにする
     data remove storage api: CustomNameVisible
 # 最新のものかチェックし、最新じゃなければ取得
-    execute store result score $NotLatestData Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.CustomNameVisible.Time set from storage global Time
-    execute if score $NotLatestData Temporary matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.CustomNameVisible.Data set from entity @s CustomNameVisible
+    execute store result score $NotLatestData Temporary run data modify storage indexstorage: _.DataCache.CustomNameVisible.Time set from storage global Time
+    execute if score $NotLatestData Temporary matches 1 run data modify storage indexstorage: _.DataCache.CustomNameVisible.Data set from entity @s CustomNameVisible
 # outputのstorageに移す
-    data modify storage api: CustomNameVisible set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.CustomNameVisible.Data
+    data modify storage api: CustomNameVisible set from storage indexstorage: _.DataCache.CustomNameVisible.Data

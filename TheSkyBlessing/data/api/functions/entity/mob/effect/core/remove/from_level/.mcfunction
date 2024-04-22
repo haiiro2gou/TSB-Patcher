@@ -5,9 +5,9 @@
 # @within function api:entity/mob/effect/remove/from_level
 
 # storage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # effect id抽出
-    data modify storage asset:effect IDList append from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[].ID
+    data modify storage asset:effect IDList append from storage indexstorage: _.Effects[].ID
 # 条件を代入
     data modify storage asset:effect ClearType set from storage api: Argument.ClearType
     data modify storage asset:effect IsSingle set from storage api: Argument.IsSingle

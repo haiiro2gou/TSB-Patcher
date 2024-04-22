@@ -5,9 +5,9 @@
 # @within function api:modifier/max_mp/remove
 
 # UserStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 無ければ入れる
-    data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.MaxMP
+    data modify storage api: Modifiers set from storage indexstorage: _.Modifiers.Modifier.MaxMP
 # 配列の初期化
     data modify storage api: NewModifiers set value []
     data remove storage api: Removed
@@ -15,11 +15,11 @@
     function api:modifier/core/common/remove_modifier
 # 新しい配列を戻す
     data modify storage api: Modifiers set from storage api: NewModifiers
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.MaxMP set from storage api: Modifiers
+    data modify storage indexstorage: _.Modifiers.Modifier.MaxMP set from storage api: Modifiers
 # データの更新
-    data modify storage api: Base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base.MaxMP
+    data modify storage api: Base set from storage indexstorage: _.Modifiers.Base.MaxMP
     function api:modifier/core/common/update_modifier/
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MaxMP set from storage api: Modifier
+    data modify storage indexstorage: _.Modifiers.MaxMP set from storage api: Modifier
 # リセット
     data remove storage api: Base
     data remove storage api: Modifiers

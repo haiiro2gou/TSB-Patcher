@@ -7,6 +7,6 @@
 #   Return.MPRegen : double
 # @api
 
-function oh_my_dat:please
+function indexstorage:pull/
 data remove storage api: Return.MPRegen
-data modify storage api: Return.MPRegen set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MPRegen
+data modify storage api: Return.MPRegen set from storage indexstorage: _.Modifiers.MPRegen

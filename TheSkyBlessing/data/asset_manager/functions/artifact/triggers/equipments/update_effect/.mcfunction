@@ -5,7 +5,7 @@
 # @within function asset_manager:artifact/triggers/
 
 # ユーザーストレージ呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 
 # データの初期化
     data modify storage asset:artifact Old.Modifiers set value []
@@ -13,8 +13,8 @@
     data modify storage asset:artifact New.Modifiers set value []
     data modify storage asset:artifact New.EquipIDList set value []
 # 前データを回収
-    data modify storage asset:artifact Old.Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.Modifiers
-    data modify storage asset:artifact EquipIDList set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.IDList
+    data modify storage asset:artifact Old.Modifiers set from storage indexstorage: _.Equipments.Modifiers
+    data modify storage asset:artifact EquipIDList set from storage indexstorage: _.Equipments.IDList
 # Modifierを一旦削除
     execute if data storage asset:artifact Old.Modifiers[0] run function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 
@@ -28,8 +28,8 @@
     execute if data storage asset:artifact Modifiers[0] run function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/
     execute if data storage asset:artifact EquipIDList[0] run function asset_manager:artifact/triggers/equipments/update_effect/equip_set
 # 抽出したデータを戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.Modifiers set from storage asset:artifact New.Modifiers
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.IDList set from storage asset:artifact New.EquipIDList
+    data modify storage indexstorage: _.Equipments.Modifiers set from storage asset:artifact New.Modifiers
+    data modify storage indexstorage: _.Equipments.IDList set from storage asset:artifact New.EquipIDList
 
 # リセット
     data remove storage asset:artifact CopeidItemData

@@ -5,5 +5,5 @@
 # @private
 # @user
 
-function oh_my_dat:please
-data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems
+function indexstorage:pull/
+data remove storage indexstorage: _.LostItems

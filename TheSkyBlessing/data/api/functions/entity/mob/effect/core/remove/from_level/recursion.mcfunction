@@ -28,7 +28,7 @@
 # 条件を満たしている場合残り時間に-1を代入する
     execute if data storage asset:effect {CanRemove:true} run data modify storage asset:effect TargetEffectData.Duration set value -1
 # 結果を戻す
-    execute if data storage asset:effect TargetEffectData run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects append from storage asset:effect TargetEffectData
+    execute if data storage asset:effect TargetEffectData run data modify storage indexstorage: _.Effects append from storage asset:effect TargetEffectData
 
 # リセット
     data remove storage asset:effect ID

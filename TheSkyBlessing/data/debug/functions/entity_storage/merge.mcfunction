@@ -3,8 +3,8 @@
 # @private
 
 # EntityStorage取得
-    function oh_my_dat:please
+    function indexstorage:pull/
 # merge
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4] merge from storage lib: Argument.Data
+    data modify storage indexstorage: _ merge from storage lib: Argument.Data
 # リセット
     data remove storage lib: Argument.Data

@@ -72,15 +72,15 @@
     execute if data storage asset:mob {Type:"Enemy"} run team join Enemy
     execute if data storage asset:mob {Type:"Enemy.Boss"} run team join Enemy
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 属性耐性
     # Baseを追加
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
-        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
+        data modify storage indexstorage: _.Modifiers.Defense set from storage asset:mob Resist
 # フィールド
     execute if data storage asset:mob FieldOverride run data modify storage asset:mob Field merge from storage asset:mob FieldOverride
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:mob Field
+    data modify storage indexstorage: _.MobField set from storage asset:mob Field
 # LoreをROMに書き込む
     data modify storage api: Argument.Address set from storage asset:mob ID
     function api:rom/please

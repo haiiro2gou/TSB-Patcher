@@ -1,0 +1,10 @@
+{
+    "pack": {
+        "pack_format": 18,
+        "supported_formats": {
+            "max_inclusive": 26,
+            "min_inclusive": 18
+        },
+        "description": "Entity-specific Storage"
+    }
+}

@@ -5,9 +5,9 @@
 # @within function core:tick/
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 必要なデータ取得
-    data modify storage asset:effect Effects set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
+    data modify storage asset:effect Effects set from storage indexstorage: _.Effects
 # 死亡判定
     execute if entity @s[tag=Death] run tag @s add DeathProcess
     execute if score @s UsedTotem matches 1.. run tag @s add DeathProcess
@@ -17,9 +17,9 @@
 # 付与されているエフェクトが何もなければタグを消す
     execute unless data storage asset:effect NextTickEffects[0] run tag @s remove HasAssetEffect
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 元に戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects set from storage asset:effect NextTickEffects
+    data modify storage indexstorage: _.Effects set from storage asset:effect NextTickEffects
 
 # リセット
     scoreboard players reset @s UsedMilk

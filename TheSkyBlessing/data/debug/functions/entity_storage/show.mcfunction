@@ -3,6 +3,6 @@
 # @private
 
 # EntityStorage取得
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 表示
-    tellraw @a [{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4]"}]
+    tellraw @a [{"storage":"indexstorage:","nbt":"_"}]

@@ -11,10 +11,10 @@
     #declare score_holder $NotLatestData
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # outputをきれいにする
     data remove storage api: UUID
 # キャッシュされていなければ取得
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data set from entity @s UUID
+    execute unless data storage indexstorage: _.DataCache.UUID.Data run data modify storage indexstorage: _.DataCache.UUID.Data set from entity @s UUID
 # outputのstorageに移す
-    data modify storage api: UUID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data
+    data modify storage api: UUID set from storage indexstorage: _.DataCache.UUID.Data

@@ -5,9 +5,9 @@
 # @within function asset_manager:artifact/triggers/
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 突っ込む
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.Inventory set from storage asset:context New.Inventory
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.SelectedItemSlot set from storage asset:context New.SelectedItemSlot
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.Items set from storage asset:context New.Items
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.id set from storage asset:context New.id
+    data modify storage indexstorage: _.ContextStash.Inventory set from storage asset:context New.Inventory
+    data modify storage indexstorage: _.ContextStash.SelectedItemSlot set from storage asset:context New.SelectedItemSlot
+    data modify storage indexstorage: _.ContextStash.Items set from storage asset:context New.Items
+    data modify storage indexstorage: _.ContextStash.id set from storage asset:context New.id

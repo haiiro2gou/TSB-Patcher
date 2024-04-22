@@ -4,13 +4,13 @@
 #
 # @input
 #   as player
-#   storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MaxMP
+#   storage indexstorage: _.Modifiers.MaxMP
 # @output
 #   score @s MPMax
 # @api
 
 # Storage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 最大MP変更
-    execute store result score @s MPMax run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MaxMP 1
+    execute store result score @s MPMax run data get storage indexstorage: _.Modifiers.MaxMP 1
     scoreboard players operation @s MPMax > $0 Const

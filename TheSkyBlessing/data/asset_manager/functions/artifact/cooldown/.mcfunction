@@ -21,9 +21,9 @@
 # 13. hotbar 8
 
 # EntityStorage呼び出し
-    function oh_my_dat:please
+    function indexstorage:pull/
 # 長いので一度コピーしましょう
-    data modify storage asset:artifact LCDs set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown
+    data modify storage asset:artifact LCDs set from storage indexstorage: _.LocalCoolDown
 # 各スロットのCDをデクリメントする LCDs(normal) -> DecrementedLCDs(inverted)
     function asset_manager:artifact/cooldown/foreach/decrement
 # 各スロットの表示データ構築 + DecrementedLCDs(inverted) -> ( LCDs(normal), LCDMessages(normal) )
@@ -45,7 +45,7 @@
 # 出力
     title @s actionbar [{"text":">","font":"cooldown/main_bar"},{"storage":"asset:artifact","nbt":"MainBarMessage[]","separator":"","interpret":true},{"text":"~"},{"storage":"asset:artifact","nbt":"LCDMessages[0]","interpret":true,"font":"cooldown/mini_bar/offhand"},{"text":"<"},{"storage":"asset:artifact","nbt":"LCDMessages[1]","interpret":true,"font":"cooldown/mini_bar/feet"},{"text":"*"},{"storage":"asset:artifact","nbt":"LCDMessages[2]","interpret":true,"font":"cooldown/mini_bar/legs"},{"text":"*"},{"storage":"asset:artifact","nbt":"LCDMessages[3]","interpret":true,"font":"cooldown/mini_bar/chest"},{"text":"*"},{"storage":"asset:artifact","nbt":"LCDMessages[4]","interpret":true,"font":"cooldown/mini_bar/head"},{"text":">"},{"storage":"asset:artifact","nbt":"LCDMessages[5]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[6]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[7]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[8]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[9]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[10]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[11]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[12]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[13]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[14]","interpret":true,"font":"cooldown/mini_bar/"}]
 # 元に戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set from storage asset:artifact LCDs
+    data modify storage indexstorage: _.LocalCoolDown set from storage asset:artifact LCDs
 # リセット
     scoreboard players reset $Value Temporary
     scoreboard players reset $NormalizedValue Temporary

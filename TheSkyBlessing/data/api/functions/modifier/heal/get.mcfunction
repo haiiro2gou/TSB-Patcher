@@ -7,6 +7,6 @@
 #   Return.Heal : double
 # @api
 
-function oh_my_dat:please
+function indexstorage:pull/
 data remove storage api: Return.Heal
-data modify storage api: Return.Heal set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Heal
+data modify storage api: Return.Heal set from storage indexstorage: _.Modifiers.Heal

@@ -36,7 +36,7 @@ enum(string) StarColor {
 
 compound IDPair {
     TeleporterID: int
-    OyMyDatID: int
+    IndexStorageID: int
 }
 
 AssetTeleporter describes minecraft:storage[asset:teleporter]
