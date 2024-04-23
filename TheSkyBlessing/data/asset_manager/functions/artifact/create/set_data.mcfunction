@@ -22,7 +22,8 @@
 #       ├ LocalCooldown? : int
 #       ├ SpecialCooldown? : int
 #       ├ DisableCooldownMessage? : boolean
-#       └ DisableMPMessage? : boolean
+#       ├ DisableMPMessage? : boolean
+#       └ Secret? : boolean
 #       CanUsedGod : God[]
 #       EquipID? : int
 #       Modifiers : Component[]

@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/trigger/special_cooltime
+#> asset_manager:artifact/create/trigger/entryspecial_cooltime
 #
 # スペシャルクールタイムを秒数にする 1tickとかだと表示が変になる
 #
-# @within function asset_manager:artifact/create/trigger/
+# @within function asset_manager:artifact/create/trigger/entry
 
 #> Temp
 # @private

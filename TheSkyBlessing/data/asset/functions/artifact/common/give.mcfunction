@@ -20,7 +20,8 @@
 #   ├ LocalCooldown? : int
 #   ├ SpecialCooldown? : int
 #   ├ DisableCooldownMessage? : boolean
-#   └ DisableMPMessage? : boolean
+#   ├ DisableMPMessage? : boolean
+#   └ Secret? : boolean
 #   DisableBreakSound? : boolean
 #   CanUsedGod : God[]
 #   EquipID? : int

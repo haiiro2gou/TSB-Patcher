@@ -14,7 +14,7 @@
     # execute unless data storage asset:temp Triggers[-1].LocalCooldown run
     # execute unless data storage asset:temp Triggers[-1].SpecialCooldown run
     # execute unless data storage asset:temp Triggers[-1].DisableCooldownMessage run
-    # execute unless data storage asset:temp Triggers[-1].DiableMPMessage run
+    # execute unless data storage asset:temp Triggers[-1].DisableMPMessage run
 
 # loop
     data remove storage asset:temp Triggers[-1]

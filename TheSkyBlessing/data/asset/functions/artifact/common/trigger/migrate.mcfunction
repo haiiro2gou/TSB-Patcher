@@ -12,7 +12,8 @@
     # execute unless data storage asset:artifact LocalCooldown run
     # execute unless data storage asset:artifact SpecialCooldown run
     # execute unless data storage asset:artifact DisableCooldownMessage run
-    # execute unless data storage asset:artifact DiableMPMessage run
+    # execute unless data storage asset:artifact DisableMPMessage run
+    # execute unless data storage asset:artifact Secret run
 
 # migrate
     data modify storage asset:artifact Triggers append value {}
@@ -27,6 +28,7 @@
     data modify storage asset:artifact Triggers[0].SpecialCooldown set from storage asset:artifact SpecialCooldown
     data modify storage asset:artifact Triggers[0].DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Triggers[0].DisableMPMessage set from storage asset:artifact DisableMPMessage
+    data modify storage asset:artifact Triggers[0].Secret set from storage asset:artifact Secret
 
 # reset
     data remove storage asset:artifact Slot
@@ -40,3 +42,4 @@
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
+    data remove storage asset:artifact Secret
