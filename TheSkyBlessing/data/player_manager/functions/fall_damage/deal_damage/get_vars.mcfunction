@@ -18,6 +18,9 @@
     execute store result score $YVec Temporary run data get storage api: Return.PlayerVector[1] 10
     scoreboard players operation $FallDistance Temporary -= $YVec Temporary
 
+# 水中にいれば無効化する
+    execute if predicate lib:is_in_water/include_flowing run scoreboard players set $FallDistance Temporary 0
+
 # 落下ダメージ倍率の初期化
     scoreboard players set $DamageMultiplier Temporary 10
 
