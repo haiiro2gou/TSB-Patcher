@@ -1,6 +1,6 @@
 #> asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter
 #
-# IDの一致するテレポーターのOhMyDatIDを検索し、存在するかと、存在する場合はそのIDを返す
+# IDの一致するテレポーターのIndexStorageIDを検索し、存在するかと、存在する場合はそのIDを返す
 #
 # @input storage api: Argument.ID : int
 # @output score
