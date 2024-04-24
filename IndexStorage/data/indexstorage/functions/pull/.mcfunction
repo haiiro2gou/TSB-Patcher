@@ -4,7 +4,7 @@
 # @api
 
 # validate
-    execute unless score @s IndexStorageID matches 0.. run function indexstorage:provide/
+    execute unless score @s IndexStorageID matches 1.. run function indexstorage:provide/
     execute if data storage indexstorage: _ run function indexstorage:push/
 # データを回収する
     execute store result storage indexstorage:core m.id int 1 run scoreboard players get @s IndexStorageID
