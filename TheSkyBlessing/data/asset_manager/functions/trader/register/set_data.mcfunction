@@ -4,10 +4,10 @@
 #
 # @within function asset_manager:trader/register/
 
-# セッション開ける
-    function lib:array/session/open
 # storage呼び出し
     function indexstorage:pull/
+# セッション開ける
+    function lib:array/session/open
 # ID
     data modify storage indexstorage: _.TraderData.ID set from storage asset:trader ID
 # Default位置
