@@ -54,7 +54,6 @@
         data modify storage asset:mob Attributes[{Name:"generic.movement_speed"}].Base set from storage asset:mob Speed
         data modify storage asset:mob Attributes[{Name:"generic.follow_range"}].Base set from storage asset:mob FollowRange
         data modify storage asset:mob Attributes[{Name:"generic.knockback_resistance"}].Base set from storage asset:mob KnockBackResist
-        attribute @s generic.knockback_resistance modifier add 1-0-2-0-0 "General.KBResist" 0.5 add
     # 適用
         data modify entity @s Attributes set from storage asset:mob Attributes
     # 体力 (e2)
