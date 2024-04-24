@@ -2,7 +2,7 @@ compound AssetTeleporter {
    /// テレポーターの定義データ
    Teleporters: [GroupData]
    /// テレポーターのIDとOyMyDatIDのMap
-   TeleporeterOMDMap: [IDPair]
+   TeleporterISMap: [IDPair]
 }
 
 compound GroupData {
