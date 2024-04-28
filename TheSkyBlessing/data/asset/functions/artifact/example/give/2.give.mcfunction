@@ -16,7 +16,7 @@ data modify storage asset:artifact Lore set value ['{"text":"複数Triggerを有
 data modify storage asset:artifact Triggers set value []
 # Trigger 0
     data modify storage asset:artifact Triggers append value {}
-    data modify storage asset:artifact Triggers[-1].Slot set value "mainhand"
+    data modify storage asset:artifact Triggers[-1].Slot set value "hotbar"
     data modify storage asset:artifact Triggers[-1].Trigger set value "onAttack"
     # data modify storage asset:artifact Triggers[-1].Condition set value '{"text":""}'
     data modify storage asset:artifact Triggers[-1].AttackInfo set value {Damage:["???"],AttackType:[Physical],ElementType:[None],BypassResist:1b,IsrangeAttack:never}
@@ -24,6 +24,8 @@ data modify storage asset:artifact Triggers set value []
     # data modify storage asset:artifact Triggers[-1].MPRequire set value 100
     data modify storage asset:artifact Triggers[-1].LocalCooldown set value 15
     # data modify storage asset:artifact Triggers[-1].SpecialCooldown set value 5
+    data modify storage asset:artifact Triggers[-1].DisableCooldownMessage set value true
+    data modify storage asset:artifact Triggers[-1].DisableMPMessage set value true
 # Trigger 2
     data modify storage asset:artifact Triggers append value {}
     data modify storage asset:artifact Triggers[-1].Slot set value "hotbar"
@@ -34,6 +36,7 @@ data modify storage asset:artifact Triggers set value []
     # data modify storage asset:artifact Triggers[-1].MPRequire set value 100
     # data modify storage asset:artifact Triggers[-1].LocalCooldown set value 30
     # data modify storage asset:artifact Triggers[-1].SpecialCooldown set value 5
+    data modify storage asset:artifact Triggers[-1].Secret set value true
 # Modifier
     data modify storage asset:artifact Modifiers set value []
     data modify storage asset:artifact Modifiers append value {Type:"attackBase",Slot:"hotbar",Amount:0.05d,Operation:"multiply_base",MaxStack:9}
