@@ -10,6 +10,8 @@
 # プレイヤーの所持するアイテムのMetaチェック
     function core:tick/check_item_meta/inventory
 
+# 最大体力の変更
+    execute if score @s ScoreToMaxHealth matches -2147483648..2147483647 run function lib:score_to_health_wrapper/max/
 # プレイヤーの体力の変更Queueの消化
     execute if entity @s[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc/
 # MPを経験値バーに同期
