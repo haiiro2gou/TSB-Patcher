@@ -32,14 +32,12 @@
 # 候補データを再設定する
     data modify storage lib: Array set from storage lib: Array[-1]
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
-    tellraw @a [{"storage":"lib:","nbt":"Array"}]
     scoreboard players remove $CandidateLength Temporary 1
     execute store result score $Pulls Temporary run function lib:random/
     scoreboard players operation $Pulls Temporary %= $41 Const
     scoreboard players add $Pulls Temporary 30
     scoreboard players operation $Pulls Temporary *= $CandidateLength Temporary
     scoreboard players operation $Pulls Temporary /= $100 Const
-    tellraw @a [{"score":{"name":"$Pulls","objective":"Temporary"}}]
 # シャッフルして取り出す
     data modify storage asset:artifact Type set from storage asset:context Type
     function lib:array/shuffle
