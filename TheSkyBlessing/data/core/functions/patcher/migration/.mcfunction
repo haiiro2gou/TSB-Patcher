@@ -19,3 +19,5 @@ execute if data storage global Patcher{Version:"v1.1.8"} run function core:patch
 
 execute if data storage global Patcher{Version:"v1.1.9"} run function core:patcher/migration/v1.2.0/
 execute if data storage global Patcher{Version:"v1.2.0"} run function core:patcher/migration/v1.2.1/
+
+execute if data storage global Patcher{Version:"v1.2.1"} run function core:patcher/migration/v1.3.0/
