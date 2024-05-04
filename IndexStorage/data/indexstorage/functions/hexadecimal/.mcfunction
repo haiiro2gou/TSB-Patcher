@@ -12,7 +12,8 @@
     data modify storage indexstorage:core hexadecimal set value []
     data remove storage indexstorage:core UUIDString
 # 実行
-    execute if data storage indexstorage:core UUIDInt[0] run function indexstorage:hexadecimal/for_each
+    data modify storage indexstorage:core UUIDInt set from entity @s UUID
+    function indexstorage:hexadecimal/for_each
     execute if data storage indexstorage:core hexadecimal[1] run data modify storage indexstorage:core hexadecimal insert 12 value "-"
     execute if data storage indexstorage:core hexadecimal[1] run data modify storage indexstorage:core hexadecimal insert 17 value "-"
     execute if data storage indexstorage:core hexadecimal[1] run data modify storage indexstorage:core hexadecimal insert 22 value "-"

@@ -13,8 +13,9 @@
     execute if data storage indexstorage:core UnusedID[-1] run data remove storage indexstorage:core UnusedID[0]
 # ストレージ割り当て
     execute store result storage indexstorage:core m.id int 1 run scoreboard players get @s IndexStorageID
-    data modify storage indexstorage:core UUIDInt set from entity @s UUID
-    function indexstorage:hexadecimal/
+    execute if entity @s[type=!player] run function indexstorage:hexadecimal/
+    execute if entity @s[type= player] run function lib:get_name/
+    execute if entity @s[type= player] run data modify storage indexstorage:core UUIDString set from storage lib: Return.Name
     function indexstorage:provide/.m with storage indexstorage:core m
     tag @s add HasStorage
 # リセット
