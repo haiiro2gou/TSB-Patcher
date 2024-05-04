@@ -54,13 +54,6 @@
         scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
         scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
 
-    #> PlayerManager - ScoreToMaxHealth
-    # @within function
-    #   api:modifier/max_health/*
-    #   core:tick/player/post
-    #   lib:score_to_health_wrapper/max/*
-        scoreboard objectives add ScoreToMaxHealth dummy {"text":"プレイヤーをこの最大体力にする(*0.0001HP)"}
-
     #> PlayerManager - Motionチェック用スコアボード
     # @within
     #   function
