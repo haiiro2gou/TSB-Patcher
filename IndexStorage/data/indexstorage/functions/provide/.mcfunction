@@ -21,3 +21,4 @@
 # リセット
     function lib:array/session/close
     data remove storage indexstorage:core m
+    data remove storage indexstorage:core UUIDString
