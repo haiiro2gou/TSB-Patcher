@@ -3,8 +3,7 @@
 
 #> ReturnTag
 # @within function
-#   asset:artifact/*/**check_condition
-#   asset:artifact/*/**check_condition/**
+#   asset:artifact/*/**check**
 #   asset_manager:artifact/check/.m
 #   asset:artifact/common/use/*
     #declare tag CanUsed
