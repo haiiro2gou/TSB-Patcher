@@ -12,10 +12,10 @@
     function api:global_vars/get_difficulty
     execute store result score $Difficulty Temporary run data get storage api: Return.Difficulty
 # 通知
-    execute if score $Difficulty Temporary matches 1 run tellraw @a [{"text":"現在の難易度: "},{"text":"イージー","color":"green"}]
-    execute if score $Difficulty Temporary matches 2 run tellraw @a [{"text":"現在の難易度: "},{"text":"ノーマル","color":"yellow"}]
-    execute if score $Difficulty Temporary matches 3 run tellraw @a [{"text":"現在の難易度: "},{"text":"ハード","color":"red"}]
-    execute if score $Difficulty Temporary matches 4.. unless score $Difficulty Temporary matches 9 run tellraw @a [{"text":"現在の難易度: "},{"text":"ハード+","color":"black"}]
-    execute if score $Difficulty Temporary matches 9 run tellraw @a [{"text":"現在の難易度: "},{"text":"スペランカー","color":"dark_purple"}]
+    execute if score $Difficulty Temporary matches 1 run tellraw @s [{"text":"現在の難易度: "},{"text":"イージー","color":"green"}]
+    execute if score $Difficulty Temporary matches 2 run tellraw @s [{"text":"現在の難易度: "},{"text":"ノーマル","color":"yellow"}]
+    execute if score $Difficulty Temporary matches 3 run tellraw @s [{"text":"現在の難易度: "},{"text":"ハード","color":"red"}]
+    execute if score $Difficulty Temporary matches 4.. unless score $Difficulty Temporary matches 9 run tellraw @s [{"text":"現在の難易度: "},{"text":"ハード+","color":"black"}]
+    execute if score $Difficulty Temporary matches 9 run tellraw @s [{"text":"現在の難易度: "},{"text":"スペランカー","color":"dark_purple"}]
 # リセット
     scoreboard players reset $Difficulty Temporary
