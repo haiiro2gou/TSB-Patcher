@@ -22,7 +22,7 @@
     function world_manager:force_difficulty
 
 #> TSB-Patcher v1.2.0+ OhMyDat -> IndexStorage
-    execute as @e if score @s OhMyDatID matches 1.. run function core:patcher/migration/v1.2.0/entity
+    execute as @e[scores={OhMyDatID=1..}] run function core:patcher/migration/v1.2.0/entity
 
 # プレイヤー事前処理
     execute as @a at @s run function core:tick/player/pre
