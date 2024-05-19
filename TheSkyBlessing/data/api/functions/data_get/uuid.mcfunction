@@ -12,8 +12,6 @@
 
 # EntityStorage呼び出し
     function indexstorage:pull/
-# outputをきれいにする
-    data remove storage api: UUID
 # キャッシュされていなければ取得
     execute unless data storage indexstorage: _.DataCache.UUID.Data run data modify storage indexstorage: _.DataCache.UUID.Data set from entity @s UUID
 # outputのstorageに移す

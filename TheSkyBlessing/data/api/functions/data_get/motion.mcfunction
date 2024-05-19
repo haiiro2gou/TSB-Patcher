@@ -12,8 +12,6 @@
 
 # EntityStorage呼び出し
     function indexstorage:pull/
-# outputをきれいにする
-    data remove storage api: Motion
 # 最新のものかチェックし、最新じゃなければ取得
     execute store result score $NotLatestData Temporary run data modify storage indexstorage: _.DataCache.Motion.Time set from storage global Time
     execute if score $NotLatestData Temporary matches 1 run data modify storage indexstorage: _.DataCache.Motion.Data set from entity @s Motion
