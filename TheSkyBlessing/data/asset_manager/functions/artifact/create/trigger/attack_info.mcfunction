@@ -1,4 +1,4 @@
-#> asset_manager:artifact/create/trigger/entryattack_info
+#> asset_manager:artifact/create/trigger/attack_info
 #
 # 攻撃に関する情報をLoreに追加します
 #

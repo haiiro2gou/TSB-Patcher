@@ -1,4 +1,4 @@
-#> asset_manager:artifact/create/trigger/entrycooltime
+#> asset_manager:artifact/create/trigger/cooltime
 #
 # 普通のクールタイムを秒数に変換 クールタイムが1tickだったりすると正確な秒数が出ない
 #

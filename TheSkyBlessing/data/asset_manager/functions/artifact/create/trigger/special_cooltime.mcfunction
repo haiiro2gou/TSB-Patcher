@@ -1,4 +1,4 @@
-#> asset_manager:artifact/create/trigger/entryspecial_cooltime
+#> asset_manager:artifact/create/trigger/special_cooltime
 #
 # スペシャルクールタイムを秒数にする 1tickとかだと表示が変になる
 #

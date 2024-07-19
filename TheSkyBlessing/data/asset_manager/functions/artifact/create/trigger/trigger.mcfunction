@@ -1,4 +1,4 @@
-#> asset_manager:artifact/create/trigger/entrytrigger
+#> asset_manager:artifact/create/trigger/trigger
 #
 # 使用の条件を設定します
 #
