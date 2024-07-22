@@ -1,6 +1,6 @@
-#> mob_manager:environmental_damage
+#> mob_manager:fix_health
 #
-# 緩衝体力が減っていた場合の処理
+# 体力に変動があった場合の処理
 #
 # @within function core:tick/
 
@@ -8,7 +8,7 @@
 # @private
     #declare score_holder $Damage
 
-# 体力の減少分だけダメージを与える
+# 体力を更新する
     execute store result score $Damage Temporary run data get entity @s Health 100
     scoreboard players remove $Damage Temporary 51200
     scoreboard players operation @s MobHealth += $Damage Temporary
