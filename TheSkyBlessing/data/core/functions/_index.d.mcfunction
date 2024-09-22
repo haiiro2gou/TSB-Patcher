@@ -9,11 +9,13 @@
 #> Global Vars - Islands
 # @within function
 #   core:patcher/load_once
+#   api:global_vars/islands_purified
+#   api:global_vars/game_progress
 #   asset_manager:island/dispel/successful
 #   asset_manager:island/patcher/init
 #   lib:message/common/*
-    #declare score_holder $Island
-    #declare score_holder $IslandTotal
+    #declare score_holder $PurifiedIslands
+    #declare score_holder $TotalIslands
 
 # TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
 #> Global Vars - Private

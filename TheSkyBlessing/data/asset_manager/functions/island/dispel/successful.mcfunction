@@ -7,7 +7,7 @@
 # 邪魔なスコアをリセットする
     scoreboard players reset @s DispelTime
 # 解呪数を1増やす
-    scoreboard players add $Island Global 1
+    scoreboard players add $PurifiedIslands Global 1
 # VFX
     function asset_manager:island/dispel/vfx/dispel
 # メッセージ

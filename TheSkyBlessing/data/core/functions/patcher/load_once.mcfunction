@@ -38,10 +38,10 @@
 
     #> AssetManager: Island -Public
     # @public
-        #declare score_holder $Island
-        #declare score_holder $IslandTotal
-        scoreboard players set $Island Global 0
-        scoreboard players set $IslandTotal Global 50
+        #declare score_holder $PurifiedIslands
+        #declare score_holder $TotalIslands
+        scoreboard players set $PurifiedIslands Global 0
+        scoreboard players set $TotalIslands Global 50
 
     #> AssetManager: Teleporter
     # @within function
