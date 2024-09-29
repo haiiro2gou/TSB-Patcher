@@ -15,7 +15,7 @@
 # 1tick前のFallDistance取得
     execute store result score $FallDistance Temporary run scoreboard players get @s OldFallDistance
     function api:player_vector/get
-    execute store result score $YVec Temporary run data get storage api: Return.PlayerVector[1] 10
+    execute store result score $YVec Temporary run data get storage api: Return.Vector[1] 10
     scoreboard players operation $FallDistance Temporary -= $YVec Temporary
 
 # 水中にいれば無効化する
