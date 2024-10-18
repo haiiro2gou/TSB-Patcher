@@ -10,9 +10,8 @@ The fork of TSB with latest updates applied
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.carloscuesta.me/)
 
 > このリポジトリは配布マップ[TheSkyBlessing](https://github.com/ProjectTSB/TheSkyBlessing)の非公式拡張データパックの製作・配布場所です。  
-> 本データパックを利用中にバグが発生した場合、TSB公式Discordでのバグ報告をしないようお願いしています。
+> 本データパックを利用中にバグが発生した場合、[TSB-Patcherフォーラム](https://discordapp.com/channels/742465492861845564/1080539174697963651/1080539174697963651)にて、利用バージョンの付記とともにバグ報告をお願いしています。
 > また、当データパックを導入する際はバックアップを忘れずに実行してください。
-> なお、プレイ途中での導入は想定されていません。予期せぬ挙動が確認される場合があります。
 
 ## 対応バージョン (Versions)
 
