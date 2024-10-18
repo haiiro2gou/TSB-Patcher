@@ -1,18 +1,24 @@
 name: lint-datapack
 on:
-  push:
-  workflow_dispatch:
+    push:
+    workflow_dispatch:
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
+    cancel-in-progress: true
 jobs:
-  lint:
-    name: lint
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Test
-        uses: ChenCMD/datapack-linter@v1
-        with:
-          outputDefine: public
-          notOutputSuccess: true
+    lint:
+        name: lint
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v4
+            with:
+                fetch-depth: 0
+
+          - name: Datapack Linter
+            uses: ChenCMD/datapack-linter@v2
+            with:
+                GITHUB_TOKEN: ${{ github.token }}
+                muteSuccessResult: true
+                ignoreLintPathPattern: |
+                    animated_java:**

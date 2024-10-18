@@ -22,3 +22,6 @@
 # 初期化処理
     execute if data storage global {IsProduction:0b} run function #asset:mob/load
     execute if data storage global {IsProduction:0b} run function #asset:sacred_treasure/load
+
+# Patcherに流す
+    function core:patcher/load
