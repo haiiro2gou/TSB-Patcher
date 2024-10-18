@@ -36,7 +36,7 @@ The fork of TSB with latest updates applied
 このリポジトリでは、以下のディレクトリを除き、[CC0-1.0 Universal](LICENSE)ライセンスが適用されています。
 
 - [Asset](Asset/data/asset/functions)ディレクトリ ([MIT License](https://github.com/ProjectTSB/Asset/blob/master/Asset/LICENSE) / Copyright by ProjectTSB)
-- [IndexStorage](https://github.com/haiiro2gou/IndexStorage)ディレクトリ ([Apache-2.0 License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/IndexStorage/LICENSE) / Copyright by 赤石愛)
+- [IndexStorage](https://github.com/haiiro2gou/IndexStorage)ディレクトリ ([Apache-2.0 License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/IndexStorage/LICENSE) / Copyright by はいいろ)
 - [NaturalMergeSort](https://github.com/Ai-Akaishi/NaturalMergeSort)ディレクトリ ([MIT License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 - [TheSkyBlessing/data/rom](TheSkyBlessing/data/rom/functions)ディレクトリ ([MIT License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/OhMyDat/LICENSE) / Copyright by 赤石愛)
 - [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)ディレクトリ ([Apache-2.0 License](https://github.com/haiiro2gou/TSB-Patcher/blob/master/ScoreToHealth/LICENSE) / Copyright by 赤石愛)
